@@ -1,0 +1,32 @@
+import { cn } from "@/lib/utils";
+
+interface FilterTabsProps {
+  categories: string[];
+  activeCategory: string;
+  onCategoryChange: (category: string) => void;
+}
+
+const FilterTabs = ({ categories, activeCategory, onCategoryChange }: FilterTabsProps) => {
+  return (
+    <div className="w-full overflow-x-auto scrollbar-hide">
+      <div className="flex gap-2 pb-2 min-w-max">
+        {categories.map((category) => (
+          <button
+            key={category}
+            onClick={() => onCategoryChange(category)}
+            className={cn(
+              "px-4 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200",
+              activeCategory === category
+                ? "bg-primary text-primary-foreground shadow-md"
+                : "bg-card text-muted-foreground hover:bg-secondary hover:text-foreground border border-border"
+            )}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default FilterTabs;
