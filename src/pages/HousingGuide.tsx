@@ -148,17 +148,17 @@ const HousingGuide = () => {
         </section>
 
         {/* Neighborhoods Section */}
-        <section id="neighborhoods" className="py-16 md:py-20 bg-background">
+        <section id="neighborhoods" className="py-12 sm:py-16 md:py-20 bg-background">
           <div className="container">
             <div className="flex items-center gap-3 mb-3">
-              <MapPin className="h-6 w-6 text-primary" />
-              <h2 className="text-2xl md:text-3xl font-bold">Safe Neighborhoods</h2>
+              <MapPin className="h-5 sm:h-6 w-5 sm:w-6 text-primary" />
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">Safe Neighborhoods</h2>
             </div>
-            <p className="text-muted-foreground mb-10 max-w-2xl">
+            <p className="text-muted-foreground mb-8 sm:mb-10 max-w-2xl text-sm sm:text-base">
               Popular areas near UW where students typically live. Each has its own character and trade-offs.
             </p>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
               {neighborhoods.map((neighborhood, index) => (
                 <NeighborhoodCard
                   key={neighborhood.name}
@@ -171,13 +171,13 @@ const HousingGuide = () => {
         </section>
 
         {/* Apartments Section */}
-        <section id="apartments" className="py-16 md:py-20 bg-purple-light">
+        <section id="apartments" className="py-12 sm:py-16 md:py-20 bg-purple-light">
           <div className="container">
             <div className="flex items-center gap-3 mb-3">
-              <Home className="h-6 w-6 text-primary" />
-              <h2 className="text-2xl md:text-3xl font-bold">Popular Student Apartments</h2>
+              <Home className="h-5 sm:h-6 w-5 sm:w-6 text-primary" />
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">Popular Student Apartments</h2>
             </div>
-            <p className="text-muted-foreground mb-10 max-w-2xl">
+            <p className="text-muted-foreground mb-8 sm:mb-10 max-w-2xl text-sm sm:text-base">
               These are commonly recommended by students. Prices are estimates and may vary.
             </p>
 

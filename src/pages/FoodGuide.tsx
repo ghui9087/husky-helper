@@ -49,19 +49,19 @@ const FoodGuide = () => {
         </section>
 
         {/* Quick stats */}
-        <section className="py-6 bg-card border-b border-border">
+        <section className="py-4 sm:py-6 bg-card border-b border-border">
           <div className="container">
-            <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
+            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-sm">
               <div className="flex items-center gap-2">
-                <span className="text-2xl">🍜</span>
+                <span className="text-xl sm:text-2xl">🍜</span>
                 <span className="text-muted-foreground">15+ restaurants</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-2xl">💰</span>
-                <span className="text-muted-foreground">Budget-friendly options</span>
+                <span className="text-xl sm:text-2xl">💰</span>
+                <span className="text-muted-foreground">Budget-friendly</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-2xl">🎓</span>
+                <span className="text-xl sm:text-2xl">🎓</span>
                 <span className="text-muted-foreground">Student discounts</span>
               </div>
             </div>
@@ -69,10 +69,10 @@ const FoodGuide = () => {
         </section>
 
         {/* Filter & Results */}
-        <section className="py-10 md:py-16 bg-background">
+        <section className="py-8 sm:py-10 md:py-16 bg-background">
           <div className="container">
             {/* Filter Tabs */}
-            <div className="mb-8">
+            <div className="mb-6 sm:mb-8 -mx-4 px-4 sm:mx-0 sm:px-0">
               <FilterTabs
                 categories={categories}
                 activeCategory={activeCategory}

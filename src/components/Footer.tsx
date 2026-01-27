@@ -1,50 +1,126 @@
-import { MapPin } from "lucide-react";
+import { MapPin, Mail, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const lastUpdated = "January 2026";
+
+  const quickLinks = [
+    { name: "Housing Guide", href: "/housing" },
+    { name: "Food & Dining", href: "/food" },
+    { name: "Campus Life", href: "/campus" },
+    { name: "Getting Around", href: "/transport" },
+  ];
+
+  const externalLinks = [
+    { name: "UW Official Site", href: "https://www.washington.edu" },
+    { name: "MyUW Portal", href: "https://my.uw.edu" },
+    { name: "UW ISS", href: "https://iss.washington.edu" },
+  ];
 
   return (
-    <footer className="border-t border-border bg-background">
-      <div className="container py-12">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          {/* Logo & Description */}
-          <div className="flex flex-col items-center md:items-start gap-3">
-            <a href="/" className="flex items-center gap-2 font-semibold">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg hero-gradient">
-                <MapPin className="h-4 w-4 text-primary-foreground" />
+    <footer className="border-t border-border bg-secondary/30">
+      {/* Main Footer Content */}
+      <div className="container py-12 md:py-16">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Brand Column */}
+          <div className="sm:col-span-2 lg:col-span-1">
+            <Link to="/" className="flex items-center gap-2.5 font-semibold text-lg mb-4">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg hero-gradient shadow-sm">
+                <MapPin className="h-5 w-5 text-primary-foreground" />
               </div>
-              <span>UW Survival Guide</span>
-            </a>
-            <p className="text-sm text-muted-foreground text-center md:text-left">
-              Helping international students thrive at University of Washington.
+              <span className="text-foreground">UW Survival Guide</span>
+            </Link>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+              A student-created resource helping international students navigate 
+              UW Seattle and make the most of their Husky experience.
+            </p>
+            <p className="text-sm font-medium text-primary">
+              Made by UW students, for UW students 💜
             </p>
           </div>
 
-          {/* Links */}
-          <nav className="flex flex-wrap justify-center gap-6 text-sm">
-            <a href="#housing" className="text-muted-foreground hover:text-foreground transition-colors">
-              Housing
-            </a>
-            <a href="#food" className="text-muted-foreground hover:text-foreground transition-colors">
-              Food
-            </a>
-            <a href="#campus" className="text-muted-foreground hover:text-foreground transition-colors">
-              Campus
-            </a>
-            <a href="#transport" className="text-muted-foreground hover:text-foreground transition-colors">
-              Transport
-            </a>
-          </nav>
-        </div>
+          {/* Quick Links */}
+          <div>
+            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-3">
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        {/* Copyright */}
-        <div className="mt-8 pt-6 border-t border-border">
-          <p className="text-center text-sm text-muted-foreground">
-            © {currentYear} UW Survival Guide. Made with 💜 by UW students.
-          </p>
-          <p className="text-center text-xs text-muted-foreground/70 mt-2">
-            Not officially affiliated with the University of Washington.
-          </p>
+          {/* UW Resources */}
+          <div>
+            <h4 className="font-semibold mb-4">UW Resources</h4>
+            <ul className="space-y-3">
+              {externalLinks.map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1"
+                  >
+                    {link.name}
+                    <ExternalLink className="h-3 w-3" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="font-semibold mb-4">Get in Touch</h4>
+            <div className="space-y-3">
+              <a
+                href="mailto:uwsurvivalguide@uw.edu"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
+              >
+                <Mail className="h-4 w-4" />
+                uwsurvivalguide@uw.edu
+              </a>
+              <p className="text-sm text-muted-foreground">
+                Have suggestions or corrections? We'd love to hear from you!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-border bg-muted/50">
+        <div className="container py-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+            <div className="space-y-1">
+              <p className="text-sm text-muted-foreground">
+                © {currentYear} UW Survival Guide. All information provided as-is.
+              </p>
+              <p className="text-xs text-muted-foreground/70">
+                Not officially affiliated with the University of Washington.
+              </p>
+            </div>
+            <p className="text-xs text-muted-foreground/70">
+              Last updated: {lastUpdated}
+            </p>
+          </div>
+          
+          {/* Disclaimer */}
+          <div className="mt-6 pt-4 border-t border-border/50">
+            <p className="text-xs text-muted-foreground/70 text-center max-w-3xl mx-auto">
+              <strong>Disclaimer:</strong> This guide is created by students and is for informational purposes only. 
+              Information may be outdated or inaccurate. Always verify important details with official UW sources. 
+              We are not responsible for any decisions made based on this information.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
