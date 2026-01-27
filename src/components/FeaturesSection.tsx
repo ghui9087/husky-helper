@@ -6,7 +6,7 @@ const features = [
     title: "Housing Guide",
     description: "Find safe neighborhoods and apartment recommendations near campus. Tips on rental processes, roommate matching, and what to look for.",
     icon: Home,
-    href: "#housing",
+    href: "/housing",
     color: "purple" as const,
   },
   {
