@@ -20,7 +20,7 @@ const features = [
     title: "Campus Life",
     description: "Navigate essential facilities, find study spots, join student organizations, and learn insider tips from current students.",
     icon: GraduationCap,
-    href: "#campus",
+    href: "/campus",
     color: "purple" as const,
   },
   {
