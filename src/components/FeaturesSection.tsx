@@ -13,7 +13,7 @@ const features = [
     title: "Food & Dining",
     description: "Discover restaurants near campus sorted by cuisine type. From authentic Asian food to budget-friendly options for students.",
     icon: Utensils,
-    href: "#food",
+    href: "/food",
     color: "gold" as const,
   },
   {
