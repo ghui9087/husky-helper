@@ -12,6 +12,7 @@ export interface Restaurant {
   isStudentFavorite: boolean;
   isQuickCheap: boolean;
   websiteUrl?: string;
+  menuUrl?: string;
   googleMapsUrl: string;
 }
 
