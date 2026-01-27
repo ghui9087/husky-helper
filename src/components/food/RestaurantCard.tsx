@@ -1,4 +1,4 @@
-import { MapPin, Percent, ExternalLink, Navigation } from "lucide-react";
+import { MapPin, Percent, ExternalLink, Globe, UtensilsCrossed } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -12,6 +12,7 @@ interface RestaurantCardProps {
   image: string;
   hasStudentDiscount?: boolean;
   websiteUrl?: string;
+  menuUrl?: string;
   googleMapsUrl: string;
   delay?: number;
 }
@@ -26,6 +27,7 @@ const RestaurantCard = ({
   image,
   hasStudentDiscount = false,
   websiteUrl,
+  menuUrl,
   googleMapsUrl,
   delay = 0,
 }: RestaurantCardProps) => {
@@ -49,6 +51,12 @@ const RestaurantCard = ({
       case "$$$":
         return "text-orange-600 bg-orange-50";
     }
+  };
+
+  // Format Google Maps URL with proper API format
+  const getGoogleMapsUrl = () => {
+    const query = encodeURIComponent(`${name} Seattle WA`);
+    return `https://www.google.com/maps/search/?api=1&query=${query}`;
   };
 
   return (
@@ -106,55 +114,77 @@ const RestaurantCard = ({
         </p>
 
         {/* Action Buttons */}
-        <div className="flex gap-2 mt-auto pt-2">
-          <Button
-            variant="outline"
-            size="sm"
-            className="flex-1 text-xs sm:text-sm"
-            asChild
-          >
-            <a 
-              href={googleMapsUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              <Navigation className="h-3.5 w-3.5 mr-1.5" />
-              <span className="hidden xs:inline">Directions</span>
-              <span className="xs:hidden">Map</span>
-            </a>
-          </Button>
-          
-          {websiteUrl ? (
+        <div className="flex flex-col gap-2 mt-auto pt-2">
+          {/* Primary row: Maps + Website */}
+          <div className="flex gap-2">
             <Button
-              variant="default"
+              variant="outline"
               size="sm"
-              className="flex-1 text-xs sm:text-sm"
+              className="flex-1 h-10 text-xs sm:text-sm hover:bg-secondary hover:border-primary/30 transition-all"
               asChild
             >
               <a 
-                href={websiteUrl} 
+                href={getGoogleMapsUrl()} 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <ExternalLink className="h-3.5 w-3.5 mr-1.5" />
-                <span className="hidden xs:inline">Website</span>
-                <span className="xs:hidden">Visit</span>
+                <MapPin className="h-4 w-4 mr-1.5 text-red-500" />
+                <span className="hidden sm:inline">View on Maps</span>
+                <span className="sm:hidden">Maps</span>
               </a>
             </Button>
-          ) : (
+            
+            {websiteUrl && (
+              <Button
+                variant="default"
+                size="sm"
+                className="flex-1 h-10 text-xs sm:text-sm hover:scale-[1.02] transition-all"
+                asChild
+              >
+                <a 
+                  href={websiteUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Globe className="h-4 w-4 mr-1.5" />
+                  <span className="hidden sm:inline">Visit Website</span>
+                  <span className="sm:hidden">Website</span>
+                </a>
+              </Button>
+            )}
+          </div>
+
+          {/* Secondary row: Menu button */}
+          {menuUrl ? (
             <Button
               variant="secondary"
               size="sm"
-              className="flex-1 text-xs sm:text-sm"
+              className="w-full h-9 text-xs sm:text-sm hover:bg-accent/20 transition-all"
               asChild
             >
               <a 
-                href={`https://www.google.com/search?q=${encodeURIComponent(name + ' Seattle reviews')}`} 
+                href={menuUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <ExternalLink className="h-3.5 w-3.5 mr-1.5" />
-                Reviews
+                <UtensilsCrossed className="h-4 w-4 mr-1.5" />
+                View Menu
+              </a>
+            </Button>
+          ) : !websiteUrl && (
+            <Button
+              variant="secondary"
+              size="sm"
+              className="w-full h-9 text-xs sm:text-sm hover:bg-accent/20 transition-all"
+              asChild
+            >
+              <a 
+                href={`https://www.google.com/search?q=${encodeURIComponent(name + ' Seattle menu')}`} 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <UtensilsCrossed className="h-4 w-4 mr-1.5" />
+                Find Menu
               </a>
             </Button>
           )}
