@@ -106,6 +106,8 @@ const FoodGuide = () => {
                   description={restaurant.description}
                   image={restaurant.image}
                   hasStudentDiscount={restaurant.hasStudentDiscount}
+                  websiteUrl={restaurant.websiteUrl}
+                  googleMapsUrl={restaurant.googleMapsUrl}
                   delay={0.05 + index * 0.05}
                 />
               ))}

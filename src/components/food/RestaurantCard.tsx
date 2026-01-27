@@ -1,5 +1,6 @@
-import { MapPin, DollarSign, Clock, Percent } from "lucide-react";
+import { MapPin, Percent, ExternalLink, Navigation } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 interface RestaurantCardProps {
   name: string;
@@ -10,6 +11,8 @@ interface RestaurantCardProps {
   description: string;
   image: string;
   hasStudentDiscount?: boolean;
+  websiteUrl?: string;
+  googleMapsUrl: string;
   delay?: number;
 }
 
@@ -22,6 +25,8 @@ const RestaurantCard = ({
   description,
   image,
   hasStudentDiscount = false,
+  websiteUrl,
+  googleMapsUrl,
   delay = 0,
 }: RestaurantCardProps) => {
   const getDistanceIcon = () => {
@@ -48,7 +53,7 @@ const RestaurantCard = ({
 
   return (
     <div
-      className="group bg-card rounded-2xl border border-border/60 shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden opacity-0 animate-fade-in-up"
+      className="group bg-card rounded-2xl border border-border/60 shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden opacity-0 animate-fade-in-up flex flex-col"
       style={{ animationDelay: `${delay}s` }}
     >
       {/* Image */}
@@ -84,7 +89,7 @@ const RestaurantCard = ({
       </div>
 
       {/* Content */}
-      <div className="p-4 sm:p-5">
+      <div className="p-4 sm:p-5 flex-1 flex flex-col">
         <h3 className="text-base sm:text-lg font-semibold mb-2 group-hover:text-primary transition-colors line-clamp-1">
           {name}
         </h3>
@@ -96,9 +101,64 @@ const RestaurantCard = ({
           </span>
         </div>
 
-        <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
+        <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2 mb-4">
           {description}
         </p>
+
+        {/* Action Buttons */}
+        <div className="flex gap-2 mt-auto pt-2">
+          <Button
+            variant="outline"
+            size="sm"
+            className="flex-1 text-xs sm:text-sm"
+            asChild
+          >
+            <a 
+              href={googleMapsUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Navigation className="h-3.5 w-3.5 mr-1.5" />
+              <span className="hidden xs:inline">Directions</span>
+              <span className="xs:hidden">Map</span>
+            </a>
+          </Button>
+          
+          {websiteUrl ? (
+            <Button
+              variant="default"
+              size="sm"
+              className="flex-1 text-xs sm:text-sm"
+              asChild
+            >
+              <a 
+                href={websiteUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <ExternalLink className="h-3.5 w-3.5 mr-1.5" />
+                <span className="hidden xs:inline">Website</span>
+                <span className="xs:hidden">Visit</span>
+              </a>
+            </Button>
+          ) : (
+            <Button
+              variant="secondary"
+              size="sm"
+              className="flex-1 text-xs sm:text-sm"
+              asChild
+            >
+              <a 
+                href={`https://www.google.com/search?q=${encodeURIComponent(name + ' Seattle reviews')}`} 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <ExternalLink className="h-3.5 w-3.5 mr-1.5" />
+                Reviews
+              </a>
+            </Button>
+          )}
+        </div>
       </div>
     </div>
   );
