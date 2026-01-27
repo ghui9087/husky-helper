@@ -11,6 +11,8 @@ export interface Restaurant {
   hasStudentDiscount: boolean;
   isStudentFavorite: boolean;
   isQuickCheap: boolean;
+  websiteUrl?: string;
+  googleMapsUrl: string;
 }
 
 export const restaurants: Restaurant[] = [
@@ -27,6 +29,8 @@ export const restaurants: Restaurant[] = [
     hasStudentDiscount: true,
     isStudentFavorite: true,
     isQuickCheap: false,
+    websiteUrl: "https://hfs.uw.edu/eat/dining-locations/local-point",
+    googleMapsUrl: "https://maps.google.com/?q=Local+Point+UW+Seattle",
   },
   {
     id: 2,
@@ -41,6 +45,8 @@ export const restaurants: Restaurant[] = [
     hasStudentDiscount: true,
     isStudentFavorite: true,
     isQuickCheap: true,
+    websiteUrl: "https://hub.washington.edu/food-drink/",
+    googleMapsUrl: "https://maps.google.com/?q=HUB+Husky+Union+Building+Seattle",
   },
   {
     id: 3,
@@ -55,6 +61,8 @@ export const restaurants: Restaurant[] = [
     hasStudentDiscount: false,
     isStudentFavorite: true,
     isQuickCheap: true,
+    websiteUrl: "https://www.xiannoodles.com/",
+    googleMapsUrl: "https://maps.google.com/?q=Xi'an+Noodles+University+District+Seattle",
   },
   {
     id: 4,
@@ -69,6 +77,8 @@ export const restaurants: Restaurant[] = [
     hasStudentDiscount: false,
     isStudentFavorite: false,
     isQuickCheap: true,
+    websiteUrl: "https://www.udonseattle.com/",
+    googleMapsUrl: "https://maps.google.com/?q=U:Don+University+District+Seattle",
   },
   {
     id: 5,
@@ -83,6 +93,7 @@ export const restaurants: Restaurant[] = [
     hasStudentDiscount: false,
     isStudentFavorite: false,
     isQuickCheap: false,
+    googleMapsUrl: "https://maps.google.com/?q=Taste+of+Xi'an+Seattle",
   },
   {
     id: 6,
@@ -97,6 +108,7 @@ export const restaurants: Restaurant[] = [
     hasStudentDiscount: true,
     isStudentFavorite: true,
     isQuickCheap: false,
+    googleMapsUrl: "https://maps.google.com/?q=Korea+House+University+District+Seattle",
   },
   {
     id: 7,
@@ -111,6 +123,7 @@ export const restaurants: Restaurant[] = [
     hasStudentDiscount: false,
     isStudentFavorite: false,
     isQuickCheap: true,
+    googleMapsUrl: "https://maps.google.com/?q=Pho+Shizzle+Seattle",
   },
   {
     id: 8,
@@ -125,6 +138,7 @@ export const restaurants: Restaurant[] = [
     hasStudentDiscount: false,
     isStudentFavorite: true,
     isQuickCheap: true,
+    googleMapsUrl: "https://maps.google.com/?q=Thai+Tom+University+District+Seattle",
   },
   {
     id: 9,
@@ -139,6 +153,8 @@ export const restaurants: Restaurant[] = [
     hasStudentDiscount: false,
     isStudentFavorite: false,
     isQuickCheap: false,
+    websiteUrl: "https://www.portagebaycafe.com/",
+    googleMapsUrl: "https://maps.google.com/?q=Portage+Bay+Cafe+Roosevelt+Seattle",
   },
   {
     id: 10,
@@ -153,6 +169,7 @@ export const restaurants: Restaurant[] = [
     hasStudentDiscount: true,
     isStudentFavorite: true,
     isQuickCheap: true,
+    googleMapsUrl: "https://maps.google.com/?q=Shawarma+King+University+District+Seattle",
   },
   {
     id: 11,
@@ -167,6 +184,8 @@ export const restaurants: Restaurant[] = [
     hasStudentDiscount: true,
     isStudentFavorite: false,
     isQuickCheap: true,
+    websiteUrl: "https://cafesolstice.com/",
+    googleMapsUrl: "https://maps.google.com/?q=Cafe+Solstice+University+District+Seattle",
   },
   {
     id: 12,
@@ -181,6 +200,7 @@ export const restaurants: Restaurant[] = [
     hasStudentDiscount: false,
     isStudentFavorite: false,
     isQuickCheap: true,
+    googleMapsUrl: "https://maps.google.com/?q=Aladdin+Falafel+Corner+University+District+Seattle",
   },
   {
     id: 13,
@@ -195,6 +215,8 @@ export const restaurants: Restaurant[] = [
     hasStudentDiscount: true,
     isStudentFavorite: false,
     isQuickCheap: false,
+    websiteUrl: "https://cedarsseattle.com/",
+    googleMapsUrl: "https://maps.google.com/?q=Cedars+Restaurant+University+District+Seattle",
   },
   {
     id: 14,
@@ -209,6 +231,7 @@ export const restaurants: Restaurant[] = [
     hasStudentDiscount: false,
     isStudentFavorite: true,
     isQuickCheap: true,
+    googleMapsUrl: "https://maps.google.com/?q=Cafe+Allegro+University+District+Seattle",
   },
   {
     id: 15,
@@ -223,6 +246,8 @@ export const restaurants: Restaurant[] = [
     hasStudentDiscount: true,
     isStudentFavorite: false,
     isQuickCheap: true,
+    websiteUrl: "https://www.veggiegrill.com/",
+    googleMapsUrl: "https://maps.google.com/?q=Veggie+Grill+Seattle",
   },
 ];
 
