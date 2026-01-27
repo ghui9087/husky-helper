@@ -266,26 +266,28 @@ const TransportGuide = () => {
           </div>
         </section>
 
-        {/* Quick Reference & Apps Section */}
+        {/* Essential Apps Section */}
         <section className="py-12 md:py-16 bg-background">
           <div className="container">
-            <div className="grid lg:grid-cols-3 gap-8">
-              {/* Apps */}
-              <div className="lg:col-span-2">
-                <h2 className="text-2xl md:text-3xl font-bold mb-3">Essential Apps</h2>
-                <p className="text-muted-foreground mb-6">Download these before your first day</p>
-                
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {transportApps.map((app) => (
-                    <TransportAppCard key={app.name} {...app} />
-                  ))}
-                </div>
-              </div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">Essential Apps</h2>
+            <p className="text-muted-foreground mb-8">Download these before your first day</p>
+            
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+              {transportApps.map((app) => (
+                <TransportAppCard key={app.name} {...app} />
+              ))}
+            </div>
+          </div>
+        </section>
 
-              {/* Quick Reference */}
-              <div>
-                <QuickReferenceCard />
-              </div>
+        {/* Quick Reference Section */}
+        <section className="py-12 md:py-16 bg-muted/30">
+          <div className="container">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-center">📌 Quick Reference</h2>
+            <p className="text-muted-foreground mb-8 text-center">Important contacts and info at your fingertips</p>
+            
+            <div className="max-w-3xl mx-auto">
+              <QuickReferenceCard />
             </div>
           </div>
         </section>
