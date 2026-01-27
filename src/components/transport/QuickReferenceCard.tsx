@@ -29,19 +29,16 @@ const QuickReferenceCard = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-primary/5 to-accent/10 rounded-2xl border border-primary/20 p-5 md:p-6">
-      <h3 className="font-bold text-lg mb-4 text-center">📌 Quick Reference</h3>
-      <div className="grid grid-cols-2 gap-3">
-        {references.map((ref) => (
-          <div key={ref.label} className="bg-card rounded-xl p-3 text-center shadow-sm">
-            <div className={`inline-flex h-10 w-10 items-center justify-center rounded-lg ${ref.color} mb-2`}>
-              <ref.icon className="h-5 w-5" />
-            </div>
-            <p className="text-xs text-muted-foreground">{ref.label}</p>
-            <p className="text-sm font-medium truncate">{ref.value}</p>
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+      {references.map((ref) => (
+        <div key={ref.label} className="bg-card rounded-2xl p-5 md:p-6 text-center shadow-sm border border-border/50 hover:shadow-md transition-shadow">
+          <div className={`inline-flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-xl ${ref.color} mb-3`}>
+            <ref.icon className="h-6 w-6 md:h-7 md:w-7" />
           </div>
-        ))}
-      </div>
+          <p className="text-xs md:text-sm text-muted-foreground mb-1">{ref.label}</p>
+          <p className="text-sm md:text-base font-semibold">{ref.value}</p>
+        </div>
+      ))}
     </div>
   );
 };
