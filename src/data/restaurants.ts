@@ -1,3 +1,5 @@
+import sizzleCrunchImage from "@/assets/sizzle-crunch.png";
+
 export interface Restaurant {
   id: number;
   name: string;
@@ -202,7 +204,7 @@ export const restaurants: Restaurant[] = [
     distance: "7 min walk",
     distanceType: "walk",
     description: "Fresh Asian fusion dishes with crispy textures and bold flavors.",
-    image: "https://images.unsplash.com/photo-1593001874117-c99c800e3eb7?w=400&h=300&fit=crop",
+    image: sizzleCrunchImage,
     hasStudentDiscount: false,
     isStudentFavorite: false,
     isQuickCheap: true,
