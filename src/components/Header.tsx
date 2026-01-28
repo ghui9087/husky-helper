@@ -104,7 +104,7 @@ const Header = () => {
             {/* Mobile contact link */}
             <div className="mt-6 pt-6 border-t border-border">
               <a
-                href="mailto:uwsurvivalguide@uw.edu"
+                href="mailto:wxy95929@uw.edu"
                 className="flex items-center px-4 py-4 text-base font-medium text-muted-foreground hover:text-foreground rounded-xl hover:bg-secondary/50"
               >
                 Contact Us
