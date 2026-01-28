@@ -93,12 +93,12 @@ const FoodGuide = () => {
             {/* Results count */}
             <div className="flex items-center justify-between mb-6">
               <p className="text-muted-foreground">
-                Showing <span className="font-semibold text-foreground">{filteredRestaurants.length}</span> restaurants
+                {t("food.showing")} <span className="font-semibold text-foreground">{filteredRestaurants.length}</span> {t("food.restaurants")}
               </p>
               {activeCategory === "Student Favorites" && (
                 <div className="flex items-center gap-1.5 text-sm text-primary">
                   <Sparkles className="h-4 w-4" />
-                  <span>Top picks from UW students</span>
+                  <span>{t("food.topPicks")}</span>
                 </div>
               )}
             </div>
@@ -136,22 +136,22 @@ const FoodGuide = () => {
         {/* Tips Section */}
         <section className="py-12 bg-gold-light">
           <div className="container">
-            <h2 className="text-xl font-semibold mb-6 text-center">Pro Tips for Eating Near Campus</h2>
+            <h2 className="text-xl font-semibold mb-6 text-center">{t("food.proTips.title")}</h2>
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <div className="bg-card rounded-xl p-5 shadow-sm">
                 <span className="text-2xl mb-3 block">💳</span>
-                <h3 className="font-medium mb-2">Use Your Husky Card</h3>
-                <p className="text-sm text-muted-foreground">Many U-District restaurants offer 10-15% student discounts. Always ask!</p>
+                <h3 className="font-medium mb-2">{t("food.proTips.huskyCard")}</h3>
+                <p className="text-sm text-muted-foreground">{t("food.proTips.huskyCardDesc")}</p>
               </div>
               <div className="bg-card rounded-xl p-5 shadow-sm">
                 <span className="text-2xl mb-3 block">⏰</span>
-                <h3 className="font-medium mb-2">Avoid Peak Hours</h3>
-                <p className="text-sm text-muted-foreground">Popular spots get crowded 12-1pm. Eat early or late for shorter waits.</p>
+                <h3 className="font-medium mb-2">{t("food.proTips.peakHours")}</h3>
+                <p className="text-sm text-muted-foreground">{t("food.proTips.peakHoursDesc")}</p>
               </div>
               <div className="bg-card rounded-xl p-5 shadow-sm">
                 <span className="text-2xl mb-3 block">📱</span>
-                <h3 className="font-medium mb-2">Check Apps</h3>
-                <p className="text-sm text-muted-foreground">Use DoorDash, Uber Eats, or Snackpass for student deals and free delivery.</p>
+                <h3 className="font-medium mb-2">{t("food.proTips.checkApps")}</h3>
+                <p className="text-sm text-muted-foreground">{t("food.proTips.checkAppsDesc")}</p>
               </div>
             </div>
           </div>
@@ -161,8 +161,7 @@ const FoodGuide = () => {
         <section className="py-8 bg-muted">
           <div className="container">
             <p className="text-center text-sm text-muted-foreground max-w-3xl mx-auto">
-              <strong>Note:</strong> Prices, hours, and offerings may change. Some restaurants may be temporarily closed. 
-              We recommend checking Google Maps or calling ahead before visiting.
+              <strong>Note:</strong> {t("food.disclaimer")}
             </p>
           </div>
         </section>

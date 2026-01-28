@@ -3,6 +3,7 @@ import {
   AlertCircle, CheckCircle, CreditCard, Bookmark
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RouteCard from "@/components/transport/RouteCard";
@@ -70,15 +71,6 @@ const transportApps = [
   { name: "Uber/Lyft", description: "Rideshare backup option", icon: "🚗", isMustHave: false },
 ];
 
-const transportTips = [
-  { emoji: "💳", title: "Tap Every Time", description: "Tap your Husky Card when boarding buses and at Light Rail stations. It's free but required!" },
-  { emoji: "🛑", title: "Request Your Stop", description: "Pull the yellow cord or push the red button near your stop. The bus won't stop automatically." },
-  { emoji: "📴", title: "Download Offline", description: "Save bus schedules and maps offline for areas with poor signal." },
-  { emoji: "🌙", title: "Night Safety", description: "Stick to well-lit routes after dark. Use NightRide shuttle or travel with friends." },
-  { emoji: "🚲", title: "Bike Share", description: "Lime bikes are scattered around campus. Great for short trips when the bus isn't coming." },
-  { emoji: "🎧", title: "Stay Aware", description: "Keep one earbud out and stay alert, especially at night or in unfamiliar areas." },
-];
-
 const shuttleServices = [
   {
     name: "NightRide",
@@ -97,6 +89,17 @@ const shuttleServices = [
 ];
 
 const TransportGuide = () => {
+  const { t } = useTranslation();
+
+  const transportTips = [
+    { emoji: "💳", title: t("transport.tips.tap"), description: t("transport.tips.tapDesc") },
+    { emoji: "🛑", title: t("transport.tips.stop"), description: t("transport.tips.stopDesc") },
+    { emoji: "📴", title: t("transport.tips.offline"), description: t("transport.tips.offlineDesc") },
+    { emoji: "🌙", title: t("transport.tips.night"), description: t("transport.tips.nightDesc") },
+    { emoji: "🚲", title: t("transport.tips.bike"), description: t("transport.tips.bikeDesc") },
+    { emoji: "🎧", title: t("transport.tips.aware"), description: t("transport.tips.awareDesc") },
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -119,13 +122,13 @@ const TransportGuide = () => {
                   className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-4 transition-colors"
                 >
                   <ArrowLeft className="h-4 w-4" />
-                  Back to Home
+                  {t("common.backToHome")}
                 </Link>
                 
                 {/* Save Tip */}
                 <div className="flex items-center gap-2 mb-4 px-3 py-2 bg-white/10 backdrop-blur rounded-lg w-fit">
                   <Bookmark className="h-4 w-4 text-white" />
-                  <span className="text-sm text-white/90">Save this page - screenshot the routes you use most!</span>
+                  <span className="text-sm text-white/90">{t("transport.saveTip")}</span>
                 </div>
 
                 <div className="flex items-center gap-4 mb-3">
@@ -133,11 +136,11 @@ const TransportGuide = () => {
                     <Bus className="h-6 w-6 md:h-7 md:w-7 text-white" />
                   </div>
                   <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-                    Getting Around Seattle
+                    {t("transport.title")}
                   </h1>
                 </div>
                 <p className="text-base md:text-lg text-white/90 max-w-2xl">
-                  Your Husky Card is your free transit pass. Buses, trains, streetcars – all included with your tuition!
+                  {t("transport.subtitle")}
                 </p>
               </div>
             </div>
@@ -153,23 +156,22 @@ const TransportGuide = () => {
                   <CreditCard className="h-8 w-8 text-green-600" />
                 </div>
                 <div className="flex-1">
-                  <h2 className="text-xl md:text-2xl font-bold text-green-900 mb-2">Your U-Pass = FREE Unlimited Transit!</h2>
+                  <h2 className="text-xl md:text-2xl font-bold text-green-900 mb-2">{t("transport.upass.title")}</h2>
                   <p className="text-green-700 mb-4">
-                    As a UW student, your Husky Card works as an unlimited transit pass. It covers King County Metro buses, 
-                    Link Light Rail, Sound Transit, Seattle Streetcar, and Water Taxi.
+                    {t("transport.upass.description")}
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <div className="flex items-center gap-2 text-sm bg-green-100 text-green-800 px-3 py-1.5 rounded-full">
                       <CheckCircle className="h-4 w-4" />
-                      <span>Activate via MyUW</span>
+                      <span>{t("transport.upass.activate")}</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm bg-green-100 text-green-800 px-3 py-1.5 rounded-full">
                       <CheckCircle className="h-4 w-4" />
-                      <span>Tap at ORCA reader</span>
+                      <span>{t("transport.upass.tap")}</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm bg-green-100 text-green-800 px-3 py-1.5 rounded-full">
                       <CheckCircle className="h-4 w-4" />
-                      <span>Valid during enrolled quarters</span>
+                      <span>{t("transport.upass.valid")}</span>
                     </div>
                   </div>
                 </div>
@@ -181,8 +183,8 @@ const TransportGuide = () => {
         {/* Getting to Campus */}
         <section className="py-12 md:py-16 bg-background">
           <div className="container">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3">Getting to Campus</h2>
-            <p className="text-muted-foreground mb-8">How to reach UW from major locations</p>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">{t("transport.gettingToCampus.title")}</h2>
+            <p className="text-muted-foreground mb-8">{t("transport.gettingToCampus.subtitle")}</p>
 
             <div className="grid md:grid-cols-3 gap-5">
               {/* From Airport */}
@@ -191,20 +193,20 @@ const TransportGuide = () => {
                   <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-500 text-white">
                     <Plane className="h-5 w-5" />
                   </div>
-                  <h3 className="font-semibold">From SeaTac Airport</h3>
+                  <h3 className="font-semibold">{t("transport.gettingToCampus.fromAirport")}</h3>
                 </div>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-start gap-2">
                     <Train className="h-4 w-4 text-blue-600 mt-0.5 shrink-0" />
-                    <span>Take Link Light Rail (1 Line) directly to UW Station</span>
+                    <span>{t("transport.gettingToCampus.airportTip")}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 shrink-0" />
-                    <span><strong>FREE</strong> with your U-Pass!</span>
+                    <span><strong>{t("transport.gettingToCampus.airportFree")}</strong></span>
                   </li>
                   <li className="flex items-start gap-2">
                     <MapPin className="h-4 w-4 text-muted-foreground mt-0.5 shrink-0" />
-                    <span>~45 minutes, runs every 6-10 min</span>
+                    <span>{t("transport.gettingToCampus.airportTime")}</span>
                   </li>
                 </ul>
               </div>
@@ -215,20 +217,20 @@ const TransportGuide = () => {
                   <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary text-white">
                     <Bus className="h-5 w-5" />
                   </div>
-                  <h3 className="font-semibold">From Downtown Seattle</h3>
+                  <h3 className="font-semibold">{t("transport.gettingToCampus.fromDowntown")}</h3>
                 </div>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-start gap-2">
                     <Train className="h-4 w-4 text-blue-600 mt-0.5 shrink-0" />
-                    <span>Light Rail: Westlake → UW Station (15 min)</span>
+                    <span>{t("transport.gettingToCampus.downtownRail")}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Bus className="h-4 w-4 text-green-600 mt-0.5 shrink-0" />
-                    <span>Bus 70, 71, 73: Multiple stops on campus</span>
+                    <span>{t("transport.gettingToCampus.downtownBus")}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <MapPin className="h-4 w-4 text-muted-foreground mt-0.5 shrink-0" />
-                    <span>Frequent service during rush hours</span>
+                    <span>{t("transport.gettingToCampus.downtownFreq")}</span>
                   </li>
                 </ul>
               </div>
@@ -239,7 +241,7 @@ const TransportGuide = () => {
                   <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-green-600 text-white">
                     <MapPin className="h-5 w-5" />
                   </div>
-                  <h3 className="font-semibold">From Nearby Areas</h3>
+                  <h3 className="font-semibold">{t("transport.gettingToCampus.fromNearby")}</h3>
                 </div>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-start gap-2">
@@ -267,8 +269,8 @@ const TransportGuide = () => {
         {/* Popular Routes */}
         <section className="py-12 md:py-16 bg-muted/30">
           <div className="container">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3">Popular Student Routes</h2>
-            <p className="text-muted-foreground mb-8">Routes you'll use most often – save these for quick reference!</p>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">{t("transport.routes.title")}</h2>
+            <p className="text-muted-foreground mb-8">{t("transport.routes.subtitle")}</p>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {popularRoutes.map((route) => (
@@ -281,8 +283,8 @@ const TransportGuide = () => {
         {/* Essential Apps Section */}
         <section className="py-12 md:py-16 bg-background">
           <div className="container">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3">Essential Apps</h2>
-            <p className="text-muted-foreground mb-8">Download these before your first day</p>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">{t("transport.apps.title")}</h2>
+            <p className="text-muted-foreground mb-8">{t("transport.apps.subtitle")}</p>
             
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
               {transportApps.map((app) => (
@@ -295,8 +297,8 @@ const TransportGuide = () => {
         {/* Quick Reference Section */}
         <section className="py-12 md:py-16 bg-muted/30">
           <div className="container">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-center">📌 Quick Reference</h2>
-            <p className="text-muted-foreground mb-8 text-center">Important contacts and info at your fingertips</p>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-center">{t("transport.quickRef.title")}</h2>
+            <p className="text-muted-foreground mb-8 text-center">{t("transport.quickRef.subtitle")}</p>
             
             <div className="max-w-3xl mx-auto">
               <QuickReferenceCard />
@@ -307,8 +309,8 @@ const TransportGuide = () => {
         {/* Transportation Tips */}
         <section className="py-12 md:py-16 bg-secondary/30">
           <div className="container">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3">Tips for New Students</h2>
-            <p className="text-muted-foreground mb-8">Transit etiquette and safety advice</p>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">{t("transport.tips.title")}</h2>
+            <p className="text-muted-foreground mb-8">{t("transport.tips.subtitle")}</p>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {transportTips.map((tip) => (
@@ -321,8 +323,8 @@ const TransportGuide = () => {
         {/* Campus Shuttles */}
         <section className="py-12 md:py-16 bg-background">
           <div className="container">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3">Campus Shuttle Services</h2>
-            <p className="text-muted-foreground mb-8">Free shuttles operated by UW Transportation</p>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">{t("transport.shuttles.title")}</h2>
+            <p className="text-muted-foreground mb-8">{t("transport.shuttles.subtitle")}</p>
 
             <div className="grid md:grid-cols-2 gap-5 max-w-4xl">
               {shuttleServices.map((shuttle) => (
@@ -340,10 +342,9 @@ const TransportGuide = () => {
                 <AlertCircle className="h-6 w-6" />
               </div>
               <div>
-                <h3 className="font-semibold mb-2">First Week Tip</h3>
+                <h3 className="font-semibold mb-2">{t("transport.firstWeekTip.title")}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Activate your U-Pass through MyUW <strong>before</strong> your first bus ride. It takes 24-48 hours to activate. 
-                  If you need to travel before activation, single-ride fares are $2.75 (pay with ORCA or credit card).
+                  {t("transport.firstWeekTip.content")}
                 </p>
               </div>
             </div>

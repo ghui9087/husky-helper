@@ -1,5 +1,6 @@
 import { Home, MapPin, CheckCircle, AlertTriangle, ExternalLink, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NeighborhoodCard from "@/components/housing/NeighborhoodCard";
@@ -142,6 +143,8 @@ const resources = [
 ];
 
 const HousingGuide = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -164,7 +167,7 @@ const HousingGuide = () => {
                   className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-4 transition-colors"
                 >
                   <ArrowLeft className="h-4 w-4" />
-                  Back to Home
+                  {t("common.backToHome")}
                 </Link>
                 
                 <div className="flex items-center gap-4 mb-3">
@@ -172,11 +175,11 @@ const HousingGuide = () => {
                     <Home className="h-6 w-6 md:h-7 md:w-7 text-white" />
                   </div>
                   <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-                    Housing Guide
+                    {t("housing.title")}
                   </h1>
                 </div>
                 <p className="text-base md:text-lg text-white/90 max-w-2xl">
-                  Find safe neighborhoods, discover student-friendly apartments, and learn what to look for when renting in Seattle.
+                  {t("housing.subtitle")}
                 </p>
               </div>
             </div>
@@ -188,10 +191,10 @@ const HousingGuide = () => {
           <div className="container">
             <div className="flex items-center gap-3 mb-3">
               <MapPin className="h-5 sm:h-6 w-5 sm:w-6 text-primary" />
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">Safe Neighborhoods</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">{t("housing.neighborhoods.title")}</h2>
             </div>
             <p className="text-muted-foreground mb-8 sm:mb-10 max-w-2xl text-sm sm:text-base">
-              Popular areas near UW where students typically live. Each has its own character and trade-offs.
+              {t("housing.neighborhoods.subtitle")}
             </p>
 
             <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
@@ -211,10 +214,10 @@ const HousingGuide = () => {
           <div className="container">
             <div className="flex items-center gap-3 mb-3">
               <Home className="h-5 sm:h-6 w-5 sm:w-6 text-primary" />
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">Popular Student Apartments</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">{t("housing.apartments.title")}</h2>
             </div>
             <p className="text-muted-foreground mb-8 sm:mb-10 max-w-2xl text-sm sm:text-base">
-              These are commonly recommended by students. Prices are estimates and may vary.
+              {t("housing.apartments.subtitle")}
             </p>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -232,28 +235,28 @@ const HousingGuide = () => {
         {/* Rental Tips Section */}
         <section id="tips" className="py-16 md:py-20 bg-background">
           <div className="container">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3">Rental Tips</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">{t("housing.tips.title")}</h2>
             <p className="text-muted-foreground mb-10 max-w-2xl">
-              What to know before signing a lease. These tips can save you from common problems.
+              {t("housing.tips.subtitle")}
             </p>
 
             <div className="grid md:grid-cols-3 gap-6">
               <RentalTip
-                title="Before Signing"
+                title={t("housing.tips.beforeSigning")}
                 items={checklistItems}
                 icon={CheckCircle}
                 variant="check"
                 delay={0.1}
               />
               <RentalTip
-                title="Red Flags to Avoid"
+                title={t("housing.tips.redFlags")}
                 items={redFlags}
                 icon={AlertTriangle}
                 variant="warning"
                 delay={0.2}
               />
               <RentalTip
-                title="Where to Find Listings"
+                title={t("housing.tips.whereTo")}
                 items={resources}
                 icon={ExternalLink}
                 variant="link"
@@ -267,8 +270,7 @@ const HousingGuide = () => {
         <section className="py-10 bg-muted">
           <div className="container">
             <p className="text-center text-sm text-muted-foreground max-w-3xl mx-auto">
-              <strong>Disclaimer:</strong> This information is based on student experiences and is for reference only. 
-              Prices, availability, and conditions may change. Always verify details independently before making any decisions.
+              <strong>{t("footer.disclaimer")}</strong> {t("housing.disclaimer")}
             </p>
           </div>
         </section>
