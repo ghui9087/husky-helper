@@ -7,76 +7,268 @@
     "transport": "交通出行",
     "contact": "联系我们"
   },
+  "common": {
+    "backToHome": "返回首页"
+  },
   "hero": {
     "badge": "学生创作，服务学生",
     "slogan": "无限可能",
     "welcome": "欢迎来到",
     "subtitle": "你的校园生存指南",
-    "description": "由学生创建的资源，帮助国际学生了解西雅图和华盛顿大学校园生活。找到住房、发现美食，充分享受你的Husky体验。",
-    "goDawgs": "冲啊哈士奇！",
+    "description": "由学生创建的资源，帮助国际学生适应西雅图和UW校园生活。找到住房，发现美食，充分享受你的Husky体验。",
+    "goDawgs": "Go Dawgs！",
     "exploreGuides": "探索指南",
     "startCampus": "从校园生活开始",
     "meetDubs": "认识Dubs",
     "mascotDesc": "我们可爱的UW吉祥物",
-    "woofMessage": "汪！冲啊哈士奇！"
+    "woofMessage": "汪！Go Dawgs！"
   },
   "carousel": {
-    "title": "探索美丽的校园",
-    "subtitle": "发现华大西雅图的独特魅力",
-    "cherryBlossom": "樱花季",
-    "cherryDesc": "四方院樱花盛开",
+    "title": "探索我们美丽的校园",
+    "subtitle": "发现是什么让UW西雅图如此特别",
+    "cherryBlossom": "樱花季节",
+    "cherryDesc": "盛开的樱花广场",
     "library": "苏萨洛图书馆",
-    "libraryDesc": "哈利波特风格阅览室",
-    "fountain": "鼓手喷泉",
+    "libraryDesc": "\"哈利波特\"阅览室",
+    "fountain": "德拉姆海勒喷泉",
     "fountainDesc": "标志性校园地标"
   },
   "features": {
     "title": "你需要知道的一切",
-    "subtitle": "在华大西雅图茁壮成长的全面指南",
+    "subtitle": "在UW西雅图茁壮成长的综合指南",
     "campusLife": {
       "title": "校园生活",
-      "description": "华大西雅图校园的重要地点、资源和导航技巧"
+      "description": "UW西雅图校园的重要地点、资源和导航技巧"
     },
     "housing": {
       "title": "住房指南",
-      "description": "在校园附近找到理想的社区和公寓"
+      "description": "在校园附近找到完美的社区和公寓"
     },
     "food": {
       "title": "美食餐饮",
-      "description": "发现华大周边最好的餐厅和美食点"
+      "description": "发现UW周围最好的餐厅和美食点"
     },
     "transport": {
       "title": "交通出行",
-      "description": "掌握西雅图的公交系统和U-PASS"
+      "description": "掌握西雅图的交通系统和U-PASS"
     },
     "learnMore": "了解更多"
   },
   "about": {
-    "title": "由Huskies创作，为Huskies服务",
-    "subtitle": "我们知道在一个新的国家重新开始有多么令人不知所措。这就是我们创建这个指南的原因。",
+    "title": "由Husky创建，为Husky服务",
+    "subtitle": "我们知道在新国家重新开始会有多么令人不知所措。这就是我们创建这个指南的原因。",
     "byStudents": "学生创作",
-    "byStudentsDesc": "由经历过一切的国际学生创建",
+    "byStudentsDesc": "由经历过这一切的国际学生创建",
     "community": "社区驱动",
     "communityDesc": "基于真实经验和反馈的推荐",
     "updated": "持续更新",
-    "updatedDesc": "定期添加新的技巧和信息",
-    "contactPrompt": "有建议想分享或改进意见？",
+    "updatedDesc": "定期添加新的建议和信息",
+    "contactPrompt": "有建议或改进意见吗？",
     "getInTouch": "联系我们 →"
   },
   "footer": {
-    "description": "由学生创建的资源，帮助国际学生了解华大西雅图，充分享受Husky体验。",
-    "madeBy": "由华大学生创作，服务华大学生 💜",
+    "description": "由学生创建的资源，帮助国际学生适应UW西雅图并充分利用他们的Husky体验。",
+    "madeBy": "由UW学生创建，为UW学生服务 💜",
     "quickLinks": "快速链接",
     "uwResources": "UW资源",
-    "uwOfficial": "UW官网",
+    "uwOfficial": "UW官方网站",
     "myuw": "MyUW门户",
-    "iss": "UW国际学生服务",
+    "iss": "UW ISS",
     "getInTouch": "联系方式",
-    "suggestions": "有建议或更正？我们很乐意听取！",
+    "suggestions": "有建议或更正？我们很乐意听取您的意见！",
     "copyright": "UW生存指南。所有信息按原样提供。",
-    "notAffiliated": "与华盛顿大学无官方关联。",
+    "notAffiliated": "非华盛顿大学官方附属机构。",
     "lastUpdated": "最后更新",
     "disclaimer": "免责声明：",
-    "disclaimerText": "本指南由学生创建，仅供参考。信息可能过时或不准确。请务必与UW官方来源核实重要细节。我们不对基于此信息做出的任何决定负责。"
+    "disclaimerText": "本指南由学生创建，仅供参考。信息可能过时或不准确。请务必通过UW官方渠道核实重要细节。我们不对基于此信息做出的任何决定负责。"
+  },
+  "campusLife": {
+    "title": "校园生活必备",
+    "subtitle": "在UW顺利起步所需的一切。从第一周任务到紧急联系方式。",
+    "firstWeek": {
+      "title": "第一周清单",
+      "subtitle": "在第一周完成这些任务，为成功做好准备。优先完成高优先级项目！",
+      "huskyCard": "领取Husky Card",
+      "huskyCardDesc": "你的官方UW身份证。进入建筑物、图书馆、健身房、交通等都需要它。在Schmitz Hall的Husky Card办公室领取。",
+      "upass": "激活U-Pass",
+      "upassDesc": "免费无限乘坐公交和轻轨！在第一周通过MyUW账户激活。",
+      "myuw": "设置MyUW账户",
+      "myuwDesc": "你的选课、成绩、邮件和所有UW服务的门户。使用你的UW NetID登录。",
+      "classrooms": "找到你的教室",
+      "classroomsDesc": "开课前在校园里走一走。UW校园很大——提前了解你要去的地方！",
+      "clubs": "加入学生组织",
+      "clubsDesc": "UW有超过1000个社团！去学生活动办公室或参加RSO博览会找到你的社区。"
+    },
+    "scenery": {
+      "title": "校园风景",
+      "subtitle": "校园里你会想要探索和拍照的美丽景点。",
+      "suzzallo": "苏萨洛图书馆阅览室",
+      "suzzalloDesc": "标志性的\"哈利波特\"图书馆，拥有令人惊叹的哥特式建筑",
+      "redSquare": "红场和德拉姆海勒喷泉",
+      "redSquareDesc": "校园的心脏，晴天可以看到雷尼尔山",
+      "mapTitle": "📍 探索完整校园地图",
+      "mapSubtitle": "帮助你找到建筑物、停车场等的互动地图。",
+      "openMap": "打开UW地图"
+    },
+    "locations": {
+      "title": "必备校园地点",
+      "subtitle": "知道在哪里学习、锻炼、寻求帮助和喝咖啡。这些是你最常去的地方。",
+      "odegaard": "Odegaard图书馆",
+      "odegaardDesc": "24/7本科生图书馆，有小组学习室、电脑实验室和受欢迎的UW星巴克。",
+      "suzzallo": "苏萨洛图书馆",
+      "suzzalloDesc": "标志性的'哈利波特'图书馆。美丽的阅览室、安静的学习空间和研究资源。",
+      "ima": "IMA（校内体育活动）",
+      "imaDesc": "先进的健身房，有游泳池、攀岩墙、篮球场和健身课程。学生免费！",
+      "espresso": "苏萨洛咖啡厅",
+      "espressoDesc": "苏萨洛图书馆里的温馨咖啡厅。学习时喝咖啡和吃点心的好地方。",
+      "hub": "HUB（Husky联盟大楼）",
+      "hubDesc": "学生中心，有美食广场、学习休息室、保龄球馆和学生组织办公室。",
+      "labs": "电脑实验室",
+      "labsDesc": "校园内多个实验室提供打印、扫描和软件。Odegaard和Mary Gates Hall很受欢迎。",
+      "health": "Hall Health中心",
+      "healthDesc": "初级保健、心理健康、药房和健康教育。大多数服务由学生保险覆盖。",
+      "allen": "安静学习：Allen图书馆",
+      "allenDesc": "北翼有专门的安静楼层。非常适合专注学习和研究。"
+    },
+    "apps": {
+      "title": "实用应用和资源",
+      "subtitle": "下载这些应用并收藏这些网站。它们会让你的UW生活更轻松。",
+      "myuwApp": "MyUW手机应用",
+      "myuwAppDesc": "随时查看课程、成绩、校园地图和公交时刻表。",
+      "safeCampus": "UW SafeCampus",
+      "safeCampusDesc": "报告安全问题，访问紧急资源，并获得实时警报。",
+      "transit": "Transit App / OneBusAway",
+      "transitDesc": "西雅图交通的实时公交到达和行程规划。",
+      "wechat": "UW国际学生微信群",
+      "wechatDesc": "与其他国际学生联系。搜索'UW Class of [年份]'群组。",
+      "canvas": "Canvas（学习平台）",
+      "canvasDesc": "教授发布作业、讲座和成绩的地方。每天查看！",
+      "iss": "ISS网站",
+      "issDesc": "国际学生服务门户，提供签证信息、活动和资源。"
+    },
+    "emergency": {
+      "title": "紧急联系方式",
+      "subtitle": "把这些号码存在手机里。你可能永远不需要它们，但重要的是要有。",
+      "police": "UW警察局",
+      "policeDesc": "24/7校园警察处理紧急情况。危及生命的紧急情况请拨打911。",
+      "hallHealth": "Hall Health中心",
+      "hallHealthDesc": "工作时间的医疗预约和健康咨询。",
+      "issContact": "国际学生服务",
+      "issContactDesc": "签证问题、旅行签名和国际学生支持。",
+      "counseling": "心理咨询中心",
+      "counselingDesc": "学生免费心理健康咨询。提供危机支持。",
+      "safeCampusLine": "SafeCampus 24/7热线",
+      "safeCampusLineDesc": "报告问题、获取建议或随时与人交谈。",
+      "lifeThreatening": "危及生命的紧急情况",
+      "call911": "拨打911",
+      "available247": "警察、消防、医疗紧急情况 - 24/7可用"
+    },
+    "proTip": {
+      "title": "国际学生小贴士",
+      "content": "在第一周访问Schmitz Hall的国际学生服务（ISS）办公室。他们可以帮助解决签证问题、文化适应，并将你与其他国际学生联系起来。"
+    }
+  },
+  "housing": {
+    "title": "住房指南",
+    "subtitle": "找到安全的社区，发现学生友好的公寓，了解在西雅图租房时要注意什么。",
+    "neighborhoods": {
+      "title": "安全社区",
+      "subtitle": "UW附近学生通常居住的热门区域。每个区域都有自己的特点和权衡。"
+    },
+    "apartments": {
+      "title": "热门学生公寓",
+      "subtitle": "这些是学生常推荐的。价格是估计值，可能会有变化。"
+    },
+    "tips": {
+      "title": "租房技巧",
+      "subtitle": "签约前需要知道的事情。这些技巧可以帮你避免常见问题。",
+      "beforeSigning": "签约前",
+      "redFlags": "要避免的警示信号",
+      "whereTo": "在哪里找房源"
+    },
+    "disclaimer": "此信息基于学生经验，仅供参考。价格、可用性和条件可能会发生变化。在做任何决定之前，请务必独立核实详情。"
+  },
+  "food": {
+    "title": "美食餐饮",
+    "subtitle": "发现UW校园附近最好的美食。从课间快餐到周末早午餐。",
+    "stats": {
+      "restaurants": "15+家餐厅",
+      "budget": "价格实惠",
+      "discounts": "学生折扣"
+    },
+    "showing": "显示",
+    "restaurants": "家餐厅",
+    "topPicks": "UW学生的热门选择",
+    "proTips": {
+      "title": "校园附近用餐小贴士",
+      "huskyCard": "使用Husky Card",
+      "huskyCardDesc": "很多U-District餐厅提供10-15%的学生折扣。记得询问！",
+      "peakHours": "避开高峰时段",
+      "peakHoursDesc": "热门餐厅12-1点很拥挤。早点或晚点吃等待时间更短。",
+      "checkApps": "查看应用",
+      "checkAppsDesc": "使用DoorDash、Uber Eats或Snackpass获取学生优惠和免费配送。"
+    },
+    "disclaimer": "价格、营业时间和菜品可能会变化。部分餐厅可能暂时关闭。建议访问前先查看Google Maps或电话确认。"
+  },
+  "transport": {
+    "title": "西雅图交通指南",
+    "subtitle": "你的Husky Card就是免费交通卡。公交、地铁、有轨电车——都包含在学费里！",
+    "saveTip": "保存此页面 - 截图你最常用的路线！",
+    "upass": {
+      "title": "U-Pass = 免费无限交通！",
+      "description": "作为UW学生，你的Husky Card就是无限交通卡。涵盖King County Metro公交、Link轻轨、Sound Transit、西雅图有轨电车和水上出租车。",
+      "activate": "通过MyUW激活",
+      "tap": "在ORCA读卡器刷卡",
+      "valid": "注册学期期间有效"
+    },
+    "gettingToCampus": {
+      "title": "到达校园",
+      "subtitle": "如何从主要地点到达UW",
+      "fromAirport": "从SeaTac机场",
+      "airportTip": "乘坐Link轻轨（1号线）直达UW站",
+      "airportFree": "U-Pass免费！",
+      "airportTime": "约45分钟，每6-10分钟一班",
+      "fromDowntown": "从西雅图市中心",
+      "downtownRail": "轻轨：Westlake → UW站（15分钟）",
+      "downtownBus": "公交70、71、73：校园内多站点",
+      "downtownFreq": "高峰期班次频繁",
+      "fromNearby": "从附近区域"
+    },
+    "routes": {
+      "title": "热门学生路线",
+      "subtitle": "你最常用的路线——保存以便快速查看！"
+    },
+    "apps": {
+      "title": "必备应用",
+      "subtitle": "第一天前下载这些"
+    },
+    "quickRef": {
+      "title": "📌 快速参考",
+      "subtitle": "重要联系方式和信息触手可及"
+    },
+    "tips": {
+      "title": "新生交通小贴士",
+      "subtitle": "交通礼仪和安全建议",
+      "tap": "每次刷卡",
+      "tapDesc": "上公交和在轻轨站时刷Husky Card。免费但必须刷！",
+      "stop": "请求停站",
+      "stopDesc": "在你要下车的站点附近拉黄色绳子或按红色按钮。公交不会自动停。",
+      "offline": "离线下载",
+      "offlineDesc": "为信号差的区域保存离线公交时刻表和地图。",
+      "night": "夜间安全",
+      "nightDesc": "天黑后走灯光明亮的路线。使用NightRide班车或和朋友一起出行。",
+      "bike": "共享单车",
+      "bikeDesc": "Lime单车在校园各处。公交不来时短途出行很方便。",
+      "aware": "保持警觉",
+      "awareDesc": "保持一只耳朵不戴耳机，保持警觉，特别是晚上或在不熟悉的区域。"
+    },
+    "shuttles": {
+      "title": "校园班车服务",
+      "subtitle": "UW交通部门运营的免费班车"
+    },
+    "firstWeekTip": {
+      "title": "第一周小贴士",
+      "content": "在第一次乘公交前通过MyUW激活U-Pass。激活需要24-48小时。如果需要在激活前出行，单程票价$2.75（用ORCA或信用卡支付）。"
+    }
   }
 }
