@@ -1,4 +1,4 @@
-import { MapPin, Percent, Globe, UtensilsCrossed } from "lucide-react";
+import { Percent } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface RestaurantCardProps {
@@ -51,11 +51,10 @@ const RestaurantCard = ({
     }
   };
 
-  // Format Google Maps URL with proper API format
-  const googleMapsSearchUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name + ' Seattle WA')}`;
-  
-  // Menu search URL fallback
-  const menuSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(name + ' Seattle menu')}`;
+  // Google Maps search URL (University District)
+  const googleMapsSearchUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    `${name} University District Seattle`
+  )}`;
 
   return (
     <div
@@ -111,57 +110,25 @@ const RestaurantCard = ({
           {description}
         </p>
 
-        {/* Action Buttons - Simple <a> tags */}
-        <div className="flex flex-col gap-2 mt-auto pt-2">
-          {/* Primary row: Maps + Website */}
-          <div className="flex gap-2">
-            {/* Google Maps Button */}
-            <a
-              href={googleMapsSearchUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 inline-flex items-center justify-center gap-1.5 h-10 px-3 text-xs sm:text-sm font-medium rounded-lg border border-input bg-background hover:bg-secondary hover:border-primary/30 transition-all"
-            >
-              <MapPin className="h-4 w-4 text-red-500" />
-              <span className="hidden sm:inline">View on Maps</span>
-              <span className="sm:hidden">Maps</span>
-            </a>
-            
-            {/* Website Button */}
-            {websiteUrl && (
-              <a
-                href={websiteUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 inline-flex items-center justify-center gap-1.5 h-10 px-3 text-xs sm:text-sm font-medium rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-[1.02] transition-all"
-              >
-                <Globe className="h-4 w-4" />
-                <span className="hidden sm:inline">Visit Website</span>
-                <span className="sm:hidden">Website</span>
-              </a>
-            )}
-          </div>
+        {/* Simple external links (no buttons, no onClick, no embeds) */}
+        <div className="mt-auto pt-2 space-y-2">
+          <a
+            href={googleMapsSearchUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex w-full items-center justify-center rounded-lg px-3 py-2 text-sm font-medium underline underline-offset-4 text-primary hover:text-primary/80 transition-colors"
+          >
+            📍 View on Google Maps
+          </a>
 
-          {/* Menu Button */}
-          {menuUrl ? (
+          {websiteUrl && (
             <a
-              href={menuUrl}
+              href={websiteUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-1.5 h-9 px-3 text-xs sm:text-sm font-medium rounded-lg bg-secondary text-secondary-foreground hover:bg-accent/20 transition-all"
+              className="inline-flex w-full items-center justify-center rounded-lg px-3 py-2 text-sm font-medium underline underline-offset-4 text-primary hover:text-primary/80 transition-colors"
             >
-              <UtensilsCrossed className="h-4 w-4" />
-              View Menu
-            </a>
-          ) : !websiteUrl && (
-            <a
-              href={menuSearchUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-1.5 h-9 px-3 text-xs sm:text-sm font-medium rounded-lg bg-secondary text-secondary-foreground hover:bg-accent/20 transition-all"
-            >
-              <UtensilsCrossed className="h-4 w-4" />
-              Find Menu
+              🌐 Visit Website
             </a>
           )}
         </div>
