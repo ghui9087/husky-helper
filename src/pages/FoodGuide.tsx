@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import RestaurantCard from "@/components/food/RestaurantCard";
 import FilterTabs from "@/components/food/FilterTabs";
 import { categories, filterRestaurants } from "@/data/restaurants";
+import udistrictFood from "@/assets/udistrict-food.jpg";
 
 const FoodGuide = () => {
   const [activeCategory, setActiveCategory] = useState("All Restaurants");
@@ -19,32 +20,39 @@ const FoodGuide = () => {
       <Header />
       
       <main className="flex-1">
-        {/* Hero Section - Warm food colors */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-amber-500 via-orange-500 to-red-500 py-16 md:py-20">
-          {/* Decorative elements */}
-          <div className="absolute top-10 right-10 w-64 h-64 bg-yellow-300/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-red-600/20 rounded-full blur-3xl" />
-          
-          <div className="container relative">
-            <Link 
-              to="/" 
-              className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Back to Home
-            </Link>
+        {/* Hero Section with Image */}
+        <section className="relative">
+          <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden">
+            <img 
+              src={udistrictFood} 
+              alt="Students enjoying food in University District restaurants" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-amber-600/70 via-orange-500/50 to-red-500/80" />
             
-            <div className="flex items-center gap-4 mb-4">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 backdrop-blur">
-                <Utensils className="h-7 w-7 text-white" />
+            <div className="absolute inset-0 flex items-center">
+              <div className="container">
+                <Link 
+                  to="/" 
+                  className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-4 transition-colors"
+                >
+                  <ArrowLeft className="h-4 w-4" />
+                  Back to Home
+                </Link>
+                
+                <div className="flex items-center gap-4 mb-3">
+                  <div className="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-2xl bg-white/10 backdrop-blur">
+                    <Utensils className="h-6 w-6 md:h-7 md:w-7 text-white" />
+                  </div>
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                    Food & Dining
+                  </h1>
+                </div>
+                <p className="text-base md:text-lg text-white/90 max-w-2xl">
+                  Discover the best eats near UW campus. From quick bites between classes to weekend brunch spots.
+                </p>
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-                Food & Dining
-              </h1>
             </div>
-            <p className="text-lg text-white/90 max-w-2xl">
-              Discover the best eats near UW campus. From quick bites between classes to weekend brunch spots.
-            </p>
           </div>
         </section>
 

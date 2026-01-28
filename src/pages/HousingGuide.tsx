@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import NeighborhoodCard from "@/components/housing/NeighborhoodCard";
 import ApartmentCard from "@/components/housing/ApartmentCard";
 import RentalTip from "@/components/housing/RentalTip";
+import seattleHousing from "@/assets/seattle-housing.jpg";
 
 const neighborhoods = [
   {
@@ -146,28 +147,39 @@ const HousingGuide = () => {
       <Header />
       
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="hero-gradient py-16 md:py-20">
-          <div className="container">
-            <Link 
-              to="/" 
-              className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground mb-6 transition-colors"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Back to Home
-            </Link>
+        {/* Hero Section with Image */}
+        <section className="relative">
+          <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden">
+            <img 
+              src={seattleHousing} 
+              alt="Student apartments in Seattle University District" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/50 to-primary/80" />
             
-            <div className="flex items-center gap-4 mb-4">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-foreground/10 backdrop-blur">
-                <Home className="h-7 w-7 text-primary-foreground" />
+            <div className="absolute inset-0 flex items-center">
+              <div className="container">
+                <Link 
+                  to="/" 
+                  className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-4 transition-colors"
+                >
+                  <ArrowLeft className="h-4 w-4" />
+                  Back to Home
+                </Link>
+                
+                <div className="flex items-center gap-4 mb-3">
+                  <div className="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-2xl bg-white/10 backdrop-blur">
+                    <Home className="h-6 w-6 md:h-7 md:w-7 text-white" />
+                  </div>
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                    Housing Guide
+                  </h1>
+                </div>
+                <p className="text-base md:text-lg text-white/90 max-w-2xl">
+                  Find safe neighborhoods, discover student-friendly apartments, and learn what to look for when renting in Seattle.
+                </p>
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground">
-                Housing Guide
-              </h1>
             </div>
-            <p className="text-lg text-primary-foreground/80 max-w-2xl">
-              Find safe neighborhoods, discover student-friendly apartments, and learn what to look for when renting in Seattle.
-            </p>
           </div>
         </section>
 
