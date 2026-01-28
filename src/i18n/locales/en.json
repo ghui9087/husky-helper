@@ -7,6 +7,9 @@
     "transport": "Getting Around",
     "contact": "Contact Us"
   },
+  "common": {
+    "backToHome": "Back to Home"
+  },
   "hero": {
     "badge": "Made by students, for students",
     "slogan": "Be Boundless",
@@ -78,5 +81,194 @@
     "lastUpdated": "Last updated",
     "disclaimer": "Disclaimer:",
     "disclaimerText": "This guide is created by students and is for informational purposes only. Information may be outdated or inaccurate. Always verify important details with official UW sources. We are not responsible for any decisions made based on this information."
+  },
+  "campusLife": {
+    "title": "Campus Life Essentials",
+    "subtitle": "Everything you need to know to hit the ground running at UW. From your first week tasks to emergency contacts.",
+    "firstWeek": {
+      "title": "First Week Checklist",
+      "subtitle": "Complete these tasks in your first week to set yourself up for success. High priority items first!",
+      "huskyCard": "Get Your Husky Card",
+      "huskyCardDesc": "Your official UW ID. Needed for building access, library, gym, transit, and more. Get it at the Husky Card Office in Schmitz Hall.",
+      "upass": "Activate Your U-Pass",
+      "upassDesc": "Free unlimited transit on buses and light rail! Activate through your MyUW account within the first week.",
+      "myuw": "Set Up MyUW Account",
+      "myuwDesc": "Your portal for class registration, grades, email, and all UW services. Use your UW NetID to log in.",
+      "classrooms": "Find Your Classrooms",
+      "classroomsDesc": "Do a campus walk-through before classes start. The UW campus is big – know where you're going!",
+      "clubs": "Join Student Organizations",
+      "clubsDesc": "Over 1,000 clubs at UW! Check out the Student Activities Office or attend the RSO Fair to find your community."
+    },
+    "scenery": {
+      "title": "Campus Scenery",
+      "subtitle": "Some beautiful spots on campus you'll want to explore and photograph.",
+      "suzzallo": "Suzzallo Library Reading Room",
+      "suzzalloDesc": "The iconic \"Harry Potter\" library with stunning Gothic architecture",
+      "redSquare": "Red Square & Drumheller Fountain",
+      "redSquareDesc": "The heart of campus with views of Mount Rainier on clear days",
+      "mapTitle": "📍 Explore the Full Campus Map",
+      "mapSubtitle": "Interactive map to help you find buildings, parking, and more.",
+      "openMap": "Open UW Map"
+    },
+    "locations": {
+      "title": "Essential Campus Locations",
+      "subtitle": "Know where to study, work out, get help, and grab coffee. These are the spots you'll visit most.",
+      "odegaard": "Odegaard Library",
+      "odegaardDesc": "24/7 undergraduate library with group study rooms, computer labs, and the popular UW Starbucks.",
+      "suzzallo": "Suzzallo Library",
+      "suzzalloDesc": "The iconic 'Harry Potter' library. Beautiful reading room, quiet study spaces, and research resources.",
+      "ima": "IMA (Intramural Activities)",
+      "imaDesc": "State-of-the-art gym with pools, climbing wall, basketball courts, and fitness classes. Free for students!",
+      "espresso": "Suzzallo Espresso",
+      "espressoDesc": "Cozy café in Suzzallo Library. Great coffee and snacks for study sessions.",
+      "hub": "HUB (Husky Union Building)",
+      "hubDesc": "Student center with food court, study lounges, bowling alley, and student org offices.",
+      "labs": "Computer Labs",
+      "labsDesc": "Multiple labs across campus with printing, scanning, and software. Odegaard and Mary Gates Hall are popular.",
+      "health": "Hall Health Center",
+      "healthDesc": "Primary care, mental health, pharmacy, and health education. Most services covered by student insurance.",
+      "allen": "Quiet Study: Allen Library",
+      "allenDesc": "North wing has dedicated quiet floors. Perfect for focused studying and research."
+    },
+    "apps": {
+      "title": "Useful Apps & Resources",
+      "subtitle": "Download these apps and bookmark these sites. They'll make your UW life much easier.",
+      "myuwApp": "MyUW Mobile App",
+      "myuwAppDesc": "Access classes, grades, campus map, and bus schedules on the go.",
+      "safeCampus": "UW SafeCampus",
+      "safeCampusDesc": "Report safety concerns, access emergency resources, and get real-time alerts.",
+      "transit": "Transit App / OneBusAway",
+      "transitDesc": "Real-time bus arrivals and trip planning for Seattle transit.",
+      "wechat": "UW International WeChat Groups",
+      "wechatDesc": "Connect with other international students. Search 'UW Class of [Year]' groups.",
+      "canvas": "Canvas (Learning Platform)",
+      "canvasDesc": "Where professors post assignments, lectures, and grades. Check daily!",
+      "iss": "ISS Website",
+      "issDesc": "International Student Services portal for visa info, events, and resources."
+    },
+    "emergency": {
+      "title": "Emergency Contacts",
+      "subtitle": "Save these numbers in your phone. You might never need them, but it's important to have them.",
+      "police": "UW Police Department",
+      "policeDesc": "24/7 campus police for emergencies. Call 911 for life-threatening emergencies.",
+      "hallHealth": "Hall Health Center",
+      "hallHealthDesc": "Medical appointments and health advice during business hours.",
+      "issContact": "International Student Services",
+      "issContactDesc": "Visa questions, travel signatures, and international student support.",
+      "counseling": "Counseling Center",
+      "counselingDesc": "Free mental health counseling for students. Crisis support available.",
+      "safeCampusLine": "SafeCampus 24/7 Helpline",
+      "safeCampusLineDesc": "Report concerns, get advice, or talk to someone any time.",
+      "lifeThreatening": "For Life-Threatening Emergencies",
+      "call911": "Call 911",
+      "available247": "Police, Fire, Medical emergencies – available 24/7"
+    },
+    "proTip": {
+      "title": "Pro Tip for International Students",
+      "content": "Visit the International Student Services (ISS) office in Schmitz Hall during your first week. They can help with visa questions, cultural adjustment, and connecting you with other international students."
+    }
+  },
+  "housing": {
+    "title": "Housing Guide",
+    "subtitle": "Find safe neighborhoods, discover student-friendly apartments, and learn what to look for when renting in Seattle.",
+    "neighborhoods": {
+      "title": "Safe Neighborhoods",
+      "subtitle": "Popular areas near UW where students typically live. Each has its own character and trade-offs."
+    },
+    "apartments": {
+      "title": "Popular Student Apartments",
+      "subtitle": "These are commonly recommended by students. Prices are estimates and may vary."
+    },
+    "tips": {
+      "title": "Rental Tips",
+      "subtitle": "What to know before signing a lease. These tips can save you from common problems.",
+      "beforeSigning": "Before Signing",
+      "redFlags": "Red Flags to Avoid",
+      "whereTo": "Where to Find Listings"
+    },
+    "disclaimer": "This information is based on student experiences and is for reference only. Prices, availability, and conditions may change. Always verify details independently before making any decisions."
+  },
+  "food": {
+    "title": "Food & Dining",
+    "subtitle": "Discover the best eats near UW campus. From quick bites between classes to weekend brunch spots.",
+    "stats": {
+      "restaurants": "15+ restaurants",
+      "budget": "Budget-friendly",
+      "discounts": "Student discounts"
+    },
+    "showing": "Showing",
+    "restaurants": "restaurants",
+    "topPicks": "Top picks from UW students",
+    "proTips": {
+      "title": "Pro Tips for Eating Near Campus",
+      "huskyCard": "Use Your Husky Card",
+      "huskyCardDesc": "Many U-District restaurants offer 10-15% student discounts. Always ask!",
+      "peakHours": "Avoid Peak Hours",
+      "peakHoursDesc": "Popular spots get crowded 12-1pm. Eat early or late for shorter waits.",
+      "checkApps": "Check Apps",
+      "checkAppsDesc": "Use DoorDash, Uber Eats, or Snackpass for student deals and free delivery."
+    },
+    "disclaimer": "Prices, hours, and offerings may change. Some restaurants may be temporarily closed. We recommend checking Google Maps or calling ahead before visiting."
+  },
+  "transport": {
+    "title": "Getting Around Seattle",
+    "subtitle": "Your Husky Card is your free transit pass. Buses, trains, streetcars – all included with your tuition!",
+    "saveTip": "Save this page - screenshot the routes you use most!",
+    "upass": {
+      "title": "Your U-Pass = FREE Unlimited Transit!",
+      "description": "As a UW student, your Husky Card works as an unlimited transit pass. It covers King County Metro buses, Link Light Rail, Sound Transit, Seattle Streetcar, and Water Taxi.",
+      "activate": "Activate via MyUW",
+      "tap": "Tap at ORCA reader",
+      "valid": "Valid during enrolled quarters"
+    },
+    "gettingToCampus": {
+      "title": "Getting to Campus",
+      "subtitle": "How to reach UW from major locations",
+      "fromAirport": "From SeaTac Airport",
+      "airportTip": "Take Link Light Rail (1 Line) directly to UW Station",
+      "airportFree": "FREE with your U-Pass!",
+      "airportTime": "~45 minutes, runs every 6-10 min",
+      "fromDowntown": "From Downtown Seattle",
+      "downtownRail": "Light Rail: Westlake → UW Station (15 min)",
+      "downtownBus": "Bus 70, 71, 73: Multiple stops on campus",
+      "downtownFreq": "Frequent service during rush hours",
+      "fromNearby": "From Nearby Areas"
+    },
+    "routes": {
+      "title": "Popular Student Routes",
+      "subtitle": "Routes you'll use most often – save these for quick reference!"
+    },
+    "apps": {
+      "title": "Essential Apps",
+      "subtitle": "Download these before your first day"
+    },
+    "quickRef": {
+      "title": "📌 Quick Reference",
+      "subtitle": "Important contacts and info at your fingertips"
+    },
+    "tips": {
+      "title": "Tips for New Students",
+      "subtitle": "Transit etiquette and safety advice",
+      "tap": "Tap Every Time",
+      "tapDesc": "Tap your Husky Card when boarding buses and at Light Rail stations. It's free but required!",
+      "stop": "Request Your Stop",
+      "stopDesc": "Pull the yellow cord or push the red button near your stop. The bus won't stop automatically.",
+      "offline": "Download Offline",
+      "offlineDesc": "Save bus schedules and maps offline for areas with poor signal.",
+      "night": "Night Safety",
+      "nightDesc": "Stick to well-lit routes after dark. Use NightRide shuttle or travel with friends.",
+      "bike": "Bike Share",
+      "bikeDesc": "Lime bikes are scattered around campus. Great for short trips when the bus isn't coming.",
+      "aware": "Stay Aware",
+      "awareDesc": "Keep one earbud out and stay alert, especially at night or in unfamiliar areas."
+    },
+    "shuttles": {
+      "title": "Campus Shuttle Services",
+      "subtitle": "Free shuttles operated by UW Transportation"
+    },
+    "firstWeekTip": {
+      "title": "First Week Tip",
+      "content": "Activate your U-Pass through MyUW before your first bus ride. It takes 24-48 hours to activate. If you need to travel before activation, single-ride fares are $2.75 (pay with ORCA or credit card)."
+    }
   }
 }
