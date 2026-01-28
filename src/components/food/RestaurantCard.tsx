@@ -52,9 +52,12 @@ const RestaurantCard = ({
   };
 
   // Google Maps search URL (University District)
-  const googleMapsSearchUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    `${name} University District Seattle`
-  )}`;
+  // NOTE: We intentionally keep parentheses unencoded to match the user's required exact format.
+  const mapsQuery = `${name} University District Seattle`;
+  const encodedMapsQuery = encodeURIComponent(mapsQuery)
+    .replace(/%28/g, "(")
+    .replace(/%29/g, ")");
+  const googleMapsSearchUrl = `https://www.google.com/maps/search/?api=1&query=${encodedMapsQuery}`;
 
   return (
     <div
@@ -110,13 +113,13 @@ const RestaurantCard = ({
           {description}
         </p>
 
-        {/* Simple external links (no buttons, no onClick, no embeds) */}
-        <div className="mt-auto pt-2 space-y-2">
+        {/* Simple external links (pure <a> tags; no handlers; no wrappers) */}
+        <div className="mt-auto pt-2 space-y-2 text-sm">
           <a
             href={googleMapsSearchUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center rounded-lg px-3 py-2 text-sm font-medium underline underline-offset-4 text-primary hover:text-primary/80 transition-colors"
+            className="text-primary underline underline-offset-4 hover:text-primary/80"
           >
             📍 View on Google Maps
           </a>
@@ -126,7 +129,7 @@ const RestaurantCard = ({
               href={websiteUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-full items-center justify-center rounded-lg px-3 py-2 text-sm font-medium underline underline-offset-4 text-primary hover:text-primary/80 transition-colors"
+              className="text-primary underline underline-offset-4 hover:text-primary/80"
             >
               🌐 Visit Website
             </a>
