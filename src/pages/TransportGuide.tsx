@@ -10,6 +10,7 @@ import TransportAppCard from "@/components/transport/TransportAppCard";
 import QuickReferenceCard from "@/components/transport/QuickReferenceCard";
 import TransportTip from "@/components/transport/TransportTip";
 import ShuttleCard from "@/components/transport/ShuttleCard";
+import seattleLightRail from "@/assets/seattle-light-rail.jpg";
 
 const popularRoutes = [
   {
@@ -101,34 +102,45 @@ const TransportGuide = () => {
       <Header />
       
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-500 py-12 md:py-20">
-          <div className="container">
-            <Link 
-              to="/" 
-              className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Back to Home
-            </Link>
+        {/* Hero Section with Image */}
+        <section className="relative">
+          <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden">
+            <img 
+              src={seattleLightRail} 
+              alt="Seattle Light Rail at UW Station" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-600/70 via-blue-500/50 to-blue-600/80" />
             
-            {/* Save Tip */}
-            <div className="flex items-center gap-2 mb-6 px-3 py-2 bg-white/10 backdrop-blur rounded-lg w-fit">
-              <Bookmark className="h-4 w-4 text-white" />
-              <span className="text-sm text-white/90">Save this page - screenshot the routes you use most!</span>
-            </div>
+            <div className="absolute inset-0 flex items-center">
+              <div className="container">
+                <Link 
+                  to="/" 
+                  className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-4 transition-colors"
+                >
+                  <ArrowLeft className="h-4 w-4" />
+                  Back to Home
+                </Link>
+                
+                {/* Save Tip */}
+                <div className="flex items-center gap-2 mb-4 px-3 py-2 bg-white/10 backdrop-blur rounded-lg w-fit">
+                  <Bookmark className="h-4 w-4 text-white" />
+                  <span className="text-sm text-white/90">Save this page - screenshot the routes you use most!</span>
+                </div>
 
-            <div className="flex items-center gap-4 mb-4">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 backdrop-blur">
-                <Bus className="h-7 w-7 text-white" />
+                <div className="flex items-center gap-4 mb-3">
+                  <div className="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-2xl bg-white/10 backdrop-blur">
+                    <Bus className="h-6 w-6 md:h-7 md:w-7 text-white" />
+                  </div>
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                    Getting Around Seattle
+                  </h1>
+                </div>
+                <p className="text-base md:text-lg text-white/90 max-w-2xl">
+                  Your Husky Card is your free transit pass. Buses, trains, streetcars – all included with your tuition!
+                </p>
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-                Getting Around Seattle
-              </h1>
             </div>
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl">
-              Your Husky Card is your free transit pass. Buses, trains, streetcars – all included with your tuition!
-            </p>
           </div>
         </section>
 
