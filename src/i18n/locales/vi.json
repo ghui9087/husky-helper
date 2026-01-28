@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "campusLife": "Đời sống Campus",
+    "housing": "Hướng dẫn Nhà ở",
+    "food": "Ẩm thực",
+    "transport": "Di chuyển",
+    "contact": "Liên hệ"
+  },
+  "hero": {
+    "badge": "Sinh viên tạo, vì sinh viên",
+    "slogan": "Không Giới Hạn",
+    "welcome": "Chào mừng đến",
+    "subtitle": "Cẩm nang Sinh tồn Campus",
+    "description": "Tài nguyên do sinh viên tạo ra giúp sinh viên quốc tế tìm hiểu Seattle và đời sống campus UW. Tìm nhà ở, khám phá ẩm thực và tận hưởng trải nghiệm Husky.",
+    "goDawgs": "Go Dawgs!",
+    "exploreGuides": "Khám phá Hướng dẫn",
+    "startCampus": "Bắt đầu với Đời sống Campus",
+    "meetDubs": "Gặp gỡ Dubs",
+    "mascotDesc": "Linh vật UW đáng yêu",
+    "woofMessage": "Gâu! Go Dawgs!"
+  },
+  "carousel": {
+    "title": "Khám phá Campus Tuyệt đẹp",
+    "subtitle": "Khám phá điều đặc biệt của UW Seattle",
+    "cherryBlossom": "Mùa Hoa Anh Đào",
+    "cherryDesc": "The Quad nở rộ",
+    "library": "Thư viện Suzzallo",
+    "libraryDesc": "Phòng đọc Harry Potter",
+    "fountain": "Đài phun nước Drumheller",
+    "fountainDesc": "Địa danh campus biểu tượng"
+  },
+  "features": {
+    "title": "Tất cả những gì bạn cần biết",
+    "subtitle": "Hướng dẫn toàn diện để thành công tại UW Seattle",
+    "campusLife": {
+      "title": "Đời sống Campus",
+      "description": "Địa điểm quan trọng, tài nguyên và mẹo cho campus UW Seattle"
+    },
+    "housing": {
+      "title": "Hướng dẫn Nhà ở",
+      "description": "Tìm khu vực và căn hộ hoàn hảo gần campus"
+    },
+    "food": {
+      "title": "Ẩm thực",
+      "description": "Khám phá nhà hàng và điểm ăn uống tốt nhất quanh UW"
+    },
+    "transport": {
+      "title": "Di chuyển",
+      "description": "Làm chủ hệ thống giao thông Seattle với U-PASS"
+    },
+    "learnMore": "Tìm hiểu thêm"
+  },
+  "about": {
+    "title": "Huskies tạo ra, vì Huskies",
+    "subtitle": "Chúng tôi biết bắt đầu mới ở một đất nước mới có thể khó khăn như thế nào. Đó là lý do chúng tôi tạo cẩm nang này.",
+    "byStudents": "Bởi Sinh viên",
+    "byStudentsDesc": "Được tạo bởi sinh viên quốc tế đã trải qua tất cả",
+    "community": "Cộng đồng Hướng dẫn",
+    "communityDesc": "Đề xuất dựa trên kinh nghiệm và phản hồi thực tế",
+    "updated": "Luôn Cập nhật",
+    "updatedDesc": "Thêm mẹo và thông tin mới thường xuyên",
+    "contactPrompt": "Có mẹo để chia sẻ hoặc đề xuất cải thiện?",
+    "getInTouch": "Liên hệ với chúng tôi →"
+  },
+  "footer": {
+    "description": "Tài nguyên do sinh viên tạo giúp sinh viên quốc tế khám phá UW Seattle và tận hưởng trải nghiệm Husky.",
+    "madeBy": "Sinh viên UW tạo, vì sinh viên UW 💜",
+    "quickLinks": "Liên kết Nhanh",
+    "uwResources": "Tài nguyên UW",
+    "uwOfficial": "Trang web UW",
+    "myuw": "Cổng MyUW",
+    "iss": "UW ISS",
+    "getInTouch": "Liên hệ",
+    "suggestions": "Có đề xuất hoặc chỉnh sửa? Chúng tôi muốn nghe!",
+    "copyright": "UW Survival Guide. Tất cả thông tin được cung cấp nguyên trạng.",
+    "notAffiliated": "Không liên kết chính thức với Đại học Washington.",
+    "lastUpdated": "Cập nhật lần cuối",
+    "disclaimer": "Tuyên bố miễn trừ:",
+    "disclaimerText": "Cẩm nang này được sinh viên tạo và chỉ mang tính thông tin. Thông tin có thể lỗi thời hoặc không chính xác. Luôn xác minh chi tiết quan trọng với nguồn UW chính thức. Chúng tôi không chịu trách nhiệm cho bất kỳ quyết định nào dựa trên thông tin này."
+  }
+}

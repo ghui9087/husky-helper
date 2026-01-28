@@ -1,11 +1,13 @@
 import { MapPin, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import LanguageSelector from "./LanguageSelector";
 
 const Header = () => {
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -27,11 +29,11 @@ const Header = () => {
   }, [isMenuOpen]);
 
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "Campus Life", href: "/campus" },
-    { name: "Housing", href: "/housing" },
-    { name: "Food & Dining", href: "/food" },
-    { name: "Getting Around", href: "/transport" },
+    { name: t("nav.home"), href: "/" },
+    { name: t("nav.campusLife"), href: "/campus" },
+    { name: t("nav.housing"), href: "/housing" },
+    { name: t("nav.food"), href: "/food" },
+    { name: t("nav.transport"), href: "/transport" },
   ];
 
   const isActive = (href: string) => {
@@ -55,7 +57,7 @@ const Header = () => {
         <nav className="hidden lg:flex items-center gap-1">
           {navLinks.map((link) => (
             <Link
-              key={link.name}
+              key={link.href}
               to={link.href}
               className={cn(
                 "px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200",
@@ -94,7 +96,7 @@ const Header = () => {
           <nav className="container py-6 flex flex-col gap-2">
             {navLinks.map((link) => (
               <Link
-                key={link.name}
+                key={link.href}
                 to={link.href}
                 className={cn(
                   "flex items-center px-4 py-4 text-base font-medium rounded-xl transition-all",
@@ -114,7 +116,7 @@ const Header = () => {
                 href="mailto:wxy95929@uw.edu"
                 className="flex items-center px-4 py-4 text-base font-medium text-muted-foreground hover:text-foreground rounded-xl hover:bg-secondary/50"
               >
-                Contact Us
+                {t("nav.contact")}
               </a>
             </div>
           </nav>

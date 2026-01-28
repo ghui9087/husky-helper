@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "campusLife": "キャンパスライフ",
+    "housing": "住居ガイド",
+    "food": "グルメ",
+    "transport": "交通",
+    "contact": "お問い合わせ"
+  },
+  "hero": {
+    "badge": "学生が作った、学生のため",
+    "slogan": "無限の可能性",
+    "welcome": "ようこそ",
+    "subtitle": "キャンパスサバイバルガイド",
+    "description": "シアトルとUWキャンパスライフを案内する学生作成のリソースです。住居を見つけ、おいしい食べ物を発見し、ハスキー体験を最大限に活用しましょう。",
+    "goDawgs": "ゴー ドーグス！",
+    "exploreGuides": "ガイドを探索",
+    "startCampus": "キャンパスライフから始める",
+    "meetDubs": "Dubsに会おう",
+    "mascotDesc": "愛されるUWマスコット",
+    "woofMessage": "ワン！ゴー ドーグス！"
+  },
+  "carousel": {
+    "title": "美しいキャンパスを探索",
+    "subtitle": "UWシアトルの魅力を発見",
+    "cherryBlossom": "桜の季節",
+    "cherryDesc": "満開のクワッド",
+    "library": "スザロ図書館",
+    "libraryDesc": "ハリーポッター閲覧室",
+    "fountain": "ドラムヘラー噴水",
+    "fountainDesc": "象徴的なキャンパスランドマーク"
+  },
+  "features": {
+    "title": "知っておくべきすべてのこと",
+    "subtitle": "UWシアトルで成功するための総合ガイド",
+    "campusLife": {
+      "title": "キャンパスライフ",
+      "description": "UWシアトルキャンパスの重要な場所、リソース、ヒント"
+    },
+    "housing": {
+      "title": "住居ガイド",
+      "description": "キャンパス近くで完璧な地域とアパートを見つける"
+    },
+    "food": {
+      "title": "グルメ",
+      "description": "UW周辺の最高のレストランとグルメスポットを発見"
+    },
+    "transport": {
+      "title": "交通",
+      "description": "U-PASSでシアトルの交通システムをマスター"
+    },
+    "learnMore": "詳しく見る"
+  },
+  "about": {
+    "title": "ハスキーが作った、ハスキーのため",
+    "subtitle": "新しい国で新たに始めることがどれほど大変か、私たちは知っています。だからこのガイドを作りました。",
+    "byStudents": "学生制作",
+    "byStudentsDesc": "すべてを経験した留学生が作成",
+    "community": "コミュニティ主導",
+    "communityDesc": "実際の経験とフィードバックに基づく推奨",
+    "updated": "常に更新",
+    "updatedDesc": "定期的に新しいヒントと情報を追加",
+    "contactPrompt": "共有したいヒントや改善提案はありますか？",
+    "getInTouch": "お問い合わせ →"
+  },
+  "footer": {
+    "description": "留学生がUWシアトルをナビゲートし、ハスキー体験を最大限に活用できるよう支援する学生作成リソースです。",
+    "madeBy": "UW学生が作った、UW学生のため 💜",
+    "quickLinks": "クイックリンク",
+    "uwResources": "UWリソース",
+    "uwOfficial": "UW公式サイト",
+    "myuw": "MyUWポータル",
+    "iss": "UW ISS",
+    "getInTouch": "連絡先",
+    "suggestions": "提案や修正がありますか？ぜひお聞かせください！",
+    "copyright": "UWサバイバルガイド。すべての情報は現状のまま提供されます。",
+    "notAffiliated": "ワシントン大学と公式に提携していません。",
+    "lastUpdated": "最終更新",
+    "disclaimer": "免責事項：",
+    "disclaimerText": "このガイドは学生が作成したもので、情報提供のみを目的としています。情報が古くなったり不正確になる可能性があります。重要な詳細は常にUW公式ソースで確認してください。この情報に基づいた決定について責任を負いません。"
+  }
+}

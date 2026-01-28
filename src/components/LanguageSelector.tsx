@@ -1,5 +1,5 @@
 import { Globe } from "lucide-react";
-import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,13 +20,20 @@ const languages = [
 ];
 
 const LanguageSelector = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
+  const { i18n } = useTranslation();
+  
+  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
 
   const handleLanguageChange = (language: typeof languages[0]) => {
-    setSelectedLanguage(language);
-    // Store preference in localStorage
+    i18n.changeLanguage(language.code);
     localStorage.setItem("preferredLanguage", language.code);
-    // Note: Full translation would require i18n library integration
+    
+    // Set document direction for RTL languages
+    if (language.code === "ar") {
+      document.documentElement.dir = "rtl";
+    } else {
+      document.documentElement.dir = "ltr";
+    }
   };
 
   return (
@@ -34,8 +41,8 @@ const LanguageSelector = () => {
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="sm" className="gap-2 h-9 px-3">
           <Globe className="h-4 w-4" />
-          <span className="hidden sm:inline">{selectedLanguage.flag}</span>
-          <span className="hidden md:inline text-sm">{selectedLanguage.name}</span>
+          <span className="hidden sm:inline">{currentLanguage.flag}</span>
+          <span className="hidden md:inline text-sm">{currentLanguage.name}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-48 bg-background border border-border shadow-lg z-50">
@@ -44,12 +51,12 @@ const LanguageSelector = () => {
             key={language.code}
             onClick={() => handleLanguageChange(language)}
             className={`flex items-center gap-3 cursor-pointer ${
-              selectedLanguage.code === language.code ? "bg-secondary" : ""
+              currentLanguage.code === language.code ? "bg-secondary" : ""
             }`}
           >
             <span className="text-lg">{language.flag}</span>
             <span>{language.name}</span>
-            {selectedLanguage.code === language.code && (
+            {currentLanguage.code === language.code && (
               <span className="ml-auto text-primary">✓</span>
             )}
           </DropdownMenuItem>

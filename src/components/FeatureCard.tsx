@@ -6,15 +6,26 @@ interface FeatureCardProps {
   title: string;
   description: string;
   icon: LucideIcon;
-  href: string;
-  color: "purple" | "gold";
+  link: string;
+  color: string;
+  bgColor: string;
   delay?: number;
+  learnMoreText?: string;
 }
 
-const FeatureCard = ({ title, description, icon: Icon, href, color, delay = 0 }: FeatureCardProps) => {
+const FeatureCard = ({ 
+  title, 
+  description, 
+  icon: Icon, 
+  link, 
+  color, 
+  bgColor, 
+  delay = 0,
+  learnMoreText = "Explore"
+}: FeatureCardProps) => {
   return (
     <Link
-      to={href}
+      to={link}
       className={cn(
         "group relative flex flex-col p-5 sm:p-6 rounded-2xl bg-card border border-border/60",
         "shadow-card hover:shadow-card-hover transition-all duration-300",
@@ -27,15 +38,10 @@ const FeatureCard = ({ title, description, icon: Icon, href, color, delay = 0 }:
       <div
         className={cn(
           "flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-xl mb-4 sm:mb-5 transition-transform duration-300 group-hover:scale-110",
-          color === "purple" ? "bg-secondary" : "bg-gold-light"
+          bgColor
         )}
       >
-        <Icon
-          className={cn(
-            "h-6 w-6 sm:h-7 sm:w-7",
-            color === "purple" ? "text-primary" : "text-accent"
-          )}
-        />
+        <Icon className={cn("h-6 w-6 sm:h-7 sm:w-7", color)} />
       </div>
 
       {/* Content */}
@@ -48,7 +54,7 @@ const FeatureCard = ({ title, description, icon: Icon, href, color, delay = 0 }:
 
       {/* Arrow indicator */}
       <div className="mt-4 flex items-center text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-        <span>Explore</span>
+        <span>{learnMoreText}</span>
         <svg
           className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1"
           fill="none"
@@ -63,7 +69,7 @@ const FeatureCard = ({ title, description, icon: Icon, href, color, delay = 0 }:
       <div
         className={cn(
           "absolute inset-0 rounded-2xl border-2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none",
-          color === "purple" ? "border-primary/20" : "border-accent/30"
+          color === "text-primary" ? "border-primary/20" : "border-accent/30"
         )}
       />
     </Link>
