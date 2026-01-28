@@ -8,7 +8,12 @@
     "contact": "Contact Us"
   },
   "common": {
-    "backToHome": "Back to Home"
+    "backToHome": "Back to Home",
+    "safety": "Safety",
+    "distance": "Distance",
+    "rent": "Rent",
+    "pros": "Pros",
+    "cons": "Cons"
   },
   "hero": {
     "badge": "Made by students, for students",

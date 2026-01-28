@@ -7,6 +7,14 @@
     "transport": "Di chuyển",
     "contact": "Liên hệ"
   },
+  "common": {
+    "backToHome": "Quay lại trang chủ",
+    "safety": "An toàn",
+    "distance": "Khoảng cách",
+    "rent": "Thuê",
+    "pros": "Ưu điểm",
+    "cons": "Nhược điểm"
+  },
   "hero": {
     "badge": "Sinh viên tạo, vì sinh viên",
     "slogan": "Không Giới Hạn",
@@ -78,5 +86,222 @@
     "lastUpdated": "Cập nhật lần cuối",
     "disclaimer": "Tuyên bố miễn trừ:",
     "disclaimerText": "Cẩm nang này được sinh viên tạo và chỉ mang tính thông tin. Thông tin có thể lỗi thời hoặc không chính xác. Luôn xác minh chi tiết quan trọng với nguồn UW chính thức. Chúng tôi không chịu trách nhiệm cho bất kỳ quyết định nào dựa trên thông tin này."
+  },
+  "campusLife": {
+    "title": "Những điều cần thiết trong đời sống Campus",
+    "subtitle": "Mọi thứ bạn cần biết để bắt đầu suôn sẻ tại UW. Từ công việc tuần đầu đến liên hệ khẩn cấp.",
+    "firstWeek": {
+      "title": "Danh sách tuần đầu tiên",
+      "subtitle": "Hoàn thành các công việc này trong tuần đầu để chuẩn bị thành công. Ưu tiên cao trước!",
+      "huskyCard": "Nhận thẻ Husky Card",
+      "huskyCardDesc": "ID UW chính thức của bạn. Cần cho vào tòa nhà, thư viện, phòng gym, giao thông, v.v. Nhận tại Husky Card Office ở Schmitz Hall.",
+      "upass": "Kích hoạt U-Pass",
+      "upassDesc": "Miễn phí không giới hạn xe buýt và light rail! Kích hoạt qua tài khoản MyUW trong tuần đầu.",
+      "myuw": "Thiết lập tài khoản MyUW",
+      "myuwDesc": "Cổng thông tin đăng ký lớp, điểm, email và tất cả dịch vụ UW. Đăng nhập bằng UW NetID.",
+      "classrooms": "Tìm phòng học",
+      "classroomsDesc": "Đi dạo campus trước khi lớp bắt đầu. Campus UW rất lớn – biết bạn đang đi đâu!",
+      "clubs": "Tham gia tổ chức sinh viên",
+      "clubsDesc": "Hơn 1,000 câu lạc bộ tại UW! Ghé Student Activities Office hoặc tham dự RSO Fair."
+    },
+    "scenery": {
+      "title": "Phong cảnh Campus",
+      "subtitle": "Những địa điểm đẹp trên campus bạn sẽ muốn khám phá và chụp ảnh.",
+      "suzzallo": "Phòng đọc thư viện Suzzallo",
+      "suzzalloDesc": "Thư viện 'Harry Potter' biểu tượng với kiến trúc Gothic tuyệt đẹp",
+      "redSquare": "Red Square & Đài phun Drumheller",
+      "redSquareDesc": "Trái tim campus với tầm nhìn núi Rainier vào ngày đẹp trời",
+      "mapTitle": "📍 Khám phá bản đồ campus đầy đủ",
+      "mapSubtitle": "Bản đồ tương tác giúp bạn tìm tòa nhà, bãi đậu xe, v.v.",
+      "openMap": "Mở bản đồ UW"
+    },
+    "locations": {
+      "title": "Địa điểm Campus thiết yếu",
+      "subtitle": "Biết nơi học, tập thể dục, nhận trợ giúp và uống cà phê. Đây là những nơi bạn sẽ đến nhiều nhất.",
+      "odegaard": "Thư viện Odegaard",
+      "odegaardDesc": "Thư viện đại học 24/7 với phòng học nhóm, phòng máy tính và Starbucks UW nổi tiếng.",
+      "suzzallo": "Thư viện Suzzallo",
+      "suzzalloDesc": "Thư viện 'Harry Potter' biểu tượng. Phòng đọc đẹp, không gian học yên tĩnh và tài nguyên nghiên cứu.",
+      "ima": "IMA (Hoạt động nội bộ)",
+      "imaDesc": "Phòng gym hiện đại với hồ bơi, tường leo núi, sân bóng rổ và lớp fitness. Miễn phí cho sinh viên!",
+      "espresso": "Suzzallo Espresso",
+      "espressoDesc": "Quán cà phê ấm cúng trong thư viện Suzzallo. Cà phê và đồ ăn nhẹ tuyệt vời cho buổi học.",
+      "hub": "HUB (Husky Union Building)",
+      "hubDesc": "Trung tâm sinh viên với khu ẩm thực, phòng chờ học, bowling và văn phòng tổ chức sinh viên.",
+      "labs": "Phòng máy tính",
+      "labsDesc": "Nhiều phòng máy trên campus với in ấn, quét và phần mềm. Odegaard và Mary Gates Hall phổ biến.",
+      "health": "Trung tâm Hall Health",
+      "healthDesc": "Chăm sóc sức khỏe ban đầu, sức khỏe tâm thần, nhà thuốc và giáo dục sức khỏe. Hầu hết dịch vụ được bảo hiểm sinh viên chi trả.",
+      "allen": "Học yên tĩnh: Thư viện Allen",
+      "allenDesc": "Cánh bắc có các tầng yên tĩnh chuyên dụng. Hoàn hảo cho học tập và nghiên cứu tập trung."
+    },
+    "apps": {
+      "title": "Ứng dụng & Tài nguyên hữu ích",
+      "subtitle": "Tải những ứng dụng này và bookmark các trang web này. Chúng sẽ làm cuộc sống UW của bạn dễ dàng hơn nhiều.",
+      "myuwApp": "Ứng dụng MyUW",
+      "myuwAppDesc": "Truy cập lớp học, điểm, bản đồ campus và lịch xe buýt khi di chuyển.",
+      "safeCampus": "UW SafeCampus",
+      "safeCampusDesc": "Báo cáo vấn đề an ninh, truy cập tài nguyên khẩn cấp và nhận cảnh báo thời gian thực.",
+      "transit": "Transit App / OneBusAway",
+      "transitDesc": "Xe buýt đến thời gian thực và lập kế hoạch chuyến đi cho giao thông Seattle.",
+      "wechat": "Nhóm WeChat sinh viên quốc tế UW",
+      "wechatDesc": "Kết nối với sinh viên quốc tế khác. Tìm nhóm 'UW Class of [Năm]'.",
+      "canvas": "Canvas (Nền tảng học tập)",
+      "canvasDesc": "Nơi giáo sư đăng bài tập, bài giảng và điểm. Kiểm tra hàng ngày!",
+      "iss": "Website ISS",
+      "issDesc": "Cổng dịch vụ sinh viên quốc tế cho thông tin visa, sự kiện và tài nguyên."
+    },
+    "emergency": {
+      "title": "Liên hệ khẩn cấp",
+      "subtitle": "Lưu những số này vào điện thoại. Bạn có thể không bao giờ cần, nhưng có thì quan trọng.",
+      "police": "Sở cảnh sát UW",
+      "policeDesc": "Cảnh sát campus 24/7 cho trường hợp khẩn cấp. Gọi 911 cho trường hợp đe dọa tính mạng.",
+      "hallHealth": "Trung tâm Hall Health",
+      "hallHealthDesc": "Đặt lịch khám và tư vấn sức khỏe trong giờ làm việc.",
+      "issContact": "Dịch vụ sinh viên quốc tế",
+      "issContactDesc": "Câu hỏi visa, chữ ký đi lại và hỗ trợ sinh viên quốc tế.",
+      "counseling": "Trung tâm tư vấn",
+      "counselingDesc": "Tư vấn sức khỏe tâm thần miễn phí cho sinh viên. Hỗ trợ khủng hoảng có sẵn.",
+      "safeCampusLine": "Đường dây SafeCampus 24/7",
+      "safeCampusLineDesc": "Báo cáo lo ngại, nhận lời khuyên hoặc nói chuyện với ai đó bất cứ lúc nào.",
+      "lifeThreatening": "Trường hợp khẩn cấp đe dọa tính mạng",
+      "call911": "Gọi 911",
+      "available247": "Cảnh sát, Cứu hỏa, Y tế khẩn cấp – 24/7"
+    },
+    "proTip": {
+      "title": "Mẹo Pro cho sinh viên quốc tế",
+      "content": "Ghé văn phòng Dịch vụ sinh viên quốc tế (ISS) tại Schmitz Hall trong tuần đầu. Họ có thể giúp với câu hỏi visa, thích nghi văn hóa và kết nối bạn với sinh viên quốc tế khác."
+    }
+  },
+  "housing": {
+    "title": "Hướng dẫn Nhà ở",
+    "subtitle": "Tìm khu phố an toàn, khám phá căn hộ thân thiện với sinh viên và tìm hiểu những gì cần chú ý khi thuê nhà ở Seattle.",
+    "neighborhoods": {
+      "title": "Khu phố an toàn",
+      "subtitle": "Các khu vực phổ biến gần UW nơi sinh viên thường sống. Mỗi nơi có đặc điểm và đánh đổi riêng.",
+      "udistrict": {
+        "name": "University District (U-District)",
+        "description": "Trung tâm đời sống sinh viên. Đi bộ đến campus với nhiều nhà hàng và cửa hàng.",
+        "distance": "Đi bộ 5-15 phút",
+        "pros": ["Đi bộ đến campus", "Nhiều lựa chọn ăn uống", "Không khí thân thiện sinh viên", "Có light rail"],
+        "cons": ["Có thể ồn ào", "Đậu xe đường phố khó", "Một số khu vực kém an toàn ban đêm"]
+      },
+      "roosevelt": {
+        "name": "Roosevelt",
+        "description": "Khu dân cư yên tĩnh với light rail tốt đến campus.",
+        "distance": "Xe buýt 10-15 phút",
+        "pros": ["Yên tĩnh hơn U-District", "Ga light rail", "Cửa hàng tạp hóa tốt", "Thân thiện gia đình"],
+        "cons": ["Xa campus hơn", "Ít nightlife", "Ít tiện ích sinh viên"]
+      },
+      "northgate": {
+        "name": "Northgate",
+        "description": "Lựa chọn giá cả phải chăng với trung tâm mua sắm lớn và light rail trực tiếp đến UW.",
+        "distance": "Light rail 20 phút",
+        "pros": ["Giá cả phải chăng hơn", "Light rail trực tiếp", "Northgate Mall", "Căn hộ mới"],
+        "cons": ["Di chuyển xa hơn", "Ít đi bộ được", "Ít nhà hàng gần"]
+      },
+      "capitolHill": {
+        "name": "Capitol Hill",
+        "description": "Khu phố sôi động, đa dạng của Seattle với ẩm thực và nightlife tuyệt vời.",
+        "distance": "Xe buýt 15-20 phút",
+        "pros": ["Nightlife sôi động", "Cộng đồng đa dạng", "Ẩm thực tuyệt vời", "Có light rail"],
+        "cons": ["Thuê cao hơn", "Đậu xe đắt", "Có thể đông đúc", "Di chuyển xa hơn"]
+      }
+    },
+    "apartments": {
+      "title": "Căn hộ sinh viên phổ biến",
+      "subtitle": "Những căn hộ thường được sinh viên giới thiệu. Giá là ước tính và có thể thay đổi."
+    },
+    "tips": {
+      "title": "Mẹo thuê nhà",
+      "subtitle": "Cần biết trước khi ký hợp đồng. Những mẹo này có thể giúp bạn tránh vấn đề phổ biến.",
+      "beforeSigning": "Trước khi ký",
+      "redFlags": "Dấu hiệu cảnh báo cần tránh",
+      "whereTo": "Tìm danh sách ở đâu"
+    },
+    "disclaimer": "Thông tin này dựa trên trải nghiệm sinh viên và chỉ để tham khảo. Giá, khả năng có sẵn và điều kiện có thể thay đổi. Luôn xác minh chi tiết độc lập trước khi đưa ra quyết định."
+  },
+  "food": {
+    "title": "Ẩm thực",
+    "subtitle": "Khám phá những món ăn ngon nhất gần campus UW. Từ ăn nhanh giữa các lớp đến brunch cuối tuần.",
+    "stats": {
+      "restaurants": "15+ nhà hàng",
+      "budget": "Giá cả phải chăng",
+      "discounts": "Giảm giá sinh viên"
+    },
+    "showing": "Đang hiển thị",
+    "restaurants": "nhà hàng",
+    "topPicks": "Lựa chọn hàng đầu từ sinh viên UW",
+    "proTips": {
+      "title": "Mẹo ăn uống gần campus",
+      "huskyCard": "Sử dụng Husky Card",
+      "huskyCardDesc": "Nhiều nhà hàng U-District giảm 10-15% cho sinh viên. Luôn hỏi!",
+      "peakHours": "Tránh giờ cao điểm",
+      "peakHoursDesc": "Các quán nổi tiếng đông đúc 12-1 giờ. Ăn sớm hoặc muộn để ít chờ đợi.",
+      "checkApps": "Kiểm tra ứng dụng",
+      "checkAppsDesc": "Dùng DoorDash, Uber Eats hoặc Snackpass để có ưu đãi sinh viên và giao hàng miễn phí."
+    },
+    "disclaimer": "Giá, giờ mở cửa và thực đơn có thể thay đổi. Một số nhà hàng có thể tạm đóng cửa. Chúng tôi khuyên bạn kiểm tra Google Maps hoặc gọi điện trước khi đến."
+  },
+  "transport": {
+    "title": "Di chuyển ở Seattle",
+    "subtitle": "Husky Card của bạn là thẻ giao thông miễn phí. Xe buýt, tàu, xe điện – tất cả đều bao gồm trong học phí!",
+    "saveTip": "Lưu trang này - chụp màn hình các tuyến bạn dùng nhiều nhất!",
+    "upass": {
+      "title": "U-Pass = Giao thông MIỄN PHÍ không giới hạn!",
+      "description": "Là sinh viên UW, Husky Card hoạt động như thẻ giao thông không giới hạn. Bao gồm xe buýt King County Metro, Link Light Rail, Sound Transit, Seattle Streetcar và Water Taxi.",
+      "activate": "Kích hoạt qua MyUW",
+      "tap": "Quẹt tại đầu đọc ORCA",
+      "valid": "Có hiệu lực trong học kỳ đăng ký"
+    },
+    "gettingToCampus": {
+      "title": "Đến campus",
+      "subtitle": "Cách đến UW từ các địa điểm chính",
+      "fromAirport": "Từ sân bay SeaTac",
+      "airportTip": "Đi Link Light Rail (Tuyến 1) trực tiếp đến ga UW",
+      "airportFree": "MIỄN PHÍ với U-Pass!",
+      "airportTime": "~45 phút, chạy mỗi 6-10 phút",
+      "fromDowntown": "Từ trung tâm Seattle",
+      "downtownRail": "Light Rail: Westlake → Ga UW (15 phút)",
+      "downtownBus": "Xe buýt 70, 71, 73: Nhiều điểm dừng trong campus",
+      "downtownFreq": "Phục vụ thường xuyên vào giờ cao điểm",
+      "fromNearby": "Từ khu vực lân cận"
+    },
+    "routes": {
+      "title": "Tuyến phổ biến cho sinh viên",
+      "subtitle": "Các tuyến bạn sẽ dùng nhiều nhất – lưu để tham khảo nhanh!"
+    },
+    "apps": {
+      "title": "Ứng dụng thiết yếu",
+      "subtitle": "Tải xuống trước ngày đầu tiên"
+    },
+    "quickRef": {
+      "title": "📌 Tham khảo nhanh",
+      "subtitle": "Liên hệ quan trọng và thông tin trong tầm tay"
+    },
+    "tips": {
+      "title": "Mẹo cho sinh viên mới",
+      "subtitle": "Nghi thức giao thông và lời khuyên an toàn",
+      "tap": "Quẹt mỗi lần",
+      "tapDesc": "Quẹt Husky Card khi lên xe buýt và tại các ga Light Rail. Miễn phí nhưng bắt buộc!",
+      "stop": "Yêu cầu điểm dừng",
+      "stopDesc": "Kéo dây vàng hoặc nhấn nút đỏ gần điểm dừng. Xe buýt sẽ không dừng tự động.",
+      "offline": "Tải offline",
+      "offlineDesc": "Lưu lịch xe buýt và bản đồ offline cho vùng sóng yếu.",
+      "night": "An toàn ban đêm",
+      "nightDesc": "Đi các tuyến đường có đèn chiếu sáng sau khi trời tối. Dùng shuttle NightRide hoặc đi cùng bạn bè.",
+      "bike": "Xe đạp chia sẻ",
+      "bikeDesc": "Xe đạp Lime có khắp campus. Tuyệt vời cho chuyến đi ngắn khi xe buýt không đến.",
+      "aware": "Luôn cảnh giác",
+      "awareDesc": "Để một bên tai nghe và cảnh giác, đặc biệt vào ban đêm hoặc ở vùng không quen."
+    },
+    "shuttles": {
+      "title": "Dịch vụ shuttle campus",
+      "subtitle": "Shuttle miễn phí do UW Transportation vận hành"
+    },
+    "firstWeekTip": {
+      "title": "Mẹo tuần đầu",
+      "content": "Kích hoạt U-Pass qua MyUW trước chuyến xe buýt đầu tiên. Kích hoạt mất 24-48 giờ. Nếu cần di chuyển trước khi kích hoạt, vé lẻ là $2.75 (trả bằng ORCA hoặc thẻ tín dụng)."
+    }
   }
 }
