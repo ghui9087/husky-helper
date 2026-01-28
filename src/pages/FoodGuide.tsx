@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { Utensils, ArrowLeft, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RestaurantCard from "@/components/food/RestaurantCard";
@@ -9,6 +10,7 @@ import { categories, filterRestaurants } from "@/data/restaurants";
 import udistrictFood from "@/assets/udistrict-food.jpg";
 
 const FoodGuide = () => {
+  const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState("All Restaurants");
 
   const filteredRestaurants = useMemo(() => {
@@ -37,7 +39,7 @@ const FoodGuide = () => {
                   className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-4 transition-colors"
                 >
                   <ArrowLeft className="h-4 w-4" />
-                  Back to Home
+                  {t("common.backToHome")}
                 </Link>
                 
                 <div className="flex items-center gap-4 mb-3">
@@ -45,11 +47,11 @@ const FoodGuide = () => {
                     <Utensils className="h-6 w-6 md:h-7 md:w-7 text-white" />
                   </div>
                   <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-                    Food & Dining
+                    {t("food.title")}
                   </h1>
                 </div>
                 <p className="text-base md:text-lg text-white/90 max-w-2xl">
-                  Discover the best eats near UW campus. From quick bites between classes to weekend brunch spots.
+                  {t("food.subtitle")}
                 </p>
               </div>
             </div>
@@ -62,15 +64,15 @@ const FoodGuide = () => {
             <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-sm">
               <div className="flex items-center gap-2">
                 <span className="text-xl sm:text-2xl">🍜</span>
-                <span className="text-muted-foreground">15+ restaurants</span>
+                <span className="text-muted-foreground">{t("food.stats.restaurants")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-xl sm:text-2xl">💰</span>
-                <span className="text-muted-foreground">Budget-friendly</span>
+                <span className="text-muted-foreground">{t("food.stats.budget")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-xl sm:text-2xl">🎓</span>
-                <span className="text-muted-foreground">Student discounts</span>
+                <span className="text-muted-foreground">{t("food.stats.discounts")}</span>
               </div>
             </div>
           </div>
