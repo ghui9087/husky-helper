@@ -92,8 +92,8 @@ const Header = () => {
 
       {/* Mobile Navigation Overlay */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-16 z-50 bg-background/98 backdrop-blur-sm animate-fade-in">
-          <nav className="container py-6 flex flex-col gap-2">
+        <div className="lg:hidden fixed inset-0 top-16 z-50 bg-background animate-fade-in">
+          <nav className="container py-6 flex flex-col gap-2 bg-background">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
