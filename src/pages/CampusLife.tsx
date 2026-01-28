@@ -3,7 +3,7 @@ import {
   Library, Dumbbell, Coffee, Monitor, Heart, 
   Smartphone, Shield, MessageCircle, Train,
   Phone, Building, Globe, Brain,
-  CheckCircle, Compass, AlertTriangle
+  CheckCircle, Compass, AlertTriangle, Camera
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
@@ -12,6 +12,9 @@ import ChecklistItem from "@/components/campus/ChecklistItem";
 import LocationCard from "@/components/campus/LocationCard";
 import ResourceCard from "@/components/campus/ResourceCard";
 import EmergencyContact from "@/components/campus/EmergencyContact";
+import uwCampusHero from "@/assets/uw-campus-hero.jpg";
+import uwSuzzalloLibrary from "@/assets/uw-suzzallo-library.jpg";
+import uwRedSquare from "@/assets/uw-red-square.jpg";
 
 const firstWeekChecklist = [
   {
@@ -196,28 +199,41 @@ const CampusLife = () => {
       <Header />
       
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="hero-gradient py-16 md:py-20">
-          <div className="container">
-            <Link 
-              to="/" 
-              className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground mb-6 transition-colors"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Back to Home
-            </Link>
+        {/* Hero Section with Campus Image */}
+        <section className="relative">
+          {/* Hero Image */}
+          <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden">
+            <img 
+              src={uwCampusHero} 
+              alt="University of Washington Campus with cherry blossoms" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary/80" />
             
-            <div className="flex items-center gap-4 mb-4">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-foreground/10 backdrop-blur">
-                <GraduationCap className="h-7 w-7 text-primary-foreground" />
+            {/* Hero Content Overlay */}
+            <div className="absolute inset-0 flex items-center">
+              <div className="container">
+                <Link 
+                  to="/" 
+                  className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-4 transition-colors"
+                >
+                  <ArrowLeft className="h-4 w-4" />
+                  Back to Home
+                </Link>
+                
+                <div className="flex items-center gap-4 mb-3">
+                  <div className="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-2xl bg-white/10 backdrop-blur">
+                    <GraduationCap className="h-6 w-6 md:h-7 md:w-7 text-white" />
+                  </div>
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                    Campus Life Essentials
+                  </h1>
+                </div>
+                <p className="text-base md:text-lg text-white/90 max-w-2xl">
+                  Everything you need to know to hit the ground running at UW. From your first week tasks to emergency contacts.
+                </p>
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground">
-                Campus Life Essentials
-              </h1>
             </div>
-            <p className="text-lg text-primary-foreground/80 max-w-2xl">
-              Everything you need to know to hit the ground running at UW. From your first week tasks to emergency contacts.
-            </p>
           </div>
         </section>
 
@@ -236,6 +252,66 @@ const CampusLife = () => {
               {firstWeekChecklist.map((item) => (
                 <ChecklistItem key={item.title} {...item} />
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Campus Gallery Section */}
+        <section className="py-12 md:py-16 bg-muted/50">
+          <div className="container">
+            <div className="flex items-center gap-3 mb-3">
+              <Camera className="h-6 w-6 text-primary" />
+              <h2 className="text-2xl md:text-3xl font-bold">Campus Scenery</h2>
+            </div>
+            <p className="text-muted-foreground mb-8 max-w-2xl">
+              Some beautiful spots on campus you'll want to explore and photograph.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="group relative rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src={uwSuzzalloLibrary} 
+                  alt="Suzzallo Library Reading Room" 
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 text-white">
+                  <h3 className="font-semibold text-lg">Suzzallo Library Reading Room</h3>
+                  <p className="text-sm text-white/80">The iconic "Harry Potter" library with stunning Gothic architecture</p>
+                </div>
+              </div>
+
+              <div className="group relative rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src={uwRedSquare} 
+                  alt="Red Square and Drumheller Fountain" 
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 text-white">
+                  <h3 className="font-semibold text-lg">Red Square & Drumheller Fountain</h3>
+                  <p className="text-sm text-white/80">The heart of campus with views of Mount Rainier on clear days</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Interactive Map Link */}
+            <div className="mt-8 p-6 bg-card rounded-2xl border border-border shadow-sm">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                  <h3 className="font-semibold text-lg mb-1">📍 Explore the Full Campus Map</h3>
+                  <p className="text-sm text-muted-foreground">Interactive map to help you find buildings, parking, and more.</p>
+                </div>
+                <a
+                  href="https://www.washington.edu/maps/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
+                >
+                  <MapPin className="h-4 w-4" />
+                  Open UW Map
+                </a>
+              </div>
             </div>
           </div>
         </section>
