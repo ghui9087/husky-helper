@@ -8,7 +8,12 @@
     "contact": "联系我们"
   },
   "common": {
-    "backToHome": "返回首页"
+    "backToHome": "返回首页",
+    "safety": "安全",
+    "distance": "距离",
+    "rent": "租金",
+    "pros": "优点",
+    "cons": "缺点"
   },
   "hero": {
     "badge": "学生创作，服务学生",

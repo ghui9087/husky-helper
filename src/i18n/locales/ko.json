@@ -7,6 +7,14 @@
     "transport": "교통",
     "contact": "연락하기"
   },
+  "common": {
+    "backToHome": "홈으로 돌아가기",
+    "safety": "안전",
+    "distance": "거리",
+    "rent": "임대료",
+    "pros": "장점",
+    "cons": "단점"
+  },
   "hero": {
     "badge": "학생이 만들고, 학생을 위해",
     "slogan": "무한한 가능성",
@@ -78,5 +86,222 @@
     "lastUpdated": "마지막 업데이트",
     "disclaimer": "면책 조항:",
     "disclaimerText": "이 가이드는 학생들이 만든 것으로 정보 제공 목적으로만 사용됩니다. 정보가 오래되거나 부정확할 수 있습니다. 중요한 사항은 항상 UW 공식 출처에서 확인하세요. 이 정보를 기반으로 한 결정에 대해 책임지지 않습니다."
+  },
+  "campusLife": {
+    "title": "캠퍼스 생활 필수 사항",
+    "subtitle": "UW에서 빠르게 적응하기 위한 모든 것. 첫 주 과제부터 비상 연락처까지.",
+    "firstWeek": {
+      "title": "첫 주 체크리스트",
+      "subtitle": "첫 주에 이 과제들을 완료하여 성공을 준비하세요. 우선순위 항목 먼저!",
+      "huskyCard": "허스키 카드 받기",
+      "huskyCardDesc": "공식 UW ID입니다. 건물 출입, 도서관, 체육관, 교통 등에 필요합니다. Schmitz Hall의 Husky Card Office에서 받으세요.",
+      "upass": "U-Pass 활성화",
+      "upassDesc": "버스와 경전철 무제한 무료! 첫 주 내에 MyUW 계정으로 활성화하세요.",
+      "myuw": "MyUW 계정 설정",
+      "myuwDesc": "수강신청, 성적, 이메일, 모든 UW 서비스 포털. UW NetID로 로그인하세요.",
+      "classrooms": "강의실 찾기",
+      "classroomsDesc": "수업 시작 전에 캠퍼스를 둘러보세요. UW 캠퍼스는 넓습니다 - 어디로 가는지 알아두세요!",
+      "clubs": "학생 단체 가입",
+      "clubsDesc": "UW에는 1,000개 이상의 동아리가 있습니다! Student Activities Office를 방문하거나 RSO Fair에 참석하세요."
+    },
+    "scenery": {
+      "title": "캠퍼스 풍경",
+      "subtitle": "탐험하고 사진 찍고 싶은 캠퍼스의 아름다운 명소들.",
+      "suzzallo": "수잘로 도서관 열람실",
+      "suzzalloDesc": "멋진 고딕 건축의 상징적인 '해리포터' 도서관",
+      "redSquare": "레드 스퀘어 & 드럼헬러 분수",
+      "redSquareDesc": "맑은 날 마운트 레이니어가 보이는 캠퍼스의 심장부",
+      "mapTitle": "📍 전체 캠퍼스 지도 탐색",
+      "mapSubtitle": "건물, 주차장 등을 찾는 인터랙티브 지도.",
+      "openMap": "UW 지도 열기"
+    },
+    "locations": {
+      "title": "필수 캠퍼스 장소",
+      "subtitle": "공부, 운동, 도움 받기, 커피 마시기 위한 장소를 알아두세요. 가장 자주 방문하게 될 곳들입니다.",
+      "odegaard": "오데가드 도서관",
+      "odegaardDesc": "그룹 스터디룸, 컴퓨터 랩, 인기 UW 스타벅스가 있는 24시간 학부생 도서관.",
+      "suzzallo": "수잘로 도서관",
+      "suzzalloDesc": "상징적인 '해리포터' 도서관. 아름다운 열람실, 조용한 학습 공간, 연구 자원.",
+      "ima": "IMA (교내 활동)",
+      "imaDesc": "수영장, 암벽 등반 벽, 농구장, 피트니스 수업이 있는 최신 체육관. 학생 무료!",
+      "espresso": "수잘로 에스프레소",
+      "espressoDesc": "수잘로 도서관의 아늑한 카페. 공부할 때 좋은 커피와 스낵.",
+      "hub": "HUB (허스키 유니온 빌딩)",
+      "hubDesc": "푸드코트, 스터디 라운지, 볼링장, 학생 단체 사무실이 있는 학생 센터.",
+      "labs": "컴퓨터 랩",
+      "labsDesc": "인쇄, 스캔, 소프트웨어가 있는 캠퍼스 전역의 여러 랩. 오데가드와 Mary Gates Hall이 인기.",
+      "health": "홀 헬스 센터",
+      "healthDesc": "1차 진료, 정신 건강, 약국, 건강 교육. 대부분의 서비스가 학생 보험으로 보장됨.",
+      "allen": "조용한 학습: 알렌 도서관",
+      "allenDesc": "북쪽 건물에 전용 조용한 층이 있습니다. 집중 학습과 연구에 완벽."
+    },
+    "apps": {
+      "title": "유용한 앱 & 리소스",
+      "subtitle": "이 앱들을 다운로드하고 이 사이트들을 북마크하세요. UW 생활이 훨씬 쉬워질 것입니다.",
+      "myuwApp": "MyUW 모바일 앱",
+      "myuwAppDesc": "이동 중에 수업, 성적, 캠퍼스 지도, 버스 일정 확인.",
+      "safeCampus": "UW SafeCampus",
+      "safeCampusDesc": "안전 문제 보고, 비상 자원 접근, 실시간 알림 받기.",
+      "transit": "Transit App / OneBusAway",
+      "transitDesc": "시애틀 대중교통의 실시간 버스 도착과 여행 계획.",
+      "wechat": "UW 국제 학생 WeChat 그룹",
+      "wechatDesc": "다른 유학생들과 연결. 'UW Class of [Year]' 그룹 검색.",
+      "canvas": "Canvas (학습 플랫폼)",
+      "canvasDesc": "교수들이 과제, 강의, 성적을 올리는 곳. 매일 확인!",
+      "iss": "ISS 웹사이트",
+      "issDesc": "비자 정보, 이벤트, 자원을 위한 국제 학생 서비스 포털."
+    },
+    "emergency": {
+      "title": "비상 연락처",
+      "subtitle": "이 번호들을 휴대폰에 저장하세요. 필요 없을 수도 있지만, 있으면 중요합니다.",
+      "police": "UW 경찰서",
+      "policeDesc": "비상시 24시간 캠퍼스 경찰. 생명 위협 비상시 911 호출.",
+      "hallHealth": "홀 헬스 센터",
+      "hallHealthDesc": "영업 시간 중 의료 예약 및 건강 상담.",
+      "issContact": "국제 학생 서비스",
+      "issContactDesc": "비자 질문, 여행 서명, 유학생 지원.",
+      "counseling": "상담 센터",
+      "counselingDesc": "학생을 위한 무료 정신 건강 상담. 위기 지원 가능.",
+      "safeCampusLine": "SafeCampus 24시간 헬프라인",
+      "safeCampusLineDesc": "우려 사항 보고, 조언 받기, 언제든지 상담.",
+      "lifeThreatening": "생명 위협 비상시",
+      "call911": "911 전화",
+      "available247": "경찰, 소방, 의료 비상 – 24시간 이용 가능"
+    },
+    "proTip": {
+      "title": "유학생을 위한 프로 팁",
+      "content": "첫 주에 Schmitz Hall의 국제 학생 서비스(ISS) 사무실을 방문하세요. 비자 질문, 문화 적응, 다른 유학생과의 연결을 도와줄 수 있습니다."
+    }
+  },
+  "housing": {
+    "title": "주거 가이드",
+    "subtitle": "안전한 동네를 찾고, 학생 친화적인 아파트를 발견하고, 시애틀에서 임대할 때 무엇을 봐야 하는지 알아보세요.",
+    "neighborhoods": {
+      "title": "안전한 동네",
+      "subtitle": "학생들이 주로 사는 UW 근처 인기 지역. 각각 고유한 특성과 장단점이 있습니다.",
+      "udistrict": {
+        "name": "유니버시티 디스트릭트 (U-District)",
+        "description": "학생 생활의 중심. 캠퍼스까지 도보 거리에 많은 레스토랑과 상점.",
+        "distance": "도보 5-15분",
+        "pros": ["캠퍼스까지 도보 거리", "많은 음식 옵션", "학생 친화적인 분위기", "경전철 접근"],
+        "cons": ["시끄러울 수 있음", "길거리 주차 어려움", "일부 지역 밤에 덜 안전"]
+      },
+      "roosevelt": {
+        "name": "루즈벨트",
+        "description": "캠퍼스까지 경전철 접근이 좋은 조용한 주거 지역.",
+        "distance": "버스로 10-15분",
+        "pros": ["U-District보다 조용함", "경전철역", "좋은 식료품점", "가족 친화적"],
+        "cons": ["캠퍼스에서 더 멀음", "나이트라이프 적음", "학생 편의시설 적음"]
+      },
+      "northgate": {
+        "name": "노스게이트",
+        "description": "대형 쇼핑몰과 UW까지 직통 경전철 연결이 있는 저렴한 옵션.",
+        "distance": "경전철 20분",
+        "pros": ["더 저렴함", "직통 경전철", "노스게이트 몰", "새 아파트"],
+        "cons": ["더 긴 통근", "덜 걸어다닐 수 있음", "주변 레스토랑 적음"]
+      },
+      "capitolHill": {
+        "name": "캐피톨 힐",
+        "description": "훌륭한 음식과 나이트라이프 씬이 있는 시애틀의 활기차고 다양한 동네.",
+        "distance": "버스로 15-20분",
+        "pros": ["활기찬 나이트라이프", "다양한 커뮤니티", "훌륭한 음식 씬", "경전철 접근"],
+        "cons": ["높은 임대료", "주차 비쌈", "붐빌 수 있음", "더 긴 통근"]
+      }
+    },
+    "apartments": {
+      "title": "인기 학생 아파트",
+      "subtitle": "학생들이 자주 추천하는 곳들입니다. 가격은 추정치이며 변동될 수 있습니다."
+    },
+    "tips": {
+      "title": "임대 팁",
+      "subtitle": "계약서에 서명하기 전에 알아야 할 것들. 이 팁들이 일반적인 문제를 피하는 데 도움이 됩니다.",
+      "beforeSigning": "서명 전 체크리스트",
+      "redFlags": "피해야 할 위험 신호",
+      "whereTo": "매물 찾는 곳"
+    },
+    "disclaimer": "이 정보는 학생 경험을 바탕으로 하며 참고용입니다. 가격, 이용 가능성, 조건은 변경될 수 있습니다. 결정을 내리기 전에 항상 독립적으로 세부 사항을 확인하세요."
+  },
+  "food": {
+    "title": "음식 & 식사",
+    "subtitle": "UW 캠퍼스 근처 최고의 음식을 발견하세요. 수업 사이 간식부터 주말 브런치까지.",
+    "stats": {
+      "restaurants": "15개 이상 레스토랑",
+      "budget": "예산 친화적",
+      "discounts": "학생 할인"
+    },
+    "showing": "표시 중",
+    "restaurants": "개 레스토랑",
+    "topPicks": "UW 학생들의 인기 선택",
+    "proTips": {
+      "title": "캠퍼스 근처 식사 프로 팁",
+      "huskyCard": "허스키 카드 사용",
+      "huskyCardDesc": "많은 U-District 레스토랑이 10-15% 학생 할인을 제공합니다. 항상 물어보세요!",
+      "peakHours": "피크 시간 피하기",
+      "peakHoursDesc": "인기 장소는 12-1시에 붐빕니다. 일찍 또는 늦게 먹으면 대기 시간이 짧습니다.",
+      "checkApps": "앱 확인",
+      "checkAppsDesc": "학생 할인과 무료 배달을 위해 DoorDash, Uber Eats, Snackpass를 사용하세요."
+    },
+    "disclaimer": "가격, 영업 시간, 메뉴는 변경될 수 있습니다. 일부 레스토랑은 일시적으로 문을 닫을 수 있습니다. 방문 전 Google Maps를 확인하거나 전화하는 것을 권장합니다."
+  },
+  "transport": {
+    "title": "시애틀 교통",
+    "subtitle": "허스키 카드가 무료 교통 패스입니다. 버스, 기차, 스트리트카 – 모두 등록금에 포함!",
+    "saveTip": "이 페이지를 저장하세요 - 자주 사용하는 노선을 스크린샷하세요!",
+    "upass": {
+      "title": "U-Pass = 무료 무제한 교통!",
+      "description": "UW 학생으로서 허스키 카드가 무제한 교통 패스로 작동합니다. King County Metro 버스, Link 경전철, Sound Transit, 시애틀 스트리트카, 워터 택시를 이용할 수 있습니다.",
+      "activate": "MyUW로 활성화",
+      "tap": "ORCA 리더기에 태그",
+      "valid": "등록 학기 동안 유효"
+    },
+    "gettingToCampus": {
+      "title": "캠퍼스 가기",
+      "subtitle": "주요 위치에서 UW까지 가는 방법",
+      "fromAirport": "SeaTac 공항에서",
+      "airportTip": "Link 경전철(1호선)을 타고 UW역까지 직행",
+      "airportFree": "U-Pass로 무료!",
+      "airportTime": "~45분, 6-10분마다 운행",
+      "fromDowntown": "다운타운 시애틀에서",
+      "downtownRail": "경전철: Westlake → UW역 (15분)",
+      "downtownBus": "버스 70, 71, 73: 캠퍼스 내 여러 정류장",
+      "downtownFreq": "러시아워에 자주 운행",
+      "fromNearby": "주변 지역에서"
+    },
+    "routes": {
+      "title": "인기 학생 노선",
+      "subtitle": "가장 자주 사용할 노선 – 빠른 참조를 위해 저장하세요!"
+    },
+    "apps": {
+      "title": "필수 앱",
+      "subtitle": "첫날 전에 다운로드하세요"
+    },
+    "quickRef": {
+      "title": "📌 빠른 참조",
+      "subtitle": "중요한 연락처와 정보를 손끝에서"
+    },
+    "tips": {
+      "title": "새 학생을 위한 팁",
+      "subtitle": "교통 예절과 안전 조언",
+      "tap": "매번 태그하기",
+      "tapDesc": "버스 탑승 시와 경전철 역에서 허스키 카드를 태그하세요. 무료지만 필수입니다!",
+      "stop": "정류장 요청",
+      "stopDesc": "정류장 근처에서 노란 줄을 당기거나 빨간 버튼을 누르세요. 버스가 자동으로 멈추지 않습니다.",
+      "offline": "오프라인 다운로드",
+      "offlineDesc": "신호가 약한 지역을 위해 버스 시간표와 지도를 오프라인으로 저장하세요.",
+      "night": "야간 안전",
+      "nightDesc": "어두워지면 밝은 경로를 이용하세요. NightRide 셔틀을 이용하거나 친구와 함께 이동하세요.",
+      "bike": "자전거 공유",
+      "bikeDesc": "Lime 자전거가 캠퍼스 주변에 있습니다. 버스가 안 올 때 짧은 거리에 좋습니다.",
+      "aware": "주의하기",
+      "awareDesc": "이어폰 하나는 빼고 주의를 기울이세요, 특히 밤이나 낯선 지역에서."
+    },
+    "shuttles": {
+      "title": "캠퍼스 셔틀 서비스",
+      "subtitle": "UW Transportation이 운영하는 무료 셔틀"
+    },
+    "firstWeekTip": {
+      "title": "첫 주 팁",
+      "content": "첫 버스 탑승 전에 MyUW를 통해 U-Pass를 활성화하세요. 활성화에 24-48시간이 걸립니다. 활성화 전에 이동해야 한다면, 단일 요금은 $2.75입니다 (ORCA 또는 신용카드로 결제)."
+    }
   }
 }

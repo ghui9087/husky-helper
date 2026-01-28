@@ -7,6 +7,14 @@
     "transport": "Transport",
     "contact": "Nous Contacter"
   },
+  "common": {
+    "backToHome": "Retour à l'accueil",
+    "safety": "Sécurité",
+    "distance": "Distance",
+    "rent": "Loyer",
+    "pros": "Avantages",
+    "cons": "Inconvénients"
+  },
   "hero": {
     "badge": "Fait par des étudiants, pour des étudiants",
     "slogan": "Sans Limites",
@@ -78,5 +86,222 @@
     "lastUpdated": "Dernière mise à jour",
     "disclaimer": "Avertissement :",
     "disclaimerText": "Ce guide est créé par des étudiants et est fourni à titre informatif uniquement. Les informations peuvent être obsolètes ou inexactes. Vérifiez toujours les détails importants auprès des sources officielles de UW. Nous ne sommes pas responsables des décisions prises sur la base de ces informations."
+  },
+  "campusLife": {
+    "title": "Essentiels de la Vie Universitaire",
+    "subtitle": "Tout ce que vous devez savoir pour bien démarrer à UW. Des tâches de la première semaine aux contacts d'urgence.",
+    "firstWeek": {
+      "title": "Liste de la Première Semaine",
+      "subtitle": "Complétez ces tâches durant votre première semaine pour vous préparer au succès. Éléments prioritaires d'abord !",
+      "huskyCard": "Obtenez Votre Husky Card",
+      "huskyCardDesc": "Votre ID officielle UW. Nécessaire pour l'accès aux bâtiments, bibliothèque, salle de sport, transport et plus. Obtenez-la au Husky Card Office à Schmitz Hall.",
+      "upass": "Activez Votre U-Pass",
+      "upassDesc": "Transport gratuit illimité en bus et train léger ! Activez via votre compte MyUW dans la première semaine.",
+      "myuw": "Configurez Votre Compte MyUW",
+      "myuwDesc": "Votre portail pour l'inscription aux cours, notes, email et tous les services UW. Connectez-vous avec votre UW NetID.",
+      "classrooms": "Trouvez Vos Salles de Cours",
+      "classroomsDesc": "Faites une visite du campus avant le début des cours. Le campus UW est grand – sachez où vous allez !",
+      "clubs": "Rejoignez des Organisations Étudiantes",
+      "clubsDesc": "Plus de 1 000 clubs à UW ! Visitez Student Activities Office ou assistez à la foire RSO."
+    },
+    "scenery": {
+      "title": "Paysages du Campus",
+      "subtitle": "De beaux endroits sur le campus que vous voudrez explorer et photographier.",
+      "suzzallo": "Salle de Lecture Suzzallo",
+      "suzzalloDesc": "La bibliothèque emblématique 'Harry Potter' avec une architecture gothique époustouflante",
+      "redSquare": "Red Square et Fontaine Drumheller",
+      "redSquareDesc": "Le cœur du campus avec vue sur le Mont Rainier par temps clair",
+      "mapTitle": "📍 Explorez la Carte Complète du Campus",
+      "mapSubtitle": "Carte interactive pour vous aider à trouver les bâtiments, parkings et plus.",
+      "openMap": "Ouvrir la Carte UW"
+    },
+    "locations": {
+      "title": "Emplacements Essentiels du Campus",
+      "subtitle": "Sachez où étudier, faire de l'exercice, obtenir de l'aide et prendre un café. Ce sont les endroits que vous visiterez le plus.",
+      "odegaard": "Bibliothèque Odegaard",
+      "odegaardDesc": "Bibliothèque de premier cycle ouverte 24h/24 avec salles d'étude en groupe, laboratoires informatiques et le populaire Starbucks UW.",
+      "suzzallo": "Bibliothèque Suzzallo",
+      "suzzalloDesc": "La bibliothèque emblématique 'Harry Potter'. Belle salle de lecture, espaces d'étude calmes et ressources de recherche.",
+      "ima": "IMA (Activités Intra-muros)",
+      "imaDesc": "Salle de sport ultramoderne avec piscines, mur d'escalade, terrains de basket et cours de fitness. Gratuit pour les étudiants !",
+      "espresso": "Suzzallo Espresso",
+      "espressoDesc": "Café confortable dans la bibliothèque Suzzallo. Excellent café et en-cas pour les sessions d'étude.",
+      "hub": "HUB (Husky Union Building)",
+      "hubDesc": "Centre étudiant avec aire de restauration, salons d'étude, bowling et bureaux des organisations étudiantes.",
+      "labs": "Laboratoires Informatiques",
+      "labsDesc": "Plusieurs laboratoires sur le campus avec impression, numérisation et logiciels. Odegaard et Mary Gates Hall sont populaires.",
+      "health": "Centre de Santé Hall Health",
+      "healthDesc": "Soins primaires, santé mentale, pharmacie et éducation à la santé. La plupart des services sont couverts par l'assurance étudiante.",
+      "allen": "Étude Calme : Bibliothèque Allen",
+      "allenDesc": "L'aile nord a des étages dédiés au calme. Parfait pour l'étude concentrée et la recherche."
+    },
+    "apps": {
+      "title": "Applications et Ressources Utiles",
+      "subtitle": "Téléchargez ces applications et ajoutez ces sites en favoris. Ils rendront votre vie à UW beaucoup plus facile.",
+      "myuwApp": "Application Mobile MyUW",
+      "myuwAppDesc": "Accédez aux cours, notes, carte du campus et horaires de bus en déplacement.",
+      "safeCampus": "UW SafeCampus",
+      "safeCampusDesc": "Signalez les problèmes de sécurité, accédez aux ressources d'urgence et recevez des alertes en temps réel.",
+      "transit": "Transit App / OneBusAway",
+      "transitDesc": "Arrivées de bus en temps réel et planification de trajets pour les transports de Seattle.",
+      "wechat": "Groupes WeChat International UW",
+      "wechatDesc": "Connectez-vous avec d'autres étudiants internationaux. Cherchez les groupes 'UW Class of [Année]'.",
+      "canvas": "Canvas (Plateforme d'Apprentissage)",
+      "canvasDesc": "Où les professeurs publient devoirs, cours et notes. Vérifiez quotidiennement !",
+      "iss": "Site Web ISS",
+      "issDesc": "Portail des Services aux Étudiants Internationaux pour les infos visa, événements et ressources."
+    },
+    "emergency": {
+      "title": "Contacts d'Urgence",
+      "subtitle": "Enregistrez ces numéros dans votre téléphone. Vous n'en aurez peut-être jamais besoin, mais c'est important de les avoir.",
+      "police": "Police du Campus UW",
+      "policeDesc": "Police du campus 24h/24 pour les urgences. Appelez le 911 pour les urgences vitales.",
+      "hallHealth": "Centre Hall Health",
+      "hallHealthDesc": "Rendez-vous médicaux et conseils de santé pendant les heures de bureau.",
+      "issContact": "Services aux Étudiants Internationaux",
+      "issContactDesc": "Questions de visa, signatures de voyage et soutien aux étudiants internationaux.",
+      "counseling": "Centre de Conseil",
+      "counselingDesc": "Conseil en santé mentale gratuit pour les étudiants. Soutien en cas de crise disponible.",
+      "safeCampusLine": "Ligne d'Aide SafeCampus 24h/24",
+      "safeCampusLineDesc": "Signalez des préoccupations, obtenez des conseils ou parlez à quelqu'un à tout moment.",
+      "lifeThreatening": "Pour les Urgences Vitales",
+      "call911": "Appelez le 911",
+      "available247": "Police, Pompiers, Urgences médicales – disponibles 24h/24"
+    },
+    "proTip": {
+      "title": "Conseil Pro pour les Étudiants Internationaux",
+      "content": "Visitez le bureau des Services aux Étudiants Internationaux (ISS) à Schmitz Hall pendant votre première semaine. Ils peuvent aider avec les questions de visa, l'adaptation culturelle et vous connecter avec d'autres étudiants internationaux."
+    }
+  },
+  "housing": {
+    "title": "Guide du Logement",
+    "subtitle": "Trouvez des quartiers sûrs, découvrez des appartements adaptés aux étudiants et apprenez ce qu'il faut rechercher lors de la location à Seattle.",
+    "neighborhoods": {
+      "title": "Quartiers Sûrs",
+      "subtitle": "Zones populaires près de UW où les étudiants vivent généralement. Chacune a son caractère et ses compromis.",
+      "udistrict": {
+        "name": "University District (U-District)",
+        "description": "Le cœur de la vie étudiante. À distance de marche du campus avec de nombreux restaurants et boutiques.",
+        "distance": "5-15 min à pied",
+        "pros": ["À distance de marche du campus", "Nombreuses options de restauration", "Ambiance étudiante", "Accès au train léger"],
+        "cons": ["Peut être bruyant", "Stationnement de rue difficile", "Certaines zones moins sûres la nuit"]
+      },
+      "roosevelt": {
+        "name": "Roosevelt",
+        "description": "Quartier résidentiel calme avec bon accès au train léger vers le campus.",
+        "distance": "10-15 min en bus",
+        "pros": ["Plus calme que U-District", "Station de train léger", "Bonnes épiceries", "Familial"],
+        "cons": ["Plus loin du campus", "Moins de vie nocturne", "Moins de services étudiants"]
+      },
+      "northgate": {
+        "name": "Northgate",
+        "description": "Option abordable avec grand centre commercial et connexion directe au train léger vers UW.",
+        "distance": "20 min en train léger",
+        "pros": ["Plus abordable", "Train léger direct", "Centre commercial Northgate", "Appartements neufs"],
+        "cons": ["Trajet plus long", "Moins praticable à pied", "Moins de restaurants à proximité"]
+      },
+      "capitolHill": {
+        "name": "Capitol Hill",
+        "description": "Quartier vibrant et diversifié de Seattle avec excellente scène gastronomique et vie nocturne.",
+        "distance": "15-20 min en bus",
+        "pros": ["Vie nocturne animée", "Communauté diversifiée", "Excellente scène gastronomique", "Accès au train léger"],
+        "cons": ["Loyer plus élevé", "Stationnement coûteux", "Peut être bondé", "Trajet plus long"]
+      }
+    },
+    "apartments": {
+      "title": "Appartements Étudiants Populaires",
+      "subtitle": "Ceux-ci sont couramment recommandés par les étudiants. Les prix sont des estimations et peuvent varier."
+    },
+    "tips": {
+      "title": "Conseils de Location",
+      "subtitle": "Ce qu'il faut savoir avant de signer un bail. Ces conseils peuvent vous éviter des problèmes courants.",
+      "beforeSigning": "Avant de Signer",
+      "redFlags": "Signaux d'Alerte à Éviter",
+      "whereTo": "Où Trouver des Annonces"
+    },
+    "disclaimer": "Ces informations sont basées sur les expériences des étudiants et sont fournies à titre indicatif. Les prix, disponibilités et conditions peuvent changer. Vérifiez toujours les détails de manière indépendante avant de prendre une décision."
+  },
+  "food": {
+    "title": "Restauration",
+    "subtitle": "Découvrez les meilleurs repas près du campus UW. Des encas rapides entre les cours aux brunchs du week-end.",
+    "stats": {
+      "restaurants": "15+ restaurants",
+      "budget": "Prix abordables",
+      "discounts": "Réductions étudiantes"
+    },
+    "showing": "Affichage de",
+    "restaurants": "restaurants",
+    "topPicks": "Meilleurs choix des étudiants UW",
+    "proTips": {
+      "title": "Conseils Pro pour Manger près du Campus",
+      "huskyCard": "Utilisez Votre Husky Card",
+      "huskyCardDesc": "De nombreux restaurants du U-District offrent 10-15% de réduction étudiante. Demandez toujours !",
+      "peakHours": "Évitez les Heures de Pointe",
+      "peakHoursDesc": "Les endroits populaires sont bondés de 12h à 13h. Mangez tôt ou tard pour moins attendre.",
+      "checkApps": "Vérifiez les Applications",
+      "checkAppsDesc": "Utilisez DoorDash, Uber Eats ou Snackpass pour des offres étudiantes et la livraison gratuite."
+    },
+    "disclaimer": "Les prix, horaires et offres peuvent changer. Certains restaurants peuvent être temporairement fermés. Nous recommandons de vérifier sur Google Maps ou d'appeler avant de vous déplacer."
+  },
+  "transport": {
+    "title": "Se Déplacer à Seattle",
+    "subtitle": "Votre Husky Card est votre pass transport gratuit. Bus, trains, tramways – tout inclus dans vos frais de scolarité !",
+    "saveTip": "Enregistrez cette page - capturez les lignes que vous utilisez le plus !",
+    "upass": {
+      "title": "Votre U-Pass = Transports Illimités GRATUITS !",
+      "description": "En tant qu'étudiant UW, votre Husky Card fonctionne comme un pass transport illimité. Elle couvre les bus King County Metro, le Link Light Rail, Sound Transit, le tramway de Seattle et le Water Taxi.",
+      "activate": "Activer via MyUW",
+      "tap": "Biper au lecteur ORCA",
+      "valid": "Valide pendant les trimestres inscrits"
+    },
+    "gettingToCampus": {
+      "title": "Se Rendre au Campus",
+      "subtitle": "Comment atteindre UW depuis les principaux endroits",
+      "fromAirport": "Depuis l'Aéroport SeaTac",
+      "airportTip": "Prenez le Link Light Rail (Ligne 1) directement jusqu'à la station UW",
+      "airportFree": "GRATUIT avec votre U-Pass !",
+      "airportTime": "~45 minutes, toutes les 6-10 min",
+      "fromDowntown": "Depuis le Centre-ville de Seattle",
+      "downtownRail": "Light Rail : Westlake → Station UW (15 min)",
+      "downtownBus": "Bus 70, 71, 73 : Plusieurs arrêts sur le campus",
+      "downtownFreq": "Service fréquent aux heures de pointe",
+      "fromNearby": "Depuis les Quartiers Proches"
+    },
+    "routes": {
+      "title": "Lignes Populaires pour Étudiants",
+      "subtitle": "Les lignes que vous utiliserez le plus – gardez-les pour référence rapide !"
+    },
+    "apps": {
+      "title": "Applications Essentielles",
+      "subtitle": "Téléchargez-les avant votre premier jour"
+    },
+    "quickRef": {
+      "title": "📌 Référence Rapide",
+      "subtitle": "Contacts importants et infos à portée de main"
+    },
+    "tips": {
+      "title": "Conseils pour les Nouveaux Étudiants",
+      "subtitle": "Étiquette des transports et conseils de sécurité",
+      "tap": "Bipez à Chaque Fois",
+      "tapDesc": "Bipez votre Husky Card en montant dans le bus et aux stations Light Rail. C'est gratuit mais obligatoire !",
+      "stop": "Demandez Votre Arrêt",
+      "stopDesc": "Tirez la corde jaune ou appuyez sur le bouton rouge près de votre arrêt. Le bus ne s'arrêtera pas automatiquement.",
+      "offline": "Téléchargez Hors Ligne",
+      "offlineDesc": "Enregistrez les horaires de bus et les cartes hors ligne pour les zones avec mauvais signal.",
+      "night": "Sécurité Nocturne",
+      "nightDesc": "Restez sur les itinéraires bien éclairés après la tombée de la nuit. Utilisez la navette NightRide ou voyagez avec des amis.",
+      "bike": "Vélos en Libre-Service",
+      "bikeDesc": "Les vélos Lime sont dispersés sur le campus. Parfaits pour les courts trajets quand le bus n'arrive pas.",
+      "aware": "Restez Vigilant",
+      "awareDesc": "Gardez un écouteur sorti et restez alerte, surtout la nuit ou dans les zones inconnues."
+    },
+    "shuttles": {
+      "title": "Services de Navettes du Campus",
+      "subtitle": "Navettes gratuites exploitées par UW Transportation"
+    },
+    "firstWeekTip": {
+      "title": "Conseil de la Première Semaine",
+      "content": "Activez votre U-Pass via MyUW avant votre premier trajet en bus. L'activation prend 24-48 heures. Si vous devez voyager avant l'activation, les trajets simples coûtent 2,75$ (payez avec ORCA ou carte de crédit)."
+    }
   }
 }

@@ -1,4 +1,5 @@
 import { Shield, Clock, DollarSign, ThumbsUp, ThumbsDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 
 interface NeighborhoodCardProps {
@@ -22,6 +23,8 @@ const NeighborhoodCard = ({
   cons,
   delay = 0,
 }: NeighborhoodCardProps) => {
+  const { t } = useTranslation();
+  
   const getSafetyColor = (rating: number) => {
     if (rating >= 4) return "text-green-600 bg-green-50";
     if (rating >= 3) return "text-yellow-600 bg-yellow-50";
@@ -45,17 +48,17 @@ const NeighborhoodCard = ({
       <div className="px-4 sm:px-6 pb-3 sm:pb-4 grid grid-cols-3 gap-2 sm:gap-3">
         <div className={cn("flex flex-col items-center p-2 sm:p-3 rounded-xl", getSafetyColor(safetyRating))}>
           <Shield className="h-4 w-4 mb-1" />
-          <span className="text-[10px] sm:text-xs font-medium">Safety</span>
+          <span className="text-[10px] sm:text-xs font-medium">{t("common.safety")}</span>
           <span className="text-xs sm:text-sm font-bold">{safetyRating}/5</span>
         </div>
         <div className="flex flex-col items-center p-2 sm:p-3 rounded-xl bg-secondary">
           <Clock className="h-4 w-4 mb-1 text-primary" />
-          <span className="text-[10px] sm:text-xs font-medium text-muted-foreground">Distance</span>
+          <span className="text-[10px] sm:text-xs font-medium text-muted-foreground">{t("common.distance")}</span>
           <span className="text-xs sm:text-sm font-bold text-foreground leading-tight text-center">{distance}</span>
         </div>
         <div className="flex flex-col items-center p-2 sm:p-3 rounded-xl bg-gold-light">
           <DollarSign className="h-4 w-4 mb-1 text-accent" />
-          <span className="text-[10px] sm:text-xs font-medium text-muted-foreground">Rent</span>
+          <span className="text-[10px] sm:text-xs font-medium text-muted-foreground">{t("common.rent")}</span>
           <span className="text-xs sm:text-sm font-bold text-foreground">{priceRange}</span>
         </div>
       </div>
@@ -65,7 +68,7 @@ const NeighborhoodCard = ({
         <div>
           <div className="flex items-center gap-1.5 mb-2">
             <ThumbsUp className="h-4 w-4 text-green-600" />
-            <span className="text-sm font-medium text-green-700">Pros</span>
+            <span className="text-sm font-medium text-green-700">{t("common.pros")}</span>
           </div>
           <ul className="space-y-1">
             {pros.map((pro, idx) => (
@@ -79,7 +82,7 @@ const NeighborhoodCard = ({
         <div>
           <div className="flex items-center gap-1.5 mb-2">
             <ThumbsDown className="h-4 w-4 text-orange-500" />
-            <span className="text-sm font-medium text-orange-600">Cons</span>
+            <span className="text-sm font-medium text-orange-600">{t("common.cons")}</span>
           </div>
           <ul className="space-y-1">
             {cons.map((con, idx) => (
