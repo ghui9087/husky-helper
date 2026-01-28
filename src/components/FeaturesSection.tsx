@@ -3,24 +3,24 @@ import FeatureCard from "./FeatureCard";
 
 const features = [
   {
+    title: "Campus Life",
+    description: "Navigate essential facilities, find study spots, join student organizations, and learn insider tips.",
+    icon: GraduationCap,
+    href: "/campus",
+    color: "purple" as const,
+  },
+  {
     title: "Housing Guide",
     description: "Find safe neighborhoods and apartment recommendations near campus. Tips on rental processes and what to look for.",
     icon: Home,
     href: "/housing",
-    color: "purple" as const,
+    color: "gold" as const,
   },
   {
     title: "Food & Dining",
     description: "Discover restaurants near campus sorted by cuisine type. From authentic Asian food to budget-friendly options.",
     icon: Utensils,
     href: "/food",
-    color: "gold" as const,
-  },
-  {
-    title: "Campus Life",
-    description: "Navigate essential facilities, find study spots, join student organizations, and learn insider tips.",
-    icon: GraduationCap,
-    href: "/campus",
     color: "purple" as const,
   },
   {
