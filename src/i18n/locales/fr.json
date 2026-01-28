@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "campusLife": "Vie Universitaire",
+    "housing": "Logement",
+    "food": "Restauration",
+    "transport": "Transport",
+    "contact": "Nous Contacter"
+  },
+  "hero": {
+    "badge": "Fait par des étudiants, pour des étudiants",
+    "slogan": "Sans Limites",
+    "welcome": "Bienvenue à",
+    "subtitle": "Votre Guide de Survie du Campus",
+    "description": "Une ressource créée par des étudiants pour aider les étudiants internationaux à naviguer Seattle et la vie sur le campus UW. Trouvez un logement, découvrez de bons restaurants et profitez au maximum de votre expérience Husky.",
+    "goDawgs": "Allez les Dawgs !",
+    "exploreGuides": "Explorer les Guides",
+    "startCampus": "Commencer par la Vie Universitaire",
+    "meetDubs": "Rencontrez Dubs",
+    "mascotDesc": "Notre mascotte bien-aimée de UW",
+    "woofMessage": "Ouaf ! Allez les Dawgs !"
+  },
+  "carousel": {
+    "title": "Explorez Notre Magnifique Campus",
+    "subtitle": "Découvrez ce qui rend UW Seattle spécial",
+    "cherryBlossom": "Saison des Cerisiers",
+    "cherryDesc": "Le Quad en pleine floraison",
+    "library": "Bibliothèque Suzzallo",
+    "libraryDesc": "La salle de lecture Harry Potter",
+    "fountain": "Fontaine Drumheller",
+    "fountainDesc": "Point de repère emblématique du campus"
+  },
+  "features": {
+    "title": "Tout Ce Que Vous Devez Savoir",
+    "subtitle": "Vos guides complets pour réussir à UW Seattle",
+    "campusLife": {
+      "title": "Vie Universitaire",
+      "description": "Lieux essentiels, ressources et conseils pour naviguer sur le campus UW Seattle"
+    },
+    "housing": {
+      "title": "Guide du Logement",
+      "description": "Trouvez le quartier et l'appartement parfait près du campus"
+    },
+    "food": {
+      "title": "Restauration",
+      "description": "Découvrez les meilleurs restaurants et lieux de restauration autour de UW"
+    },
+    "transport": {
+      "title": "Transport",
+      "description": "Maîtrisez le système de transport de Seattle avec U-PASS"
+    },
+    "learnMore": "En savoir plus"
+  },
+  "about": {
+    "title": "Fait par des Huskies, pour des Huskies",
+    "subtitle": "Nous savons à quel point il peut être difficile de recommencer dans un nouveau pays. C'est pourquoi nous avons créé ce guide.",
+    "byStudents": "Par des Étudiants",
+    "byStudentsDesc": "Créé par des étudiants internationaux qui ont tout vécu",
+    "community": "Guidé par la Communauté",
+    "communityDesc": "Recommandations basées sur des expériences réelles et des retours",
+    "updated": "Toujours à Jour",
+    "updatedDesc": "Conseils et informations ajoutés régulièrement",
+    "contactPrompt": "Vous avez des conseils à partager ou des suggestions d'amélioration ?",
+    "getInTouch": "Contactez-nous →"
+  },
+  "footer": {
+    "description": "Une ressource créée par des étudiants pour aider les étudiants internationaux à naviguer UW Seattle et profiter au maximum de leur expérience Husky.",
+    "madeBy": "Fait par des étudiants UW, pour des étudiants UW 💜",
+    "quickLinks": "Liens Rapides",
+    "uwResources": "Ressources UW",
+    "uwOfficial": "Site Officiel UW",
+    "myuw": "Portail MyUW",
+    "iss": "UW ISS",
+    "getInTouch": "Contact",
+    "suggestions": "Vous avez des suggestions ou des corrections ? Nous serions ravis de vous entendre !",
+    "copyright": "UW Survival Guide. Toutes les informations sont fournies telles quelles.",
+    "notAffiliated": "Non officiellement affilié à l'Université de Washington.",
+    "lastUpdated": "Dernière mise à jour",
+    "disclaimer": "Avertissement :",
+    "disclaimerText": "Ce guide est créé par des étudiants et est fourni à titre informatif uniquement. Les informations peuvent être obsolètes ou inexactes. Vérifiez toujours les détails importants auprès des sources officielles de UW. Nous ne sommes pas responsables des décisions prises sur la base de ces informations."
+  }
+}
