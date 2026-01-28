@@ -17,6 +17,7 @@ const languages = [
   { code: "vi", name: "Tiếng Việt", flag: "🇻🇳" },
   { code: "es", name: "Español", flag: "🇪🇸" },
   { code: "ar", name: "العربية", flag: "🇸🇦" },
+  { code: "fr", name: "Français", flag: "🇫🇷" },
 ];
 
 const LanguageSelector = () => {
