@@ -86,25 +86,25 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Content - Dubs Image */}
+          {/* Right Content - Dubs Image with Animation */}
           <div 
             className="relative opacity-0 animate-fade-in-up order-first lg:order-last"
             style={{ animationDelay: "0.3s" }}
           >
-            <div className="relative mx-auto max-w-sm lg:max-w-md">
+            <div className="relative mx-auto max-w-sm lg:max-w-md group">
               {/* Decorative ring */}
-              <div className="absolute -inset-4 rounded-full bg-gradient-to-br from-primary/20 via-accent/10 to-primary/20 blur-2xl" />
+              <div className="absolute -inset-4 rounded-full bg-gradient-to-br from-primary/20 via-accent/10 to-primary/20 blur-2xl transition-all duration-500 group-hover:from-primary/30 group-hover:via-accent/20 group-hover:to-primary/30" />
               
-              {/* Image container */}
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-primary/20">
+              {/* Image container with hover animation */}
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-primary/20 transition-all duration-300 group-hover:shadow-primary/25 group-hover:shadow-3xl group-hover:border-primary/40">
                 <img 
                   src={dubsMascot} 
                   alt="Dubs the Husky - UW Mascot" 
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105 group-hover:animate-wiggle"
                 />
                 {/* Caption overlay */}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4">
-                  <p className="text-white text-center font-semibold text-lg">
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 transition-all duration-300 group-hover:from-primary/95">
+                  <p className="text-white text-center font-semibold text-lg transition-transform duration-300 group-hover:scale-105">
                     Meet Dubs 🐾
                   </p>
                   <p className="text-white/80 text-center text-sm">
@@ -112,6 +112,11 @@ const Hero = () => {
                   </p>
                 </div>
               </div>
+              
+              {/* Hover hint */}
+              <p className="text-center text-xs text-muted-foreground mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Woof! Go Dawgs! 🐕
+              </p>
             </div>
           </div>
         </div>

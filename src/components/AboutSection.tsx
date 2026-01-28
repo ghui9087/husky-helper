@@ -53,7 +53,7 @@ const AboutSection = () => {
               Have tips to share or suggestions for improvement?
             </p>
             <a 
-              href="mailto:uwsurvivalguide@uw.edu" 
+              href="mailto:wxy95929@uw.edu" 
               className="inline-flex items-center text-primary font-medium hover:underline"
             >
               Get in touch with us →

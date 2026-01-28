@@ -82,11 +82,11 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Get in Touch</h4>
             <div className="space-y-3">
               <a
-                href="mailto:uwsurvivalguide@uw.edu"
+                href="mailto:wxy95929@uw.edu"
                 className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
               >
                 <Mail className="h-4 w-4" />
-                uwsurvivalguide@uw.edu
+                wxy95929@uw.edu
               </a>
               <p className="text-sm text-muted-foreground">
                 Have suggestions or corrections? We'd love to hear from you!
