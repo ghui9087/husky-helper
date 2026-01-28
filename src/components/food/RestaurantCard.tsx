@@ -113,28 +113,19 @@ const RestaurantCard = ({
           {description}
         </p>
 
-        {/* Simple external links (pure <a> tags; no handlers; no wrappers) */}
-        <div className="mt-auto pt-2 space-y-2 text-sm">
-          <a
-            href={googleMapsSearchUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary underline underline-offset-4 hover:text-primary/80"
-          >
-            📍 View on Google Maps
-          </a>
-
-          {websiteUrl && (
+        {/* Single link */}
+        {websiteUrl && (
+          <div className="mt-auto pt-2 text-sm">
             <a
               href={websiteUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary underline underline-offset-4 hover:text-primary/80"
             >
-              🌐 Visit Website
+              🔗 {websiteUrl}
             </a>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );
