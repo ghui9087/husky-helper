@@ -6,6 +6,7 @@ import {
   CheckCircle, Compass, AlertTriangle, Camera
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChecklistItem from "@/components/campus/ChecklistItem";
@@ -16,184 +17,186 @@ import uwCampusHero from "@/assets/uw-campus-hero.jpg";
 import uwSuzzalloLibrary from "@/assets/uw-suzzallo-library.jpg";
 import uwRedSquare from "@/assets/uw-red-square.jpg";
 
-const firstWeekChecklist = [
-  {
-    title: "Get Your Husky Card",
-    description: "Your official UW ID. Needed for building access, library, gym, transit, and more. Get it at the Husky Card Office in Schmitz Hall.",
-    icon: CreditCard,
-    priority: "high" as const,
-  },
-  {
-    title: "Activate Your U-Pass",
-    description: "Free unlimited transit on buses and light rail! Activate through your MyUW account within the first week.",
-    icon: Bus,
-    priority: "high" as const,
-  },
-  {
-    title: "Set Up MyUW Account",
-    description: "Your portal for class registration, grades, email, and all UW services. Use your UW NetID to log in.",
-    icon: User,
-    priority: "high" as const,
-  },
-  {
-    title: "Find Your Classrooms",
-    description: "Do a campus walk-through before classes start. The UW campus is big – know where you're going!",
-    icon: MapPin,
-    priority: "medium" as const,
-  },
-  {
-    title: "Join Student Organizations",
-    description: "Over 1,000 clubs at UW! Check out the Student Activities Office or attend the RSO Fair to find your community.",
-    icon: Users,
-    priority: "medium" as const,
-  },
-];
-
-const campusLocations = [
-  {
-    name: "Odegaard Library",
-    description: "24/7 undergraduate library with group study rooms, computer labs, and the popular UW Starbucks.",
-    icon: Library,
-    hours: "24 hours (during quarters)",
-    location: "Central Campus",
-    color: "purple" as const,
-  },
-  {
-    name: "Suzzallo Library",
-    description: "The iconic 'Harry Potter' library. Beautiful reading room, quiet study spaces, and research resources.",
-    icon: Library,
-    hours: "7am - 11pm",
-    location: "Red Square",
-    color: "purple" as const,
-  },
-  {
-    name: "IMA (Intramural Activities)",
-    description: "State-of-the-art gym with pools, climbing wall, basketball courts, and fitness classes. Free for students!",
-    icon: Dumbbell,
-    hours: "6am - 11pm",
-    location: "East Campus",
-    color: "green" as const,
-  },
-  {
-    name: "Suzzallo Espresso",
-    description: "Cozy café in Suzzallo Library. Great coffee and snacks for study sessions.",
-    icon: Coffee,
-    hours: "7:30am - 6pm",
-    location: "Suzzallo Library",
-    color: "gold" as const,
-  },
-  {
-    name: "HUB (Husky Union Building)",
-    description: "Student center with food court, study lounges, bowling alley, and student org offices.",
-    icon: Building,
-    hours: "7am - 11pm",
-    location: "Central Campus",
-    color: "gold" as const,
-  },
-  {
-    name: "Computer Labs",
-    description: "Multiple labs across campus with printing, scanning, and software. Odegaard and Mary Gates Hall are popular.",
-    icon: Monitor,
-    hours: "Varies by location",
-    location: "Multiple buildings",
-    color: "blue" as const,
-  },
-  {
-    name: "Hall Health Center",
-    description: "Primary care, mental health, pharmacy, and health education. Most services covered by student insurance.",
-    icon: Heart,
-    hours: "8am - 5pm (M-F)",
-    location: "North Campus",
-    color: "green" as const,
-  },
-  {
-    name: "Quiet Study: Allen Library",
-    description: "North wing has dedicated quiet floors. Perfect for focused studying and research.",
-    icon: Library,
-    hours: "8am - 10pm",
-    location: "Next to Suzzallo",
-    color: "purple" as const,
-  },
-];
-
-const appsAndResources = [
-  {
-    name: "MyUW Mobile App",
-    description: "Access classes, grades, campus map, and bus schedules on the go.",
-    icon: Smartphone,
-    type: "app" as const,
-  },
-  {
-    name: "UW SafeCampus",
-    description: "Report safety concerns, access emergency resources, and get real-time alerts.",
-    icon: Shield,
-    type: "app" as const,
-  },
-  {
-    name: "Transit App / OneBusAway",
-    description: "Real-time bus arrivals and trip planning for Seattle transit.",
-    icon: Train,
-    type: "app" as const,
-  },
-  {
-    name: "UW International WeChat Groups",
-    description: "Connect with other international students. Search 'UW Class of [Year]' groups.",
-    icon: MessageCircle,
-    type: "social" as const,
-  },
-  {
-    name: "Canvas (Learning Platform)",
-    description: "Where professors post assignments, lectures, and grades. Check daily!",
-    icon: Monitor,
-    type: "website" as const,
-  },
-  {
-    name: "ISS Website",
-    description: "International Student Services portal for visa info, events, and resources.",
-    icon: Globe,
-    type: "website" as const,
-  },
-];
-
-const emergencyContacts = [
-  {
-    name: "UW Police Department",
-    phone: "206-543-0507",
-    description: "24/7 campus police for emergencies. Call 911 for life-threatening emergencies.",
-    icon: Phone,
-    urgent: true,
-  },
-  {
-    name: "Hall Health Center",
-    phone: "206-685-1011",
-    description: "Medical appointments and health advice during business hours.",
-    icon: Heart,
-    urgent: false,
-  },
-  {
-    name: "International Student Services",
-    phone: "206-543-1250",
-    description: "Visa questions, travel signatures, and international student support.",
-    icon: Globe,
-    urgent: false,
-  },
-  {
-    name: "Counseling Center",
-    phone: "206-543-1240",
-    description: "Free mental health counseling for students. Crisis support available.",
-    icon: Brain,
-    urgent: false,
-  },
-  {
-    name: "SafeCampus 24/7 Helpline",
-    phone: "206-685-7233",
-    description: "Report concerns, get advice, or talk to someone any time.",
-    icon: Shield,
-    urgent: false,
-  },
-];
-
 const CampusLife = () => {
+  const { t } = useTranslation();
+
+  const firstWeekChecklist = [
+    {
+      title: t("campusLife.firstWeek.huskyCard"),
+      description: t("campusLife.firstWeek.huskyCardDesc"),
+      icon: CreditCard,
+      priority: "high" as const,
+    },
+    {
+      title: t("campusLife.firstWeek.upass"),
+      description: t("campusLife.firstWeek.upassDesc"),
+      icon: Bus,
+      priority: "high" as const,
+    },
+    {
+      title: t("campusLife.firstWeek.myuw"),
+      description: t("campusLife.firstWeek.myuwDesc"),
+      icon: User,
+      priority: "high" as const,
+    },
+    {
+      title: t("campusLife.firstWeek.classrooms"),
+      description: t("campusLife.firstWeek.classroomsDesc"),
+      icon: MapPin,
+      priority: "medium" as const,
+    },
+    {
+      title: t("campusLife.firstWeek.clubs"),
+      description: t("campusLife.firstWeek.clubsDesc"),
+      icon: Users,
+      priority: "medium" as const,
+    },
+  ];
+
+  const campusLocations = [
+    {
+      name: t("campusLife.locations.odegaard"),
+      description: t("campusLife.locations.odegaardDesc"),
+      icon: Library,
+      hours: "24 hours",
+      location: "Central Campus",
+      color: "purple" as const,
+    },
+    {
+      name: t("campusLife.locations.suzzallo"),
+      description: t("campusLife.locations.suzzalloDesc"),
+      icon: Library,
+      hours: "7am - 11pm",
+      location: "Red Square",
+      color: "purple" as const,
+    },
+    {
+      name: t("campusLife.locations.ima"),
+      description: t("campusLife.locations.imaDesc"),
+      icon: Dumbbell,
+      hours: "6am - 11pm",
+      location: "East Campus",
+      color: "green" as const,
+    },
+    {
+      name: t("campusLife.locations.espresso"),
+      description: t("campusLife.locations.espressoDesc"),
+      icon: Coffee,
+      hours: "7:30am - 6pm",
+      location: "Suzzallo Library",
+      color: "gold" as const,
+    },
+    {
+      name: t("campusLife.locations.hub"),
+      description: t("campusLife.locations.hubDesc"),
+      icon: Building,
+      hours: "7am - 11pm",
+      location: "Central Campus",
+      color: "gold" as const,
+    },
+    {
+      name: t("campusLife.locations.labs"),
+      description: t("campusLife.locations.labsDesc"),
+      icon: Monitor,
+      hours: "Varies",
+      location: "Multiple",
+      color: "blue" as const,
+    },
+    {
+      name: t("campusLife.locations.health"),
+      description: t("campusLife.locations.healthDesc"),
+      icon: Heart,
+      hours: "8am - 5pm",
+      location: "North Campus",
+      color: "green" as const,
+    },
+    {
+      name: t("campusLife.locations.allen"),
+      description: t("campusLife.locations.allenDesc"),
+      icon: Library,
+      hours: "8am - 10pm",
+      location: "Next to Suzzallo",
+      color: "purple" as const,
+    },
+  ];
+
+  const appsAndResources = [
+    {
+      name: t("campusLife.apps.myuwApp"),
+      description: t("campusLife.apps.myuwAppDesc"),
+      icon: Smartphone,
+      type: "app" as const,
+    },
+    {
+      name: t("campusLife.apps.safeCampus"),
+      description: t("campusLife.apps.safeCampusDesc"),
+      icon: Shield,
+      type: "app" as const,
+    },
+    {
+      name: t("campusLife.apps.transit"),
+      description: t("campusLife.apps.transitDesc"),
+      icon: Train,
+      type: "app" as const,
+    },
+    {
+      name: t("campusLife.apps.wechat"),
+      description: t("campusLife.apps.wechatDesc"),
+      icon: MessageCircle,
+      type: "social" as const,
+    },
+    {
+      name: t("campusLife.apps.canvas"),
+      description: t("campusLife.apps.canvasDesc"),
+      icon: Monitor,
+      type: "website" as const,
+    },
+    {
+      name: t("campusLife.apps.iss"),
+      description: t("campusLife.apps.issDesc"),
+      icon: Globe,
+      type: "website" as const,
+    },
+  ];
+
+  const emergencyContacts = [
+    {
+      name: t("campusLife.emergency.police"),
+      phone: "206-543-0507",
+      description: t("campusLife.emergency.policeDesc"),
+      icon: Phone,
+      urgent: true,
+    },
+    {
+      name: t("campusLife.emergency.hallHealth"),
+      phone: "206-685-1011",
+      description: t("campusLife.emergency.hallHealthDesc"),
+      icon: Heart,
+      urgent: false,
+    },
+    {
+      name: t("campusLife.emergency.issContact"),
+      phone: "206-543-1250",
+      description: t("campusLife.emergency.issContactDesc"),
+      icon: Globe,
+      urgent: false,
+    },
+    {
+      name: t("campusLife.emergency.counseling"),
+      phone: "206-543-1240",
+      description: t("campusLife.emergency.counselingDesc"),
+      icon: Brain,
+      urgent: false,
+    },
+    {
+      name: t("campusLife.emergency.safeCampusLine"),
+      phone: "206-685-7233",
+      description: t("campusLife.emergency.safeCampusLineDesc"),
+      icon: Shield,
+      urgent: false,
+    },
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -218,7 +221,7 @@ const CampusLife = () => {
                   className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-4 transition-colors"
                 >
                   <ArrowLeft className="h-4 w-4" />
-                  Back to Home
+                  {t("common.backToHome")}
                 </Link>
                 
                 <div className="flex items-center gap-4 mb-3">
@@ -226,11 +229,11 @@ const CampusLife = () => {
                     <GraduationCap className="h-6 w-6 md:h-7 md:w-7 text-white" />
                   </div>
                   <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-                    Campus Life Essentials
+                    {t("campusLife.title")}
                   </h1>
                 </div>
                 <p className="text-base md:text-lg text-white/90 max-w-2xl">
-                  Everything you need to know to hit the ground running at UW. From your first week tasks to emergency contacts.
+                  {t("campusLife.subtitle")}
                 </p>
               </div>
             </div>
@@ -242,10 +245,10 @@ const CampusLife = () => {
           <div className="container">
             <div className="flex items-center gap-3 mb-3">
               <CheckCircle className="h-6 w-6 text-primary" />
-              <h2 className="text-2xl md:text-3xl font-bold">First Week Checklist</h2>
+              <h2 className="text-2xl md:text-3xl font-bold">{t("campusLife.firstWeek.title")}</h2>
             </div>
             <p className="text-muted-foreground mb-8 max-w-2xl">
-              Complete these tasks in your first week to set yourself up for success. High priority items first!
+              {t("campusLife.firstWeek.subtitle")}
             </p>
 
             <div className="grid gap-4 max-w-3xl">
@@ -261,10 +264,10 @@ const CampusLife = () => {
           <div className="container">
             <div className="flex items-center gap-3 mb-3">
               <Camera className="h-6 w-6 text-primary" />
-              <h2 className="text-2xl md:text-3xl font-bold">Campus Scenery</h2>
+              <h2 className="text-2xl md:text-3xl font-bold">{t("campusLife.scenery.title")}</h2>
             </div>
             <p className="text-muted-foreground mb-8 max-w-2xl">
-              Some beautiful spots on campus you'll want to explore and photograph.
+              {t("campusLife.scenery.subtitle")}
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -276,8 +279,8 @@ const CampusLife = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="font-semibold text-lg">Suzzallo Library Reading Room</h3>
-                  <p className="text-sm text-white/80">The iconic "Harry Potter" library with stunning Gothic architecture</p>
+                  <h3 className="font-semibold text-lg">{t("campusLife.scenery.suzzallo")}</h3>
+                  <p className="text-sm text-white/80">{t("campusLife.scenery.suzzalloDesc")}</p>
                 </div>
               </div>
 
@@ -289,8 +292,8 @@ const CampusLife = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="font-semibold text-lg">Red Square & Drumheller Fountain</h3>
-                  <p className="text-sm text-white/80">The heart of campus with views of Mount Rainier on clear days</p>
+                  <h3 className="font-semibold text-lg">{t("campusLife.scenery.redSquare")}</h3>
+                  <p className="text-sm text-white/80">{t("campusLife.scenery.redSquareDesc")}</p>
                 </div>
               </div>
             </div>
@@ -299,8 +302,8 @@ const CampusLife = () => {
             <div className="mt-8 p-6 bg-card rounded-2xl border border-border shadow-sm">
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div>
-                  <h3 className="font-semibold text-lg mb-1">📍 Explore the Full Campus Map</h3>
-                  <p className="text-sm text-muted-foreground">Interactive map to help you find buildings, parking, and more.</p>
+                  <h3 className="font-semibold text-lg mb-1">{t("campusLife.scenery.mapTitle")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("campusLife.scenery.mapSubtitle")}</p>
                 </div>
                 <a
                   href="https://www.washington.edu/maps/"
@@ -309,7 +312,7 @@ const CampusLife = () => {
                   className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
                 >
                   <MapPin className="h-4 w-4" />
-                  Open UW Map
+                  {t("campusLife.scenery.openMap")}
                 </a>
               </div>
             </div>
@@ -321,10 +324,10 @@ const CampusLife = () => {
           <div className="container">
             <div className="flex items-center gap-3 mb-3">
               <Compass className="h-6 w-6 text-primary" />
-              <h2 className="text-2xl md:text-3xl font-bold">Essential Campus Locations</h2>
+              <h2 className="text-2xl md:text-3xl font-bold">{t("campusLife.locations.title")}</h2>
             </div>
             <p className="text-muted-foreground mb-8 max-w-2xl">
-              Know where to study, work out, get help, and grab coffee. These are the spots you'll visit most.
+              {t("campusLife.locations.subtitle")}
             </p>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -340,10 +343,10 @@ const CampusLife = () => {
           <div className="container">
             <div className="flex items-center gap-3 mb-3">
               <Smartphone className="h-6 w-6 text-primary" />
-              <h2 className="text-2xl md:text-3xl font-bold">Useful Apps & Resources</h2>
+              <h2 className="text-2xl md:text-3xl font-bold">{t("campusLife.apps.title")}</h2>
             </div>
             <p className="text-muted-foreground mb-8 max-w-2xl">
-              Download these apps and bookmark these sites. They'll make your UW life much easier.
+              {t("campusLife.apps.subtitle")}
             </p>
 
             <div className="grid md:grid-cols-2 gap-4 max-w-4xl">
@@ -359,10 +362,10 @@ const CampusLife = () => {
           <div className="container">
             <div className="flex items-center gap-3 mb-3">
               <AlertTriangle className="h-6 w-6 text-destructive" />
-              <h2 className="text-2xl md:text-3xl font-bold">Emergency Contacts</h2>
+              <h2 className="text-2xl md:text-3xl font-bold">{t("campusLife.emergency.title")}</h2>
             </div>
             <p className="text-muted-foreground mb-8 max-w-2xl">
-              Save these numbers in your phone. You might never need them, but it's important to have them.
+              {t("campusLife.emergency.subtitle")}
             </p>
 
             <div className="grid md:grid-cols-2 gap-4 max-w-4xl">
@@ -378,9 +381,9 @@ const CampusLife = () => {
                   <Phone className="h-8 w-8" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-red-900">For Life-Threatening Emergencies</h3>
-                  <p className="text-4xl font-mono font-bold text-red-600">Call 911</p>
-                  <p className="text-sm text-red-700 mt-1">Police, Fire, Medical emergencies – available 24/7</p>
+                  <h3 className="text-2xl font-bold text-red-900">{t("campusLife.emergency.lifeThreatening")}</h3>
+                  <p className="text-4xl font-mono font-bold text-red-600">{t("campusLife.emergency.call911")}</p>
+                  <p className="text-sm text-red-700 mt-1">{t("campusLife.emergency.available247")}</p>
                 </div>
               </div>
             </div>
@@ -392,10 +395,9 @@ const CampusLife = () => {
           <div className="container">
             <div className="text-center max-w-2xl mx-auto">
               <span className="text-3xl mb-3 block">💡</span>
-              <h3 className="font-semibold text-lg mb-2">Pro Tip for International Students</h3>
+              <h3 className="font-semibold text-lg mb-2">{t("campusLife.proTip.title")}</h3>
               <p className="text-sm text-muted-foreground">
-                Visit the International Student Services (ISS) office in Schmitz Hall during your first week. 
-                They can help with visa questions, cultural adjustment, and connecting you with other international students.
+                {t("campusLife.proTip.content")}
               </p>
             </div>
           </div>
