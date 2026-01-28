@@ -1,45 +1,47 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import uwCampusHero from "@/assets/uw-campus-hero.jpg";
 import uwSuzzalloLibrary from "@/assets/uw-suzzallo-library.jpg";
 import uwRedSquare from "@/assets/uw-red-square.jpg";
 
-const campusImages = [
-  {
-    src: uwCampusHero,
-    title: "Cherry Blossom Season",
-    description: "The Quad in full bloom"
-  },
-  {
-    src: uwSuzzalloLibrary,
-    title: "Suzzallo Library",
-    description: "The 'Harry Potter' reading room"
-  },
-  {
-    src: uwRedSquare,
-    title: "Drumheller Fountain",
-    description: "Iconic campus landmark"
-  }
-];
-
 const CampusCarousel = () => {
+  const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const campusImages = [
+    {
+      src: uwCampusHero,
+      title: t("carousel.cherryBlossom"),
+      description: t("carousel.cherryDesc")
+    },
+    {
+      src: uwSuzzalloLibrary,
+      title: t("carousel.library"),
+      description: t("carousel.libraryDesc")
+    },
+    {
+      src: uwRedSquare,
+      title: t("carousel.fountain"),
+      description: t("carousel.fountainDesc")
+    }
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % campusImages.length);
     }, 4000);
     return () => clearInterval(timer);
-  }, []);
+  }, [campusImages.length]);
 
   return (
     <section className="py-12 md:py-16 bg-secondary/30">
       <div className="container">
         <div className="text-center mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold mb-2">
-            Explore Our Beautiful Campus
+            {t("carousel.title")}
           </h2>
           <p className="text-muted-foreground">
-            Discover what makes UW Seattle special
+            {t("carousel.subtitle")}
           </p>
         </div>
 

@@ -1,9 +1,12 @@
 import { ArrowDown, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import dubsMascot from "@/assets/dubs-mascot.jpg";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative overflow-hidden">
       {/* Background gradient */}
@@ -23,7 +26,7 @@ const Hero = () => {
               style={{ animationDelay: "0.1s" }}
             >
               <Sparkles className="h-4 w-4 text-accent" />
-              <span>Made by students, for students</span>
+              <span>{t("hero.badge")}</span>
             </div>
 
             {/* UW Slogan */}
@@ -32,7 +35,7 @@ const Hero = () => {
               style={{ animationDelay: "0.15s" }}
             >
               <p className="text-lg sm:text-xl font-semibold text-primary italic">
-                "Be Boundless"
+                "{t("hero.slogan")}"
               </p>
             </div>
 
@@ -41,11 +44,11 @@ const Hero = () => {
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance opacity-0 animate-fade-in-up"
               style={{ animationDelay: "0.2s" }}
             >
-              Welcome to <span className="text-primary">UW</span>
+              {t("hero.welcome")} <span className="text-primary">UW</span>
               <br className="hidden sm:block" />
               <span className="sm:hidden"> – </span>
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Your Campus Survival Guide
+                {t("hero.subtitle")}
               </span>
             </h1>
 
@@ -54,9 +57,7 @@ const Hero = () => {
               className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 text-balance opacity-0 animate-fade-in-up"
               style={{ animationDelay: "0.3s" }}
             >
-              A student-created resource to help international students navigate Seattle 
-              and UW campus life. Find housing, discover great food, and make the most 
-              of your Husky experience.
+              {t("hero.description")}
             </p>
 
             {/* Go Dawgs tagline */}
@@ -65,7 +66,7 @@ const Hero = () => {
               style={{ animationDelay: "0.35s" }}
             >
               <p className="text-2xl sm:text-3xl font-bold text-primary">
-                🐺 Go Dawgs!
+                🐺 {t("hero.goDawgs")}
               </p>
             </div>
 
@@ -76,12 +77,12 @@ const Hero = () => {
             >
               <Button variant="hero" size="lg" className="w-full sm:w-auto" asChild>
                 <a href="#guides">
-                  Explore Guides
+                  {t("hero.exploreGuides")}
                   <ArrowDown className="h-4 w-4 ml-1" />
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="w-full sm:w-auto" asChild>
-                <Link to="/campus">Start with Campus Life</Link>
+                <Link to="/campus">{t("hero.startCampus")}</Link>
               </Button>
             </div>
           </div>
@@ -105,17 +106,17 @@ const Hero = () => {
                 {/* Caption overlay */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-4 transition-all duration-300 group-hover:from-primary/95">
                   <p className="text-white text-center font-semibold text-lg transition-transform duration-300 group-hover:scale-105">
-                    Meet Dubs 🐾
+                    {t("hero.meetDubs")} 🐾
                   </p>
                   <p className="text-white/80 text-center text-sm">
-                    Our beloved UW mascot
+                    {t("hero.mascotDesc")}
                   </p>
                 </div>
               </div>
               
               {/* Hover hint */}
               <p className="text-center text-xs text-muted-foreground mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                Woof! Go Dawgs! 🐕
+                {t("hero.woofMessage")} 🐕
               </p>
             </div>
           </div>

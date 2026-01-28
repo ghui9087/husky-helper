@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "首页",
+    "campusLife": "校园生活",
+    "housing": "住房指南",
+    "food": "美食餐饮",
+    "transport": "交通出行",
+    "contact": "联系我们"
+  },
+  "hero": {
+    "badge": "学生创作，服务学生",
+    "slogan": "无限可能",
+    "welcome": "欢迎来到",
+    "subtitle": "你的校园生存指南",
+    "description": "由学生创建的资源，帮助国际学生了解西雅图和华盛顿大学校园生活。找到住房、发现美食，充分享受你的Husky体验。",
+    "goDawgs": "冲啊哈士奇！",
+    "exploreGuides": "探索指南",
+    "startCampus": "从校园生活开始",
+    "meetDubs": "认识Dubs",
+    "mascotDesc": "我们可爱的UW吉祥物",
+    "woofMessage": "汪！冲啊哈士奇！"
+  },
+  "carousel": {
+    "title": "探索美丽的校园",
+    "subtitle": "发现华大西雅图的独特魅力",
+    "cherryBlossom": "樱花季",
+    "cherryDesc": "四方院樱花盛开",
+    "library": "苏萨洛图书馆",
+    "libraryDesc": "哈利波特风格阅览室",
+    "fountain": "鼓手喷泉",
+    "fountainDesc": "标志性校园地标"
+  },
+  "features": {
+    "title": "你需要知道的一切",
+    "subtitle": "在华大西雅图茁壮成长的全面指南",
+    "campusLife": {
+      "title": "校园生活",
+      "description": "华大西雅图校园的重要地点、资源和导航技巧"
+    },
+    "housing": {
+      "title": "住房指南",
+      "description": "在校园附近找到理想的社区和公寓"
+    },
+    "food": {
+      "title": "美食餐饮",
+      "description": "发现华大周边最好的餐厅和美食点"
+    },
+    "transport": {
+      "title": "交通出行",
+      "description": "掌握西雅图的公交系统和U-PASS"
+    },
+    "learnMore": "了解更多"
+  },
+  "about": {
+    "title": "由Huskies创作，为Huskies服务",
+    "subtitle": "我们知道在一个新的国家重新开始有多么令人不知所措。这就是我们创建这个指南的原因。",
+    "byStudents": "学生创作",
+    "byStudentsDesc": "由经历过一切的国际学生创建",
+    "community": "社区驱动",
+    "communityDesc": "基于真实经验和反馈的推荐",
+    "updated": "持续更新",
+    "updatedDesc": "定期添加新的技巧和信息",
+    "contactPrompt": "有建议想分享或改进意见？",
+    "getInTouch": "联系我们 →"
+  },
+  "footer": {
+    "description": "由学生创建的资源，帮助国际学生了解华大西雅图，充分享受Husky体验。",
+    "madeBy": "由华大学生创作，服务华大学生 💜",
+    "quickLinks": "快速链接",
+    "uwResources": "UW资源",
+    "uwOfficial": "UW官网",
+    "myuw": "MyUW门户",
+    "iss": "UW国际学生服务",
+    "getInTouch": "联系方式",
+    "suggestions": "有建议或更正？我们很乐意听取！",
+    "copyright": "UW生存指南。所有信息按原样提供。",
+    "notAffiliated": "与华盛顿大学无官方关联。",
+    "lastUpdated": "最后更新",
+    "disclaimer": "免责声明：",
+    "disclaimerText": "本指南由学生创建，仅供参考。信息可能过时或不准确。请务必与UW官方来源核实重要细节。我们不对基于此信息做出的任何决定负责。"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "홈",
+    "campusLife": "캠퍼스 생활",
+    "housing": "주거 가이드",
+    "food": "음식 & 식사",
+    "transport": "교통",
+    "contact": "연락하기"
+  },
+  "hero": {
+    "badge": "학생이 만들고, 학생을 위해",
+    "slogan": "무한한 가능성",
+    "welcome": "환영합니다",
+    "subtitle": "캠퍼스 생존 가이드",
+    "description": "시애틀과 UW 캠퍼스 생활을 안내하는 학생 제작 리소스입니다. 주거지를 찾고, 맛집을 발견하고, Husky 경험을 최대한 활용하세요.",
+    "goDawgs": "고 독스!",
+    "exploreGuides": "가이드 탐색",
+    "startCampus": "캠퍼스 생활부터 시작",
+    "meetDubs": "Dubs를 만나보세요",
+    "mascotDesc": "사랑하는 UW 마스코트",
+    "woofMessage": "멍! 고 독스!"
+  },
+  "carousel": {
+    "title": "아름다운 캠퍼스 탐험",
+    "subtitle": "UW 시애틀의 특별함을 발견하세요",
+    "cherryBlossom": "벚꽃 시즌",
+    "cherryDesc": "만개한 쿼드",
+    "library": "수잘로 도서관",
+    "libraryDesc": "해리포터 열람실",
+    "fountain": "드럼헬러 분수",
+    "fountainDesc": "상징적인 캠퍼스 랜드마크"
+  },
+  "features": {
+    "title": "알아야 할 모든 것",
+    "subtitle": "UW 시애틀에서 성공하기 위한 종합 가이드",
+    "campusLife": {
+      "title": "캠퍼스 생활",
+      "description": "UW 시애틀 캠퍼스의 필수 위치, 자원 및 팁"
+    },
+    "housing": {
+      "title": "주거 가이드",
+      "description": "캠퍼스 근처에서 완벽한 동네와 아파트 찾기"
+    },
+    "food": {
+      "title": "음식 & 식사",
+      "description": "UW 주변 최고의 레스토랑과 맛집 발견"
+    },
+    "transport": {
+      "title": "교통",
+      "description": "U-PASS로 시애틀 대중교통 마스터하기"
+    },
+    "learnMore": "더 알아보기"
+  },
+  "about": {
+    "title": "허스키가 만들고, 허스키를 위해",
+    "subtitle": "새로운 나라에서 새롭게 시작하는 것이 얼마나 힘든지 압니다. 그래서 이 가이드를 만들었습니다.",
+    "byStudents": "학생 제작",
+    "byStudentsDesc": "모든 것을 경험한 유학생들이 만들었습니다",
+    "community": "커뮤니티 기반",
+    "communityDesc": "실제 경험과 피드백 기반 추천",
+    "updated": "항상 업데이트",
+    "updatedDesc": "정기적으로 새로운 팁과 정보 추가",
+    "contactPrompt": "공유할 팁이나 개선 제안이 있으신가요?",
+    "getInTouch": "연락하기 →"
+  },
+  "footer": {
+    "description": "유학생들이 UW 시애틀을 탐색하고 Husky 경험을 최대한 활용할 수 있도록 돕는 학생 제작 리소스입니다.",
+    "madeBy": "UW 학생이 만들고, UW 학생을 위해 💜",
+    "quickLinks": "빠른 링크",
+    "uwResources": "UW 리소스",
+    "uwOfficial": "UW 공식 사이트",
+    "myuw": "MyUW 포털",
+    "iss": "UW ISS",
+    "getInTouch": "연락처",
+    "suggestions": "제안이나 수정 사항이 있으신가요? 듣고 싶습니다!",
+    "copyright": "UW 생존 가이드. 모든 정보는 있는 그대로 제공됩니다.",
+    "notAffiliated": "워싱턴 대학교와 공식적으로 제휴하지 않았습니다.",
+    "lastUpdated": "마지막 업데이트",
+    "disclaimer": "면책 조항:",
+    "disclaimerText": "이 가이드는 학생들이 만든 것으로 정보 제공 목적으로만 사용됩니다. 정보가 오래되거나 부정확할 수 있습니다. 중요한 사항은 항상 UW 공식 출처에서 확인하세요. 이 정보를 기반으로 한 결정에 대해 책임지지 않습니다."
+  }
+}

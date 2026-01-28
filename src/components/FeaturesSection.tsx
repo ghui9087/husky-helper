@@ -1,38 +1,45 @@
 import { Home, Utensils, GraduationCap, Bus } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import FeatureCard from "./FeatureCard";
 
-const features = [
-  {
-    title: "Campus Life",
-    description: "Navigate essential facilities, find study spots, join student organizations, and learn insider tips.",
-    icon: GraduationCap,
-    href: "/campus",
-    color: "purple" as const,
-  },
-  {
-    title: "Housing Guide",
-    description: "Find safe neighborhoods and apartment recommendations near campus. Tips on rental processes and what to look for.",
-    icon: Home,
-    href: "/housing",
-    color: "gold" as const,
-  },
-  {
-    title: "Food & Dining",
-    description: "Discover restaurants near campus sorted by cuisine type. From authentic Asian food to budget-friendly options.",
-    icon: Utensils,
-    href: "/food",
-    color: "purple" as const,
-  },
-  {
-    title: "Getting Around",
-    description: "Master Seattle transportation with U-Pass info, bus routes, light rail tips, and bike-friendly paths.",
-    icon: Bus,
-    href: "/transport",
-    color: "gold" as const,
-  },
-];
-
 const FeaturesSection = () => {
+  const { t } = useTranslation();
+
+  const features = [
+    {
+      title: t("features.campusLife.title"),
+      description: t("features.campusLife.description"),
+      icon: GraduationCap,
+      link: "/campus",
+      color: "text-primary",
+      bgColor: "bg-secondary",
+    },
+    {
+      title: t("features.housing.title"),
+      description: t("features.housing.description"),
+      icon: Home,
+      link: "/housing",
+      color: "text-accent",
+      bgColor: "bg-gold-light",
+    },
+    {
+      title: t("features.food.title"),
+      description: t("features.food.description"),
+      icon: Utensils,
+      link: "/food",
+      color: "text-primary",
+      bgColor: "bg-secondary",
+    },
+    {
+      title: t("features.transport.title"),
+      description: t("features.transport.description"),
+      icon: Bus,
+      link: "/transport",
+      color: "text-accent",
+      bgColor: "bg-gold-light",
+    },
+  ];
+
   return (
     <section id="guides" className="py-16 md:py-24 bg-background">
       <div className="container">
@@ -42,13 +49,13 @@ const FeaturesSection = () => {
             className="text-responsive-lg font-bold mb-4 opacity-0 animate-fade-in"
             style={{ animationDelay: "0.1s" }}
           >
-            Everything You Need to Know
+            {t("features.title")}
           </h2>
           <p 
             className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in px-4"
             style={{ animationDelay: "0.2s" }}
           >
-            We've gathered the essential information to help you settle in quickly and make the most of your time at UW.
+            {t("features.subtitle")}
           </p>
         </div>
 
@@ -56,9 +63,10 @@ const FeaturesSection = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {features.map((feature, index) => (
             <FeatureCard
-              key={feature.title}
+              key={feature.link}
               {...feature}
               delay={0.3 + index * 0.1}
+              learnMoreText={t("features.learnMore")}
             />
           ))}
         </div>

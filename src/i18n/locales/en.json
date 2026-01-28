@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Home",
+    "campusLife": "Campus Life",
+    "housing": "Housing",
+    "food": "Food & Dining",
+    "transport": "Getting Around",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "badge": "Made by students, for students",
+    "slogan": "Be Boundless",
+    "welcome": "Welcome to",
+    "subtitle": "Your Campus Survival Guide",
+    "description": "A student-created resource to help international students navigate Seattle and UW campus life. Find housing, discover great food, and make the most of your Husky experience.",
+    "goDawgs": "Go Dawgs!",
+    "exploreGuides": "Explore Guides",
+    "startCampus": "Start with Campus Life",
+    "meetDubs": "Meet Dubs",
+    "mascotDesc": "Our beloved UW mascot",
+    "woofMessage": "Woof! Go Dawgs!"
+  },
+  "carousel": {
+    "title": "Explore Our Beautiful Campus",
+    "subtitle": "Discover what makes UW Seattle special",
+    "cherryBlossom": "Cherry Blossom Season",
+    "cherryDesc": "The Quad in full bloom",
+    "library": "Suzzallo Library",
+    "libraryDesc": "The 'Harry Potter' reading room",
+    "fountain": "Drumheller Fountain",
+    "fountainDesc": "Iconic campus landmark"
+  },
+  "features": {
+    "title": "Everything You Need to Know",
+    "subtitle": "Your comprehensive guides to thriving at UW Seattle",
+    "campusLife": {
+      "title": "Campus Life",
+      "description": "Essential locations, resources, and tips for navigating UW Seattle campus"
+    },
+    "housing": {
+      "title": "Housing Guide",
+      "description": "Find the perfect neighborhood and apartment near campus"
+    },
+    "food": {
+      "title": "Food & Dining",
+      "description": "Discover the best restaurants and food spots around UW"
+    },
+    "transport": {
+      "title": "Getting Around",
+      "description": "Master Seattle's transit system with U-PASS and more"
+    },
+    "learnMore": "Learn more"
+  },
+  "about": {
+    "title": "Made by Huskies, for Huskies",
+    "subtitle": "We know how overwhelming it can be to start fresh in a new country. That's why we created this guide.",
+    "byStudents": "By Students",
+    "byStudentsDesc": "Created by international students who've been through it all",
+    "community": "Community Driven",
+    "communityDesc": "Recommendations based on real experiences and feedback",
+    "updated": "Always Updated",
+    "updatedDesc": "Fresh tips and information added regularly",
+    "contactPrompt": "Have tips to share or suggestions for improvement?",
+    "getInTouch": "Get in touch with us →"
+  },
+  "footer": {
+    "description": "A student-created resource helping international students navigate UW Seattle and make the most of their Husky experience.",
+    "madeBy": "Made by UW students, for UW students 💜",
+    "quickLinks": "Quick Links",
+    "uwResources": "UW Resources",
+    "uwOfficial": "UW Official Site",
+    "myuw": "MyUW Portal",
+    "iss": "UW ISS",
+    "getInTouch": "Get in Touch",
+    "suggestions": "Have suggestions or corrections? We'd love to hear from you!",
+    "copyright": "UW Survival Guide. All information provided as-is.",
+    "notAffiliated": "Not officially affiliated with the University of Washington.",
+    "lastUpdated": "Last updated",
+    "disclaimer": "Disclaimer:",
+    "disclaimerText": "This guide is created by students and is for informational purposes only. Information may be outdated or inaccurate. Always verify important details with official UW sources. We are not responsible for any decisions made based on this information."
+  }
+}
