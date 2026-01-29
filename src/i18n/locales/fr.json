@@ -168,6 +168,25 @@
       "call911": "Appelez le 911",
       "available247": "Police, Pompiers, Urgences médicales – disponibles 24h/24"
     },
+    "circle": {
+      "title": "CIRCLE - Ressources pour Étudiants Internationaux",
+      "subtitle": "Le Centre des Relations Internationales et d'Échange de Leadership Culturel (CIRCLE) offre des programmes et un soutien aux étudiants internationaux.",
+      "coaching": "Coaching Réussite & Bien-être",
+      "coachingDesc": "Rendez-vous individuels pour identifier les domaines de croissance et les obstacles au succès et au bien-être.",
+      "friends": "CIRCLE of Friends",
+      "friendsDesc": "Un espace où les étudiants internationaux peuvent se retrouver, se faire des amis et obtenir du soutien !",
+      "uniteUW": "Unite UW",
+      "uniteUWDesc": "Programme d'échange culturel créant des ponts entre étudiants locaux et internationaux.",
+      "iwp": "Programmes d'Accueil International",
+      "iwpDesc": "Programmes organisés au début de chaque trimestre pour aider les nouveaux étudiants internationaux à s'adapter à UW.",
+      "leadership": "Série Leadership Global",
+      "leadershipDesc": "Connectez-vous avec d'éminents anciens de UW du monde entier dans différentes industries.",
+      "podcast": "Podcast In the Loop",
+      "podcastDesc": "Restez informé sur la réussite académique, le développement de carrière et les ressources UW.",
+      "visitTitle": "🌐 Visitez le Site Web CIRCLE",
+      "visitSubtitle": "Découvrez tous les programmes et inscrivez-vous aux événements.",
+      "visitButton": "Visiter CIRCLE"
+    },
     "proTip": {
       "title": "Conseil Pro pour les Étudiants Internationaux",
       "content": "Visitez le bureau des Services aux Étudiants Internationaux (ISS) à Schmitz Hall pendant votre première semaine. Ils peuvent aider avec les questions de visa, l'adaptation culturelle et vous connecter avec d'autres étudiants internationaux."

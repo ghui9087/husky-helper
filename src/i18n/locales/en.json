@@ -168,6 +168,25 @@
       "call911": "Call 911",
       "available247": "Police, Fire, Medical emergencies – available 24/7"
     },
+    "circle": {
+      "title": "CIRCLE - International Student Resources",
+      "subtitle": "The Center for International Relations & Cultural Leadership Exchange (CIRCLE) offers programs and support specifically for international students.",
+      "coaching": "Success & Well-being Coaching",
+      "coachingDesc": "One-on-one appointments to identify areas of growth and barriers to success and well-being.",
+      "friends": "CIRCLE of Friends",
+      "friendsDesc": "A space where international students can hang out, make friends, get support, and much more!",
+      "uniteUW": "Unite UW",
+      "uniteUWDesc": "Cultural exchange program that builds bridges between domestic and international students.",
+      "iwp": "International Welcome Programs",
+      "iwpDesc": "Programs held at the start of every quarter to help new international students transition to UW life.",
+      "leadership": "Global Leadership Series",
+      "leadershipDesc": "Connect with prominent UW alumni from around the world across different industries.",
+      "podcast": "In the Loop Podcast",
+      "podcastDesc": "Stay informed on academic success, career development, and UW resources.",
+      "visitTitle": "🌐 Visit CIRCLE Website",
+      "visitSubtitle": "Learn more about all programs and sign up for events.",
+      "visitButton": "Visit CIRCLE"
+    },
     "proTip": {
       "title": "Pro Tip for International Students",
       "content": "Visit the International Student Services (ISS) office in Schmitz Hall during your first week. They can help with visa questions, cultural adjustment, and connecting you with other international students."

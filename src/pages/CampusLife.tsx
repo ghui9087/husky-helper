@@ -3,7 +3,7 @@ import {
   Library, Dumbbell, Coffee, Monitor, Heart, 
   Smartphone, Shield, MessageCircle, Train,
   Phone, Building, Globe, Brain,
-  CheckCircle, Compass, AlertTriangle, Camera
+  CheckCircle, Compass, AlertTriangle, Camera, Sparkles, HeartHandshake, Podcast
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -353,6 +353,106 @@ const CampusLife = () => {
               {appsAndResources.map((resource) => (
                 <ResourceCard key={resource.name} {...resource} />
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CIRCLE - International Student Resources */}
+        <section className="py-14 md:py-20 bg-secondary/50">
+          <div className="container">
+            <div className="flex items-center gap-3 mb-3">
+              <Sparkles className="h-6 w-6 text-primary" />
+              <h2 className="text-2xl md:text-3xl font-bold">{t("campusLife.circle.title")}</h2>
+            </div>
+            <p className="text-muted-foreground mb-8 max-w-2xl">
+              {t("campusLife.circle.subtitle")}
+            </p>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+              {/* Success & Well-being Coaching */}
+              <div className="bg-card rounded-2xl border border-border/50 p-6 shadow-sm hover:shadow-md transition-all">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-100 mb-4">
+                  <HeartHandshake className="h-6 w-6 text-green-600" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">{t("campusLife.circle.coaching")}</h3>
+                <p className="text-sm text-muted-foreground">
+                  {t("campusLife.circle.coachingDesc")}
+                </p>
+              </div>
+
+              {/* CIRCLE of Friends */}
+              <div className="bg-card rounded-2xl border border-border/50 p-6 shadow-sm hover:shadow-md transition-all">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-100 mb-4">
+                  <Users className="h-6 w-6 text-purple-600" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">{t("campusLife.circle.friends")}</h3>
+                <p className="text-sm text-muted-foreground">
+                  {t("campusLife.circle.friendsDesc")}
+                </p>
+              </div>
+
+              {/* Unite UW */}
+              <div className="bg-card rounded-2xl border border-border/50 p-6 shadow-sm hover:shadow-md transition-all">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 mb-4">
+                  <Globe className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">{t("campusLife.circle.uniteUW")}</h3>
+                <p className="text-sm text-muted-foreground">
+                  {t("campusLife.circle.uniteUWDesc")}
+                </p>
+              </div>
+
+              {/* International Welcome Programs */}
+              <div className="bg-card rounded-2xl border border-border/50 p-6 shadow-sm hover:shadow-md transition-all">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-light mb-4">
+                  <GraduationCap className="h-6 w-6 text-accent" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">{t("campusLife.circle.iwp")}</h3>
+                <p className="text-sm text-muted-foreground">
+                  {t("campusLife.circle.iwpDesc")}
+                </p>
+              </div>
+
+              {/* Global Leadership Series */}
+              <div className="bg-card rounded-2xl border border-border/50 p-6 shadow-sm hover:shadow-md transition-all">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 mb-4">
+                  <Sparkles className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">{t("campusLife.circle.leadership")}</h3>
+                <p className="text-sm text-muted-foreground">
+                  {t("campusLife.circle.leadershipDesc")}
+                </p>
+              </div>
+
+              {/* In the Loop Podcast */}
+              <div className="bg-card rounded-2xl border border-border/50 p-6 shadow-sm hover:shadow-md transition-all">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-100 mb-4">
+                  <Podcast className="h-6 w-6 text-orange-600" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">{t("campusLife.circle.podcast")}</h3>
+                <p className="text-sm text-muted-foreground">
+                  {t("campusLife.circle.podcastDesc")}
+                </p>
+              </div>
+            </div>
+
+            {/* CIRCLE Website Link */}
+            <div className="p-6 bg-card rounded-2xl border border-border shadow-sm">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                  <h3 className="font-semibold text-lg mb-1">{t("campusLife.circle.visitTitle")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("campusLife.circle.visitSubtitle")}</p>
+                </div>
+                <a
+                  href="https://www.washington.edu/circle/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
+                >
+                  <Globe className="h-4 w-4" />
+                  {t("campusLife.circle.visitButton")}
+                </a>
+              </div>
             </div>
           </div>
         </section>

@@ -168,6 +168,25 @@
       "call911": "Gọi 911",
       "available247": "Cảnh sát, Cứu hỏa, Y tế khẩn cấp – 24/7"
     },
+    "circle": {
+      "title": "CIRCLE - Trung tâm Tài nguyên Sinh viên Quốc tế",
+      "subtitle": "Trung tâm Quan hệ Quốc tế & Trao đổi Lãnh đạo Văn hóa (CIRCLE) cung cấp các chương trình và hỗ trợ cho sinh viên quốc tế.",
+      "coaching": "Huấn luyện Thành công & Sức khỏe",
+      "coachingDesc": "Cuộc hẹn 1-1 để xác định các lĩnh vực phát triển và rào cản thành công & sức khỏe.",
+      "friends": "CIRCLE of Friends",
+      "friendsDesc": "Không gian để sinh viên quốc tế giao lưu, kết bạn và nhận hỗ trợ!",
+      "uniteUW": "Unite UW",
+      "uniteUWDesc": "Chương trình trao đổi văn hóa xây dựng cầu nối giữa sinh viên trong nước và quốc tế.",
+      "iwp": "Chương trình Chào đón Quốc tế",
+      "iwpDesc": "Các chương trình được tổ chức vào đầu mỗi học kỳ để giúp sinh viên quốc tế mới thích nghi với UW.",
+      "leadership": "Chuỗi Lãnh đạo Toàn cầu",
+      "leadershipDesc": "Kết nối với các cựu sinh viên UW nổi tiếng từ khắp nơi trên thế giới.",
+      "podcast": "Podcast In the Loop",
+      "podcastDesc": "Cập nhật thông tin về thành công học tập, phát triển nghề nghiệp và tài nguyên UW.",
+      "visitTitle": "🌐 Truy cập Website CIRCLE",
+      "visitSubtitle": "Tìm hiểu về tất cả các chương trình và đăng ký sự kiện.",
+      "visitButton": "Truy cập CIRCLE"
+    },
     "proTip": {
       "title": "Mẹo Pro cho sinh viên quốc tế",
       "content": "Ghé văn phòng Dịch vụ sinh viên quốc tế (ISS) tại Schmitz Hall trong tuần đầu. Họ có thể giúp với câu hỏi visa, thích nghi văn hóa và kết nối bạn với sinh viên quốc tế khác."

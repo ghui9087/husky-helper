@@ -168,6 +168,25 @@
       "call911": "911 전화",
       "available247": "경찰, 소방, 의료 비상 – 24시간 이용 가능"
     },
+    "circle": {
+      "title": "CIRCLE - 유학생 자원 센터",
+      "subtitle": "국제 관계 및 문화 리더십 교류 센터(CIRCLE)는 유학생을 위한 프로그램과 지원을 제공합니다.",
+      "coaching": "성공 & 웰빙 코칭",
+      "coachingDesc": "성장 영역과 성공 및 웰빙의 장벽을 파악하기 위한 1:1 상담 예약.",
+      "friends": "CIRCLE of Friends",
+      "friendsDesc": "유학생들이 어울리고, 친구를 사귀고, 지원을 받을 수 있는 공간!",
+      "uniteUW": "Unite UW",
+      "uniteUWDesc": "국내 학생과 유학생 사이에 다리를 놓는 문화 교류 프로그램.",
+      "iwp": "국제 신입생 프로그램",
+      "iwpDesc": "매 학기 시작에 열리며 신규 유학생의 UW 생활 적응을 돕습니다.",
+      "leadership": "글로벌 리더십 시리즈",
+      "leadershipDesc": "다양한 산업 분야의 저명한 UW 동문들과 교류하세요.",
+      "podcast": "In the Loop 팟캐스트",
+      "podcastDesc": "학업 성공, 진로 개발, UW 자원에 대한 정보를 얻으세요.",
+      "visitTitle": "🌐 CIRCLE 웹사이트 방문",
+      "visitSubtitle": "모든 프로그램에 대해 알아보고 이벤트에 등록하세요.",
+      "visitButton": "CIRCLE 방문"
+    },
     "proTip": {
       "title": "유학생을 위한 프로 팁",
       "content": "첫 주에 Schmitz Hall의 국제 학생 서비스(ISS) 사무실을 방문하세요. 비자 질문, 문화 적응, 다른 유학생과의 연결을 도와줄 수 있습니다."
