@@ -126,36 +126,35 @@ const CampusLife = () => {
       description: t("campusLife.apps.myuwAppDesc"),
       icon: Smartphone,
       type: "app" as const,
+      link: "https://my.uw.edu",
     },
     {
       name: t("campusLife.apps.safeCampus"),
       description: t("campusLife.apps.safeCampusDesc"),
       icon: Shield,
       type: "app" as const,
+      link: "https://www.washington.edu/safecampus/",
     },
     {
       name: t("campusLife.apps.transit"),
       description: t("campusLife.apps.transitDesc"),
       icon: Train,
       type: "app" as const,
-    },
-    {
-      name: t("campusLife.apps.wechat"),
-      description: t("campusLife.apps.wechatDesc"),
-      icon: MessageCircle,
-      type: "social" as const,
+      link: "https://onebusaway.org/",
     },
     {
       name: t("campusLife.apps.canvas"),
       description: t("campusLife.apps.canvasDesc"),
       icon: Monitor,
       type: "website" as const,
+      link: "https://canvas.uw.edu",
     },
     {
       name: t("campusLife.apps.iss"),
       description: t("campusLife.apps.issDesc"),
       icon: Globe,
       type: "website" as const,
+      link: "https://iss.washington.edu/",
     },
   ];
 
