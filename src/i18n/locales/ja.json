@@ -168,6 +168,25 @@
       "call911": "911に電話",
       "available247": "警察、消防、医療緊急事態 – 24時間対応"
     },
+    "circle": {
+      "title": "CIRCLE - 留学生リソースセンター",
+      "subtitle": "国際関係・文化リーダーシップ交流センター（CIRCLE）は、留学生向けのプログラムとサポートを提供しています。",
+      "coaching": "成功&ウェルビーイングコーチング",
+      "coachingDesc": "成長分野と成功・ウェルビーイングの障壁を特定するための1対1の予約。",
+      "friends": "CIRCLE of Friends",
+      "friendsDesc": "留学生が交流し、友達を作り、サポートを受けられる場所！",
+      "uniteUW": "Unite UW",
+      "uniteUWDesc": "国内学生と留学生の架け橋となる文化交流プログラム。",
+      "iwp": "留学生ウェルカムプログラム",
+      "iwpDesc": "毎学期初めに開催され、新入留学生のUW生活への移行を支援します。",
+      "leadership": "グローバルリーダーシップシリーズ",
+      "leadershipDesc": "世界中のさまざまな業界で活躍する著名なUW卒業生とつながりましょう。",
+      "podcast": "In the Loopポッドキャスト",
+      "podcastDesc": "学業の成功、キャリア開発、UWリソースについての情報を得ましょう。",
+      "visitTitle": "🌐 CIRCLEウェブサイトを訪問",
+      "visitSubtitle": "すべてのプログラムについて学び、イベントに登録しましょう。",
+      "visitButton": "CIRCLEを訪問"
+    },
     "proTip": {
       "title": "留学生向けプロのヒント",
       "content": "初週中にSchmitz Hallの留学生サービス（ISS）オフィスを訪問してください。ビザに関する質問、文化適応、他の留学生とのつながりを助けてくれます。"

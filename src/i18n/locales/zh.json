@@ -168,6 +168,25 @@
       "call911": "拨打911",
       "available247": "警察、消防、医疗紧急情况 - 24/7可用"
     },
+    "circle": {
+      "title": "CIRCLE - 国际学生资源中心",
+      "subtitle": "国际关系与文化领导力交流中心（CIRCLE）专为国际学生提供各类项目和支持。",
+      "coaching": "成功与健康辅导",
+      "coachingDesc": "一对一预约，帮助你发现成长机会并解决影响成功和身心健康的障碍。",
+      "friends": "CIRCLE of Friends",
+      "friendsDesc": "国际学生可以在这里交友、获得支持和更多帮助的空间！",
+      "uniteUW": "Unite UW",
+      "uniteUWDesc": "文化交流项目，搭建本地学生和国际学生之间的桥梁。",
+      "iwp": "国际迎新项目",
+      "iwpDesc": "每学期开始时举办的活动，帮助新国际学生适应UW生活。",
+      "leadership": "全球领导力系列",
+      "leadershipDesc": "与来自世界各地不同行业的杰出UW校友交流学习。",
+      "podcast": "In the Loop 播客",
+      "podcastDesc": "了解学业成功、职业发展和UW资源的最新信息。",
+      "visitTitle": "🌐 访问CIRCLE网站",
+      "visitSubtitle": "了解所有项目详情并报名参加活动。",
+      "visitButton": "访问CIRCLE"
+    },
     "proTip": {
       "title": "国际学生小贴士",
       "content": "在第一周访问Schmitz Hall的国际学生服务（ISS）办公室。他们可以帮助解决签证问题、文化适应，并将你与其他国际学生联系起来。"
