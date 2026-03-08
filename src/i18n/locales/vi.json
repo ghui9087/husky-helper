@@ -322,5 +322,8 @@
       "title": "Mẹo tuần đầu",
       "content": "Kích hoạt U-Pass qua MyUW trước chuyến xe buýt đầu tiên. Kích hoạt mất 24-48 giờ. Nếu cần di chuyển trước khi kích hoạt, vé lẻ là $2.75 (trả bằng ORCA hoặc thẻ tín dụng)."
     }
+  },
+  "auth": {
+    "continueAsGuest": "Tiếp tục với tư cách khách"
   }
 }

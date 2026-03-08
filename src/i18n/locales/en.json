@@ -294,5 +294,8 @@
       "title": "First Week Tip",
       "content": "Activate your U-Pass through MyUW before your first bus ride. It takes 24-48 hours to activate. If you need to travel before activation, single-ride fares are $2.75 (pay with ORCA or credit card)."
     }
+  },
+  "auth": {
+    "continueAsGuest": "Continue as Guest"
   }
 }

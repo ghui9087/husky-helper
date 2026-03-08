@@ -322,5 +322,8 @@
       "title": "Consejo de la Primera Semana",
       "content": "Activa tu U-Pass a través de MyUW antes de tu primer viaje en autobús. La activación toma 24-48 horas. Si necesitas viajar antes de la activación, las tarifas de un solo viaje son $2.75 (paga con ORCA o tarjeta de crédito)."
     }
+  },
+  "auth": {
+    "continueAsGuest": "Continuar como invitado"
   }
 }
