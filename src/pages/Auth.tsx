@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { MapPin, Mail, Lock, User, Loader2 } from 'lucide-react';
+import { MapPin, Mail, Lock, User, Loader2, X } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { useAuth } from '@/contexts/AuthContext';
 import { useEffect } from 'react';
@@ -61,7 +61,16 @@ const Auth = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center p-4">
+    <div className="min-h-screen bg-background flex items-center justify-center p-4 relative">
+      <Button
+        variant="ghost"
+        size="icon"
+        className="absolute top-4 right-4 h-10 w-10 rounded-full"
+        onClick={() => navigate('/')}
+        aria-label="Back to home"
+      >
+        <X className="h-5 w-5" />
+      </Button>
       <Card className="w-full max-w-md border-border/50 shadow-xl">
         <CardHeader className="text-center space-y-3">
           <div className="flex justify-center">
