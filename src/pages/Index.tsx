@@ -4,13 +4,18 @@ import CampusCarousel from "@/components/CampusCarousel";
 import FeaturesSection from "@/components/FeaturesSection";
 import AboutSection from "@/components/AboutSection";
 import Footer from "@/components/Footer";
+import OnboardingForm from "@/components/OnboardingForm";
+import { useAuth } from "@/contexts/AuthContext";
 
 const Index = () => {
+  const { user } = useAuth();
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
         <Hero />
+        {user && <OnboardingForm />}
         <CampusCarousel />
         <FeaturesSection />
         <AboutSection />
