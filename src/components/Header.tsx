@@ -72,8 +72,19 @@ const Header = () => {
               {link.name}
             </Link>
           ))}
-          <div className="ml-2 border-l border-border pl-3">
+          <div className="ml-2 border-l border-border pl-3 flex items-center gap-2">
             <LanguageSelector />
+            {user ? (
+              <Button variant="ghost" size="sm" onClick={() => signOut()} className="gap-1.5">
+                <LogOut className="h-4 w-4" />
+                Sign Out
+              </Button>
+            ) : (
+              <Button variant="hero" size="sm" onClick={() => navigate('/auth')} className="gap-1.5">
+                <LogIn className="h-4 w-4" />
+                Sign In
+              </Button>
+            )}
           </div>
         </nav>
 
