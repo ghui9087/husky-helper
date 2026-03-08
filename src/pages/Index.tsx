@@ -4,18 +4,19 @@ import CampusCarousel from "@/components/CampusCarousel";
 import FeaturesSection from "@/components/FeaturesSection";
 import AboutSection from "@/components/AboutSection";
 import Footer from "@/components/Footer";
-import OnboardingForm from "@/components/OnboardingForm";
+import GuestDashboard from "@/components/GuestDashboard";
+import PersonalizedDashboard from "@/components/PersonalizedDashboard";
 import { useAuth } from "@/contexts/AuthContext";
 
 const Index = () => {
-  const { user } = useAuth();
+  const { user, loading } = useAuth();
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
         <Hero />
-        {user && <OnboardingForm />}
+        {!loading && (user ? <PersonalizedDashboard /> : <GuestDashboard />)}
         <CampusCarousel />
         <FeaturesSection />
         <AboutSection />

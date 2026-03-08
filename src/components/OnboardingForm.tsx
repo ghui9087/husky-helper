@@ -52,8 +52,12 @@ const OnboardingForm = ({ onComplete }: OnboardingFormProps) => {
         .eq("user_id", user.id);
 
       if (error) throw error;
-      setCompleted(true);
       toast.success("Profile saved successfully!");
+      if (onComplete) {
+        onComplete(formData);
+      } else {
+        setCompleted(true);
+      }
     } catch (err: any) {
       toast.error(err.message || "Failed to save profile");
     } finally {
