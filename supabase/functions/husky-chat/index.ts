@@ -26,28 +26,33 @@ serve(async (req) => {
     // 1. Retrieve relevant knowledge from husky_knowledge
     const searchTerms = userMessage.toLowerCase().split(/\s+/).filter((w: string) => w.length > 2);
     let knowledgeContext = "";
+    let knowledgeFound = false;
 
-    if (searchTerms.length > 0) {
-      // Search by matching category or content
-      const { data: knowledgeRows } = await supabase
-        .from("husky_knowledge")
-        .select("category, title, content")
-        .limit(10);
+    // Fetch all knowledge rows (table is small/curated) and score relevance
+    const { data: knowledgeRows } = await supabase
+      .from("husky_knowledge")
+      .select("category, title, content");
 
-      if (knowledgeRows && knowledgeRows.length > 0) {
-        // Simple relevance scoring
-        const scored = knowledgeRows.map((row: any) => {
-          const text = `${row.category} ${row.title} ${row.content}`.toLowerCase();
-          const score = searchTerms.reduce((s: number, term: string) => s + (text.includes(term) ? 1 : 0), 0);
-          return { ...row, score };
-        }).filter((r: any) => r.score > 0)
-          .sort((a: any, b: any) => b.score - a.score)
-          .slice(0, 5);
+    if (knowledgeRows && knowledgeRows.length > 0 && searchTerms.length > 0) {
+      // Score each article by keyword overlap
+      const scored = knowledgeRows.map((row: any) => {
+        const text = `${row.category} ${row.title} ${row.content}`.toLowerCase();
+        const score = searchTerms.reduce((s: number, term: string) => {
+          // Boost category matches
+          const categoryMatch = row.category.toLowerCase().includes(term) ? 2 : 0;
+          const titleMatch = row.title.toLowerCase().includes(term) ? 1.5 : 0;
+          const contentMatch = text.includes(term) ? 1 : 0;
+          return s + categoryMatch + titleMatch + contentMatch;
+        }, 0);
+        return { ...row, score };
+      }).filter((r: any) => r.score > 0)
+        .sort((a: any, b: any) => b.score - a.score)
+        .slice(0, 5);
 
-        if (scored.length > 0) {
-          knowledgeContext = "\n\n## Relevant UW Knowledge Base Articles:\n" +
-            scored.map((r: any) => `### ${r.category}: ${r.title}\n${r.content}`).join("\n\n");
-        }
+      if (scored.length > 0) {
+        knowledgeFound = true;
+        knowledgeContext = "\n\n## Relevant UW Knowledge Base Articles:\n" +
+          scored.map((r: any) => `### [${r.category}] ${r.title}\n${r.content}`).join("\n\n");
       }
     }
 
