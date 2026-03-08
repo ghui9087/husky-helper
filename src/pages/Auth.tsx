@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -17,6 +18,7 @@ const Auth = () => {
   const [fullName, setFullName] = useState('');
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const { user } = useAuth();
 
@@ -140,7 +142,7 @@ const Auth = () => {
               {isLogin ? 'Sign In' : 'Create Account'}
             </Button>
           </form>
-          <div className="mt-6 text-center">
+          <div className="mt-6 text-center space-y-3">
             <button
               type="button"
               onClick={() => setIsLogin(!isLogin)}
@@ -148,6 +150,15 @@ const Auth = () => {
             >
               {isLogin ? "Don't have an account? Sign up" : 'Already have an account? Sign in'}
             </button>
+            <div>
+              <button
+                type="button"
+                onClick={() => navigate('/')}
+                className="text-sm text-muted-foreground/70 hover:text-muted-foreground underline underline-offset-4 transition-colors"
+              >
+                {t('auth.continueAsGuest', 'Continue as Guest')}
+              </button>
+            </div>
           </div>
         </CardContent>
       </Card>

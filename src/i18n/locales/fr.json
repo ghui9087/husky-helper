@@ -322,5 +322,8 @@
       "title": "Conseil de la Première Semaine",
       "content": "Activez votre U-Pass via MyUW avant votre premier trajet en bus. L'activation prend 24-48 heures. Si vous devez voyager avant l'activation, les trajets simples coûtent 2,75$ (payez avec ORCA ou carte de crédit)."
     }
+  },
+  "auth": {
+    "continueAsGuest": "Continuer en tant qu'invité"
   }
 }
