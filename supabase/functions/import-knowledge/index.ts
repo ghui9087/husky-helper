@@ -42,13 +42,20 @@ serve(async (req) => {
     const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 
-    const { csvUrl } = await req.json();
-    if (!csvUrl) throw new Error("No csvUrl provided");
+    const body = await req.json();
+    let csvText = "";
 
-    // Fetch CSV from URL
-    const csvResp = await fetch(csvUrl);
-    if (!csvResp.ok) throw new Error(`Failed to fetch CSV: ${csvResp.status}`);
-    const csvText = await csvResp.text();
+    if (body.csv) {
+      csvText = body.csv;
+    } else if (body.csvUrl) {
+      const csvResp = await fetch(body.csvUrl);
+      if (!csvResp.ok) throw new Error(`Failed to fetch CSV: ${csvResp.status} ${await csvResp.text()}`);
+      csvText = await csvResp.text();
+    } else {
+      throw new Error("Provide 'csv' (raw text) or 'csvUrl'");
+    }
+    
+    console.log("CSV length:", csvText.length, "First 200 chars:", csvText.substring(0, 200));
 
     const lines = csvText.split("\n").filter((l: string) => l.trim());
     const dataLines = lines.slice(1); // skip header
