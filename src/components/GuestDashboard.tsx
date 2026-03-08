@@ -1,25 +1,24 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { LogIn, Send, Bot, BookOpen, Home, UtensilsCrossed, Bus, Sparkles } from "lucide-react";
 
-const quickLinks = [
-  { icon: BookOpen, label: "Campus Life", href: "/campus" },
-  { icon: Home, label: "Housing Guide", href: "/housing" },
-  { icon: UtensilsCrossed, label: "Food Guide", href: "/food" },
-  { icon: Bus, label: "Transport", href: "/transport" },
+const quickLinkKeys = [
+  { icon: BookOpen, labelKey: "chat.campusLife", href: "/campus" },
+  { icon: Home, labelKey: "chat.housingGuide", href: "/housing" },
+  { icon: UtensilsCrossed, labelKey: "chat.foodGuide", href: "/food" },
+  { icon: Bus, labelKey: "chat.transport", href: "/transport" },
 ];
 
 const GuestDashboard = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [chatInput, setChatInput] = useState("");
-  const [messages, setMessages] = useState<{ role: "bot" | "user"; text: string }[]>([
-    {
-      role: "bot",
-      text: "Hi! I'm HuskyGuide 🐾. I can help you explore UW resources. Log in to get advice tailored to your specific program and budget!",
-    },
+  const [messages, setMessages] = useState<{ role: "bot" | "user"; textKey?: string; text?: string }[]>([
+    { role: "bot", textKey: "chat.welcomeMessage" },
   ]);
 
   const handleSend = () => {
@@ -29,10 +28,7 @@ const GuestDashboard = () => {
     setMessages((prev) => [
       ...prev,
       { role: "user", text: userMsg },
-      {
-        role: "bot",
-        text: "Hi! I'm HuskyGuide. Log in to get advice tailored to your specific program and budget! In the meantime, feel free to browse our guides above. 🐺",
-      },
+      { role: "bot", textKey: "chat.guestReply" },
     ]);
   };
 
@@ -42,16 +38,16 @@ const GuestDashboard = () => {
         {/* Header */}
         <div className="text-center space-y-2">
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
-            🐺 Welcome to HuskyGuide
+            {t('chat.welcomeToHuskyGuide')}
           </h2>
           <p className="text-muted-foreground">
-            Browse general resources or sign in for a personalized experience
+            {t('chat.browseOrSignIn')}
           </p>
         </div>
 
         {/* Quick Links Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          {quickLinks.map(({ icon: Icon, label, href }) => (
+          {quickLinkKeys.map(({ icon: Icon, labelKey, href }) => (
             <Card
               key={href}
               className="cursor-pointer border-border hover:border-primary/40 hover:shadow-md transition-all group"
@@ -61,7 +57,7 @@ const GuestDashboard = () => {
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
                   <Icon className="h-5 w-5 text-primary" />
                 </div>
-                <span className="text-sm font-medium text-foreground text-center">{label}</span>
+                <span className="text-sm font-medium text-foreground text-center">{t(labelKey)}</span>
               </CardContent>
             </Card>
           ))}
@@ -73,9 +69,9 @@ const GuestDashboard = () => {
           <CardHeader className="pb-3">
             <CardTitle className="flex items-center gap-2 text-lg">
               <Bot className="h-5 w-5 text-primary" />
-              HuskyGuide AI
+              {t('chat.huskyGuideAI')}
               <span className="ml-auto text-xs font-normal text-muted-foreground bg-secondary px-2 py-0.5 rounded-full">
-                Guest Mode
+                {t('chat.guestMode')}
               </span>
             </CardTitle>
           </CardHeader>
@@ -94,7 +90,7 @@ const GuestDashboard = () => {
                         : "bg-secondary text-foreground"
                     }`}
                   >
-                    {msg.text}
+                    {msg.textKey ? t(msg.textKey) : msg.text}
                   </div>
                 </div>
               ))}
@@ -103,7 +99,7 @@ const GuestDashboard = () => {
             {/* Input */}
             <div className="flex gap-2">
               <Input
-                placeholder="Ask about UW life..."
+                placeholder={t('chat.placeholder')}
                 value={chatInput}
                 onChange={(e) => setChatInput(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleSend()}
@@ -123,14 +119,14 @@ const GuestDashboard = () => {
               <Sparkles className="h-6 w-6 text-primary" />
             </div>
             <div className="flex-1 text-center sm:text-left">
-              <p className="font-semibold text-foreground">Get Your Personalized Guide</p>
+              <p className="font-semibold text-foreground">{t('chat.getPersonalized')}</p>
               <p className="text-sm text-muted-foreground">
-                Sign in to save your progress and get tailored advice for your program, budget, and quarter.
+                {t('chat.signInCta')}
               </p>
             </div>
             <Button variant="hero" size="lg" onClick={() => navigate("/auth")} className="shrink-0 gap-2">
               <LogIn className="h-4 w-4" />
-              Sign In / Sign Up
+              {t('chat.signInSignUp')}
             </Button>
           </CardContent>
         </Card>

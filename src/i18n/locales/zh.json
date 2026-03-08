@@ -295,6 +295,22 @@
       "content": "在第一次乘公交前通过MyUW激活U-Pass。激活需要24-48小时。如果需要在激活前出行，单程票价$2.75（用ORCA或信用卡支付）。"
     }
   },
+  "chat": {
+    "welcomeToHuskyGuide": "🐺 欢迎来到 HuskyGuide",
+    "browseOrSignIn": "浏览通用资源或登录获取个性化体验",
+    "huskyGuideAI": "HuskyGuide AI",
+    "guestMode": "访客模式",
+    "welcomeMessage": "你好！我是 HuskyGuide 🐾。我可以帮助你探索 UW 资源。登录后可获得针对你的专业和预算的个性化建议！",
+    "guestReply": "你好！我是 HuskyGuide。登录后可获得个性化建议！同时，欢迎浏览上方的指南。🐺",
+    "placeholder": "询问关于 UW 的生活...",
+    "getPersonalized": "获取个性化指南",
+    "signInCta": "登录以保存进度，获取针对你的专业、预算和学期的建议。",
+    "signInSignUp": "登录 / 注册",
+    "campusLife": "校园生活",
+    "housingGuide": "住房指南",
+    "foodGuide": "美食指南",
+    "transport": "交通出行"
+  },
   "auth": {
     "welcomeBack": "欢迎回来",
     "createAccount": "创建账户",
