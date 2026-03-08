@@ -14,6 +14,30 @@ export type Database = {
   }
   public: {
     Tables: {
+      husky_knowledge: {
+        Row: {
+          category: string
+          content: string
+          id: string
+          last_updated: string
+          title: string
+        }
+        Insert: {
+          category: string
+          content: string
+          id?: string
+          last_updated?: string
+          title: string
+        }
+        Update: {
+          category?: string
+          content?: string
+          id?: string
+          last_updated?: string
+          title?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           budget_range: string | null
