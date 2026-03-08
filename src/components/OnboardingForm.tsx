@@ -11,7 +11,11 @@ import { Progress } from "@/components/ui/progress";
 import { toast } from "@/components/ui/sonner";
 import { User, GraduationCap, MapPin, CalendarDays, DollarSign, ArrowRight, ArrowLeft, Check, Sparkles } from "lucide-react";
 
-const OnboardingForm = () => {
+interface OnboardingFormProps {
+  onComplete?: (data: { full_name: string; country: string; program: string; start_quarter: string; budget_range: string }) => void;
+}
+
+const OnboardingForm = ({ onComplete }: OnboardingFormProps) => {
   const { user } = useAuth();
   const [step, setStep] = useState(1);
   const [submitting, setSubmitting] = useState(false);
