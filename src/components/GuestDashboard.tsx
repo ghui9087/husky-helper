@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import ReactMarkdown from "react-markdown";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { LogIn, Send, Bot, BookOpen, Home, UtensilsCrossed, Bus, Sparkles } from "lucide-react";
+import { LogIn, Send, Bot, BookOpen, Home, UtensilsCrossed, Bus, Sparkles, Loader2 } from "lucide-react";
+import { useHuskyChat } from "@/hooks/useHuskyChat";
 
 const quickLinkKeys = [
   { icon: BookOpen, labelKey: "chat.campusLife", href: "/campus" },
@@ -17,19 +19,19 @@ const GuestDashboard = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const [chatInput, setChatInput] = useState("");
-  const [messages, setMessages] = useState<{ role: "bot" | "user"; textKey?: string; text?: string }[]>([
-    { role: "bot", textKey: "chat.welcomeMessage" },
-  ]);
+  const { messages, isLoading, send } = useHuskyChat();
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+    }
+  }, [messages]);
 
   const handleSend = () => {
-    if (!chatInput.trim()) return;
-    const userMsg = chatInput.trim();
+    if (!chatInput.trim() || isLoading) return;
+    send(chatInput.trim());
     setChatInput("");
-    setMessages((prev) => [
-      ...prev,
-      { role: "user", text: userMsg },
-      { role: "bot", textKey: "chat.guestReply" },
-    ]);
   };
 
   return (
@@ -77,23 +79,44 @@ const GuestDashboard = () => {
           </CardHeader>
           <CardContent className="space-y-4">
             {/* Messages */}
-            <div className="space-y-3 max-h-64 overflow-y-auto pr-1">
+            <div ref={scrollRef} className="space-y-3 max-h-80 overflow-y-auto pr-1">
+              {/* Welcome message */}
+              {messages.length === 0 && (
+                <div className="flex justify-start">
+                  <div className="max-w-[85%] rounded-xl px-4 py-2.5 text-sm bg-secondary text-foreground">
+                    {t('chat.welcomeMessage')}
+                  </div>
+                </div>
+              )}
               {messages.map((msg, i) => (
                 <div
                   key={i}
                   className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                 >
                   <div
-                    className={`max-w-[80%] rounded-xl px-4 py-2.5 text-sm ${
+                    className={`max-w-[85%] rounded-xl px-4 py-2.5 text-sm ${
                       msg.role === "user"
                         ? "bg-primary text-primary-foreground"
                         : "bg-secondary text-foreground"
                     }`}
                   >
-                    {msg.textKey ? t(msg.textKey) : msg.text}
+                    {msg.role === "assistant" ? (
+                      <div className="prose prose-sm dark:prose-invert max-w-none">
+                        <ReactMarkdown>{msg.content}</ReactMarkdown>
+                      </div>
+                    ) : (
+                      msg.content
+                    )}
                   </div>
                 </div>
               ))}
+              {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
+                <div className="flex justify-start">
+                  <div className="max-w-[85%] rounded-xl px-4 py-2.5 text-sm bg-secondary text-foreground">
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Input */}
@@ -104,9 +127,10 @@ const GuestDashboard = () => {
                 onChange={(e) => setChatInput(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleSend()}
                 className="flex-1"
+                disabled={isLoading}
               />
-              <Button size="icon" onClick={handleSend}>
-                <Send className="h-4 w-4" />
+              <Button size="icon" onClick={handleSend} disabled={isLoading}>
+                {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
               </Button>
             </div>
           </CardContent>
