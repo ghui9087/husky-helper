@@ -42,17 +42,24 @@ serve(async (req) => {
     const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 
-    const { csv } = await req.json();
-    if (!csv) throw new Error("No csv data provided");
+    const { csvUrl } = await req.json();
+    if (!csvUrl) throw new Error("No csvUrl provided");
 
-    const lines = csv.split("\n").filter((l: string) => l.trim());
-    // Skip header
-    const dataLines = lines.slice(1);
+    // Fetch CSV from URL
+    const csvResp = await fetch(csvUrl);
+    if (!csvResp.ok) throw new Error(`Failed to fetch CSV: ${csvResp.status}`);
+    const csvText = await csvResp.text();
+
+    const lines = csvText.split("\n").filter((l: string) => l.trim());
+    const dataLines = lines.slice(1); // skip header
 
     const rows = dataLines.map((line: string) => {
       const [language, category, title, content, keywords] = parseCSVLine(line);
       return { language, category, title, content, keywords };
     }).filter((r: any) => r.category && r.title && r.content);
+
+    // Clear existing data first
+    await supabase.from("husky_knowledge").delete().neq("id", "00000000-0000-0000-0000-000000000000");
 
     // Insert in batches of 50
     let inserted = 0;
@@ -66,7 +73,7 @@ serve(async (req) => {
       inserted += batch.length;
     }
 
-    return new Response(JSON.stringify({ success: true, inserted }), {
+    return new Response(JSON.stringify({ success: true, inserted, total: rows.length }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (e) {
