@@ -10,6 +10,7 @@ import vi from "./locales/vi.json";
 import es from "./locales/es.json";
 import ar from "./locales/ar.json";
 import fr from "./locales/fr.json";
+import ru from "./locales/ru.json";
 
 const savedLanguage = localStorage.getItem("preferredLanguage") || "en";
 
@@ -24,6 +25,7 @@ i18n.use(initReactI18next).init({
     es: { translation: es },
     ar: { translation: ar },
     fr: { translation: fr },
+    ru: { translation: ru },
   },
   lng: savedLanguage,
   fallbackLng: "en",
