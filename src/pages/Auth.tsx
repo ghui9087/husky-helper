@@ -81,12 +81,12 @@ const Auth = () => {
             </div>
           </div>
           <CardTitle className="text-2xl font-bold text-foreground">
-            {isLogin ? 'Welcome Back' : 'Create Account'}
+            {isLogin ? t('auth.welcomeBack', 'Welcome Back') : t('auth.createAccount', 'Create Account')}
           </CardTitle>
           <CardDescription className="text-muted-foreground">
             {isLogin
-              ? 'Sign in to your UW Survival Guide account'
-              : 'Join the UW Survival Guide community'}
+              ? t('auth.signInDesc', 'Sign in to your UW Survival Guide account')
+              : t('auth.signUpDesc', 'Join the UW Survival Guide community')}
           </CardDescription>
         </CardHeader>
         <CardContent>
