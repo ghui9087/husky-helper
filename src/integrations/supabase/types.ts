@@ -19,6 +19,8 @@ export type Database = {
           category: string
           content: string
           id: string
+          keywords: string | null
+          language: string
           last_updated: string
           title: string
         }
@@ -26,6 +28,8 @@ export type Database = {
           category: string
           content: string
           id?: string
+          keywords?: string | null
+          language?: string
           last_updated?: string
           title: string
         }
@@ -33,6 +37,8 @@ export type Database = {
           category?: string
           content?: string
           id?: string
+          keywords?: string | null
+          language?: string
           last_updated?: string
           title?: string
         }
