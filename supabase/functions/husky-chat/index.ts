@@ -28,21 +28,32 @@ serve(async (req) => {
     let knowledgeContext = "";
     let knowledgeFound = false;
 
-    // Fetch all knowledge rows (table is small/curated) and score relevance
+    // Fetch knowledge rows matching user's language (fallback to 'en')
+    const userLang = language || "en";
     const { data: knowledgeRows } = await supabase
       .from("husky_knowledge")
-      .select("category, title, content");
+      .select("category, title, content, keywords, language")
+      .eq("language", userLang);
 
-    if (knowledgeRows && knowledgeRows.length > 0 && searchTerms.length > 0) {
-      // Score each article by keyword overlap
-      const scored = knowledgeRows.map((row: any) => {
-        const text = `${row.category} ${row.title} ${row.content}`.toLowerCase();
+    // If no rows found for user language, fallback to English
+    let rows = knowledgeRows;
+    if (!rows || rows.length === 0) {
+      const { data: enRows } = await supabase
+        .from("husky_knowledge")
+        .select("category, title, content, keywords, language")
+        .eq("language", "en");
+      rows = enRows;
+    }
+
+    if (rows && rows.length > 0 && searchTerms.length > 0) {
+      const scored = rows.map((row: any) => {
+        const text = `${row.category} ${row.title} ${row.content} ${row.keywords || ""}`.toLowerCase();
         const score = searchTerms.reduce((s: number, term: string) => {
-          // Boost category matches
+          const keywordMatch = (row.keywords || "").toLowerCase().includes(term) ? 3 : 0;
           const categoryMatch = row.category.toLowerCase().includes(term) ? 2 : 0;
           const titleMatch = row.title.toLowerCase().includes(term) ? 1.5 : 0;
           const contentMatch = text.includes(term) ? 1 : 0;
-          return s + categoryMatch + titleMatch + contentMatch;
+          return s + keywordMatch + categoryMatch + titleMatch + contentMatch;
         }, 0);
         return { ...row, score };
       }).filter((r: any) => r.score > 0)
