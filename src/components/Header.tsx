@@ -11,6 +11,8 @@ const Header = () => {
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+  const { user, signOut } = useAuth();
 
   // Close menu on route change
   useEffect(() => {
