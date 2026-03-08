@@ -139,7 +139,7 @@ const Auth = () => {
             </div>
             <Button type="submit" variant="hero" className="w-full" size="lg" disabled={loading}>
               {loading && <Loader2 className="h-4 w-4 animate-spin" />}
-              {isLogin ? 'Sign In' : 'Create Account'}
+              {isLogin ? t('auth.signIn', 'Sign In') : t('auth.createAccount', 'Create Account')}
             </Button>
           </form>
           <div className="mt-6 text-center space-y-3">
