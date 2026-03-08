@@ -323,6 +323,22 @@
       "content": "Activa tu U-Pass a través de MyUW antes de tu primer viaje en autobús. La activación toma 24-48 horas. Si necesitas viajar antes de la activación, las tarifas de un solo viaje son $2.75 (paga con ORCA o tarjeta de crédito)."
     }
   },
+  "chat": {
+    "welcomeToHuskyGuide": "🐺 Bienvenido a HuskyGuide",
+    "browseOrSignIn": "Explora recursos generales o inicia sesión para una experiencia personalizada",
+    "huskyGuideAI": "HuskyGuide AI",
+    "guestMode": "Modo invitado",
+    "welcomeMessage": "¡Hola! Soy HuskyGuide 🐾. Puedo ayudarte a explorar los recursos de UW. ¡Inicia sesión para obtener consejos personalizados!",
+    "guestReply": "¡Hola! Soy HuskyGuide. ¡Inicia sesión para obtener consejos personalizados! Mientras tanto, explora las guías de arriba. 🐺",
+    "placeholder": "Pregunta sobre la vida en UW...",
+    "getPersonalized": "Obtén tu guía personalizada",
+    "signInCta": "Inicia sesión para guardar tu progreso y recibir consejos para tu programa, presupuesto y trimestre.",
+    "signInSignUp": "Iniciar sesión / Registrarse",
+    "campusLife": "Vida universitaria",
+    "housingGuide": "Guía de vivienda",
+    "foodGuide": "Guía gastronómica",
+    "transport": "Transporte"
+  },
   "auth": {
     "welcomeBack": "Bienvenido de nuevo",
     "createAccount": "Crear cuenta",

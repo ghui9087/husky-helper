@@ -323,6 +323,22 @@
       "content": "Kích hoạt U-Pass qua MyUW trước chuyến xe buýt đầu tiên. Kích hoạt mất 24-48 giờ. Nếu cần di chuyển trước khi kích hoạt, vé lẻ là $2.75 (trả bằng ORCA hoặc thẻ tín dụng)."
     }
   },
+  "chat": {
+    "welcomeToHuskyGuide": "🐺 Chào mừng đến HuskyGuide",
+    "browseOrSignIn": "Duyệt tài nguyên chung hoặc đăng nhập để có trải nghiệm cá nhân hóa",
+    "huskyGuideAI": "HuskyGuide AI",
+    "guestMode": "Chế độ khách",
+    "welcomeMessage": "Xin chào! Tôi là HuskyGuide 🐾. Tôi có thể giúp bạn khám phá tài nguyên UW. Đăng nhập để nhận lời khuyên phù hợp với chương trình và ngân sách của bạn!",
+    "guestReply": "Xin chào! Tôi là HuskyGuide. Đăng nhập để nhận lời khuyên cá nhân! Trong khi đó, hãy duyệt các hướng dẫn ở trên. 🐺",
+    "placeholder": "Hỏi về cuộc sống tại UW...",
+    "getPersonalized": "Nhận hướng dẫn cá nhân hóa",
+    "signInCta": "Đăng nhập để lưu tiến trình và nhận lời khuyên phù hợp với chương trình, ngân sách và học kỳ.",
+    "signInSignUp": "Đăng nhập / Đăng ký",
+    "campusLife": "Đời sống campus",
+    "housingGuide": "Hướng dẫn nhà ở",
+    "foodGuide": "Hướng dẫn ẩm thực",
+    "transport": "Giao thông"
+  },
   "auth": {
     "welcomeBack": "Chào mừng trở lại",
     "createAccount": "Tạo tài khoản",

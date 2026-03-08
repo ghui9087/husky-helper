@@ -323,6 +323,22 @@
       "content": "最初のバス乗車前にMyUWでU-Passを有効化してください。有効化には24-48時間かかります。有効化前に移動が必要な場合、片道運賃は$2.75です（ORCAまたはクレジットカードで支払い）。"
     }
   },
+  "chat": {
+    "welcomeToHuskyGuide": "🐺 HuskyGuideへようこそ",
+    "browseOrSignIn": "一般リソースを閲覧するか、サインインしてパーソナライズされた体験を",
+    "huskyGuideAI": "HuskyGuide AI",
+    "guestMode": "ゲストモード",
+    "welcomeMessage": "こんにちは！HuskyGuide 🐾です。UWのリソース探しをお手伝いします。ログインすると、あなたの専攻と予算に合わせたアドバイスが受けられます！",
+    "guestReply": "こんにちは！HuskyGuideです。ログインすると個別のアドバイスが受けられます！それまで、上のガイドをご覧ください。🐺",
+    "placeholder": "UWの生活について質問...",
+    "getPersonalized": "パーソナライズガイドを取得",
+    "signInCta": "サインインして進捗を保存し、専攻・予算・学期に合わせたアドバイスを受けましょう。",
+    "signInSignUp": "サインイン / サインアップ",
+    "campusLife": "キャンパスライフ",
+    "housingGuide": "住居ガイド",
+    "foodGuide": "グルメガイド",
+    "transport": "交通"
+  },
   "auth": {
     "welcomeBack": "おかえりなさい",
     "createAccount": "アカウント作成",
