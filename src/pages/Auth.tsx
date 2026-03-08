@@ -34,7 +34,7 @@ const Auth = () => {
       if (isLogin) {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
-        toast({ title: 'Welcome back!', description: 'You have signed in successfully.' });
+        toast({ title: t('auth.welcomeBack', 'Welcome back!'), description: t('auth.signInSuccess', 'You have signed in successfully.') });
         navigate('/');
       } else {
         const { error } = await supabase.auth.signUp({
