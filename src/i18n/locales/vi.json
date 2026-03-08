@@ -324,6 +324,20 @@
     }
   },
   "auth": {
+    "welcomeBack": "Chào mừng trở lại",
+    "createAccount": "Tạo tài khoản",
+    "signInDesc": "Đăng nhập vào tài khoản UW Survival Guide",
+    "signUpDesc": "Tham gia cộng đồng UW Survival Guide",
+    "fullName": "Họ và tên",
+    "fullNamePlaceholder": "Họ và tên của bạn",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "signIn": "Đăng nhập",
+    "noAccount": "Chưa có tài khoản? Đăng ký",
+    "hasAccount": "Đã có tài khoản? Đăng nhập",
+    "signInSuccess": "Bạn đã đăng nhập thành công.",
+    "accountCreated": "Tài khoản đã được tạo!",
+    "checkEmail": "Vui lòng kiểm tra email để xác minh tài khoản.",
     "continueAsGuest": "Tiếp tục với tư cách khách"
   }
 }

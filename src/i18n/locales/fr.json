@@ -324,6 +324,20 @@
     }
   },
   "auth": {
+    "welcomeBack": "Bon retour",
+    "createAccount": "Créer un compte",
+    "signInDesc": "Connectez-vous à votre compte UW Survival Guide",
+    "signUpDesc": "Rejoignez la communauté UW Survival Guide",
+    "fullName": "Nom complet",
+    "fullNamePlaceholder": "Votre nom complet",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "signIn": "Se connecter",
+    "noAccount": "Pas de compte ? Inscrivez-vous",
+    "hasAccount": "Déjà un compte ? Connectez-vous",
+    "signInSuccess": "Vous vous êtes connecté avec succès.",
+    "accountCreated": "Compte créé !",
+    "checkEmail": "Veuillez vérifier votre e-mail pour confirmer votre compte.",
     "continueAsGuest": "Continuer en tant qu'invité"
   }
 }
