@@ -324,6 +324,20 @@
     }
   },
   "auth": {
+    "welcomeBack": "مرحبًا بعودتك",
+    "createAccount": "إنشاء حساب",
+    "signInDesc": "سجّل الدخول إلى حسابك في دليل البقاء في UW",
+    "signUpDesc": "انضم إلى مجتمع دليل البقاء في UW",
+    "fullName": "الاسم الكامل",
+    "fullNamePlaceholder": "اسمك الكامل",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "signIn": "تسجيل الدخول",
+    "noAccount": "ليس لديك حساب؟ سجّل الآن",
+    "hasAccount": "لديك حساب بالفعل؟ سجّل الدخول",
+    "signInSuccess": "تم تسجيل الدخول بنجاح.",
+    "accountCreated": "تم إنشاء الحساب!",
+    "checkEmail": "يرجى التحقق من بريدك الإلكتروني لتأكيد حسابك.",
     "continueAsGuest": "المتابعة كضيف"
   }
 }

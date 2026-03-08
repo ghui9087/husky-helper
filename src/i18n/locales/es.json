@@ -324,6 +324,20 @@
     }
   },
   "auth": {
+    "welcomeBack": "Bienvenido de nuevo",
+    "createAccount": "Crear cuenta",
+    "signInDesc": "Inicia sesión en tu cuenta de UW Survival Guide",
+    "signUpDesc": "Únete a la comunidad de UW Survival Guide",
+    "fullName": "Nombre completo",
+    "fullNamePlaceholder": "Tu nombre completo",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "signIn": "Iniciar sesión",
+    "noAccount": "¿No tienes cuenta? Regístrate",
+    "hasAccount": "¿Ya tienes cuenta? Inicia sesión",
+    "signInSuccess": "Has iniciado sesión exitosamente.",
+    "accountCreated": "¡Cuenta creada!",
+    "checkEmail": "Revisa tu correo para verificar tu cuenta.",
     "continueAsGuest": "Continuar como invitado"
   }
 }

@@ -324,6 +324,20 @@
     }
   },
   "auth": {
+    "welcomeBack": "다시 오신 것을 환영합니다",
+    "createAccount": "계정 만들기",
+    "signInDesc": "UW 서바이벌 가이드 계정에 로그인하세요",
+    "signUpDesc": "UW 서바이벌 가이드 커뮤니티에 가입하세요",
+    "fullName": "이름",
+    "fullNamePlaceholder": "이름을 입력하세요",
+    "email": "이메일",
+    "password": "비밀번호",
+    "signIn": "로그인",
+    "noAccount": "계정이 없으신가요? 가입하기",
+    "hasAccount": "이미 계정이 있으신가요? 로그인",
+    "signInSuccess": "성공적으로 로그인했습니다.",
+    "accountCreated": "계정이 생성되었습니다!",
+    "checkEmail": "이메일을 확인하여 계정을 인증해주세요.",
     "continueAsGuest": "게스트로 계속하기"
   }
 }

@@ -34,7 +34,7 @@ const Auth = () => {
       if (isLogin) {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
-        toast({ title: 'Welcome back!', description: 'You have signed in successfully.' });
+        toast({ title: t('auth.welcomeBack', 'Welcome back!'), description: t('auth.signInSuccess', 'You have signed in successfully.') });
         navigate('/');
       } else {
         const { error } = await supabase.auth.signUp({
@@ -47,8 +47,8 @@ const Auth = () => {
         });
         if (error) throw error;
         toast({
-          title: 'Account created!',
-          description: 'Please check your email to verify your account.',
+          title: t('auth.accountCreated', 'Account created!'),
+          description: t('auth.checkEmail', 'Please check your email to verify your account.'),
         });
       }
     } catch (error: any) {
@@ -81,24 +81,24 @@ const Auth = () => {
             </div>
           </div>
           <CardTitle className="text-2xl font-bold text-foreground">
-            {isLogin ? 'Welcome Back' : 'Create Account'}
+            {isLogin ? t('auth.welcomeBack', 'Welcome Back') : t('auth.createAccount', 'Create Account')}
           </CardTitle>
           <CardDescription className="text-muted-foreground">
             {isLogin
-              ? 'Sign in to your UW Survival Guide account'
-              : 'Join the UW Survival Guide community'}
+              ? t('auth.signInDesc', 'Sign in to your UW Survival Guide account')
+              : t('auth.signUpDesc', 'Join the UW Survival Guide community')}
           </CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             {!isLogin && (
               <div className="space-y-2">
-                <Label htmlFor="fullName">Full Name</Label>
+                <Label htmlFor="fullName">{t('auth.fullName', 'Full Name')}</Label>
                 <div className="relative">
                   <User className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
                     id="fullName"
-                    placeholder="Your full name"
+                    placeholder={t('auth.fullNamePlaceholder', 'Your full name')}
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
                     className="pl-10"
@@ -107,7 +107,7 @@ const Auth = () => {
               </div>
             )}
             <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email">{t('auth.email', 'Email')}</Label>
               <div className="relative">
                 <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                 <Input
@@ -122,7 +122,7 @@ const Auth = () => {
               </div>
             </div>
             <div className="space-y-2">
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password">{t('auth.password', 'Password')}</Label>
               <div className="relative">
                 <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                 <Input
@@ -139,7 +139,7 @@ const Auth = () => {
             </div>
             <Button type="submit" variant="hero" className="w-full" size="lg" disabled={loading}>
               {loading && <Loader2 className="h-4 w-4 animate-spin" />}
-              {isLogin ? 'Sign In' : 'Create Account'}
+              {isLogin ? t('auth.signIn', 'Sign In') : t('auth.createAccount', 'Create Account')}
             </Button>
           </form>
           <div className="mt-6 text-center space-y-3">
@@ -148,7 +148,7 @@ const Auth = () => {
               onClick={() => setIsLogin(!isLogin)}
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
-              {isLogin ? "Don't have an account? Sign up" : 'Already have an account? Sign in'}
+              {isLogin ? t('auth.noAccount', "Don't have an account? Sign up") : t('auth.hasAccount', 'Already have an account? Sign in')}
             </button>
             <div>
               <button

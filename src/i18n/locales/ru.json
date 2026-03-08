@@ -296,6 +296,20 @@
     }
   },
   "auth": {
+    "welcomeBack": "С возвращением",
+    "createAccount": "Создать аккаунт",
+    "signInDesc": "Войдите в свой аккаунт UW Survival Guide",
+    "signUpDesc": "Присоединяйтесь к сообществу UW Survival Guide",
+    "fullName": "Полное имя",
+    "fullNamePlaceholder": "Ваше полное имя",
+    "email": "Электронная почта",
+    "password": "Пароль",
+    "signIn": "Войти",
+    "noAccount": "Нет аккаунта? Зарегистрируйтесь",
+    "hasAccount": "Уже есть аккаунт? Войдите",
+    "signInSuccess": "Вы успешно вошли.",
+    "accountCreated": "Аккаунт создан!",
+    "checkEmail": "Проверьте свою почту для подтверждения аккаунта.",
     "continueAsGuest": "Продолжить как гость"
   }
 }

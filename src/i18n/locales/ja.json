@@ -324,6 +324,20 @@
     }
   },
   "auth": {
+    "welcomeBack": "おかえりなさい",
+    "createAccount": "アカウント作成",
+    "signInDesc": "UWサバイバルガイドアカウントにサインイン",
+    "signUpDesc": "UWサバイバルガイドコミュニティに参加",
+    "fullName": "氏名",
+    "fullNamePlaceholder": "お名前を入力してください",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "signIn": "サインイン",
+    "noAccount": "アカウントをお持ちでない方はこちら",
+    "hasAccount": "すでにアカウントをお持ちの方はこちら",
+    "signInSuccess": "サインインに成功しました。",
+    "accountCreated": "アカウントが作成されました！",
+    "checkEmail": "メールを確認してアカウントを認証してください。",
     "continueAsGuest": "ゲストとして続ける"
   }
 }

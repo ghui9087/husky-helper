@@ -296,6 +296,20 @@
     }
   },
   "auth": {
+    "welcomeBack": "欢迎回来",
+    "createAccount": "创建账户",
+    "signInDesc": "登录您的UW生存指南账户",
+    "signUpDesc": "加入UW生存指南社区",
+    "fullName": "全名",
+    "fullNamePlaceholder": "您的全名",
+    "email": "邮箱",
+    "password": "密码",
+    "signIn": "登录",
+    "noAccount": "没有账户？注册",
+    "hasAccount": "已有账户？登录",
+    "signInSuccess": "登录成功。",
+    "accountCreated": "账户已创建！",
+    "checkEmail": "请检查您的邮箱以验证账户。",
     "continueAsGuest": "稍后再说"
   }
 }
