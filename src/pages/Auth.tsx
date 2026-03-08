@@ -65,11 +65,11 @@ const Auth = () => {
       <Button
         variant="ghost"
         size="icon"
-        className="absolute top-4 right-4 h-10 w-10 rounded-full"
+        className="absolute top-6 right-6 h-14 w-14 rounded-full hover:bg-destructive/10"
         onClick={() => navigate('/')}
         aria-label="Back to home"
       >
-        <X className="h-5 w-5" />
+        <X size={32} strokeWidth={2.5} />
       </Button>
       <Card className="w-full max-w-md border-border/50 shadow-xl">
         <CardHeader className="text-center space-y-3">
