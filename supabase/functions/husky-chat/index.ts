@@ -52,7 +52,7 @@ serve(async (req) => {
     if (!rows || rows.length === 0) {
       const { data: enRows } = await supabase
         .from("husky_knowledge")
-        .select("category, title, content, keywords, language")
+        .select("category, title, content, keywords, language, source_url")
         .eq("language", "en");
       rows = enRows;
     }
