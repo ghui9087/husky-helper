@@ -97,7 +97,9 @@ function getCategoryEmoji(category: string): string {
 }
 
 const ChatMessage = ({ role, content }: ChatMessageProps) => {
+  const { i18n } = useTranslation();
   const [sourcesOpen, setSourcesOpen] = useState(false);
+  const sourcesLabel = viewSourcesLabels[i18n.language] || viewSourcesLabels.en;
 
   const { mainContent, sources, isGeneralKnowledge } = useMemo(
     () => (role === "assistant" ? parseSourcesFromContent(content) : { mainContent: content, sources: [], isGeneralKnowledge: false }),
