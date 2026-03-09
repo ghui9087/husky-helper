@@ -1,6 +1,20 @@
 import { useState, useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import ReactMarkdown from "react-markdown";
 import { BookOpen, ChevronDown } from "lucide-react";
+
+const viewSourcesLabels: Record<string, string> = {
+  en: "📚 View Sources",
+  zh: "📚 查看来源",
+  ko: "📚 출처 보기",
+  ja: "📚 出典を見る",
+  hi: "📚 स्रोत देखें",
+  vi: "📚 Xem nguồn",
+  es: "📚 Ver fuentes",
+  ar: "📚 عرض المصادر",
+  fr: "📚 Voir les sources",
+  ru: "📚 Показать источники",
+};
 
 interface ChatMessageProps {
   role: "user" | "assistant";
@@ -83,7 +97,9 @@ function getCategoryEmoji(category: string): string {
 }
 
 const ChatMessage = ({ role, content }: ChatMessageProps) => {
+  const { i18n } = useTranslation();
   const [sourcesOpen, setSourcesOpen] = useState(false);
+  const sourcesLabel = viewSourcesLabels[i18n.language] || viewSourcesLabels.en;
 
   const { mainContent, sources, isGeneralKnowledge } = useMemo(
     () => (role === "assistant" ? parseSourcesFromContent(content) : { mainContent: content, sources: [], isGeneralKnowledge: false }),
@@ -116,7 +132,7 @@ const ChatMessage = ({ role, content }: ChatMessageProps) => {
               className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
             >
               <BookOpen className="h-3 w-3" />
-              <span>{sources.length > 0 ? `📚 View Sources (${sources.length})` : "📚 View Sources"}</span>
+              <span>{sources.length > 0 ? `${sourcesLabel} (${sources.length})` : sourcesLabel}</span>
               <ChevronDown
                 className={`h-3 w-3 transition-transform duration-200 ${sourcesOpen ? "rotate-180" : ""}`}
               />
