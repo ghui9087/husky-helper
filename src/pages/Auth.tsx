@@ -27,6 +27,24 @@ const Auth = () => {
     if (user) navigate('/', { replace: true });
   }, [user, navigate]);
 
+  const handleGoogleSignIn = async () => {
+    setGoogleLoading(true);
+    try {
+      const { error } = await lovable.auth.signInWithOAuth("google", {
+        redirect_uri: window.location.origin,
+      });
+      if (error) throw error;
+    } catch (error: any) {
+      toast({
+        title: 'Error',
+        description: error.message,
+        variant: 'destructive',
+      });
+    } finally {
+      setGoogleLoading(false);
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -49,8 +67,9 @@ const Auth = () => {
         if (error) throw error;
         toast({
           title: t('auth.accountCreated', 'Account created!'),
-          description: t('auth.checkEmail', 'Please check your email to verify your account.'),
+          description: t('auth.signInSuccess', 'You have signed in successfully.'),
         });
+        navigate('/');
       }
     } catch (error: any) {
       toast({
