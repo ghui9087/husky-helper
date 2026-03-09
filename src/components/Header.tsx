@@ -150,13 +150,23 @@ const Header = () => {
             {/* Mobile auth + contact */}
             <div className="mt-6 pt-6 border-t border-border space-y-2">
               {user ? (
-                <button
-                  onClick={() => { signOut(); setIsMenuOpen(false); }}
-                  className="flex items-center gap-2 px-4 py-4 w-full text-base font-medium text-muted-foreground hover:text-foreground rounded-xl hover:bg-secondary/50"
-                >
-                  <LogOut className="h-4 w-4" />
-                  Sign Out
-                </button>
+                <>
+                  <Link
+                    to="/profile"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="flex items-center gap-2 px-4 py-4 text-base font-medium text-muted-foreground hover:text-foreground rounded-xl hover:bg-secondary/50"
+                  >
+                    <Settings className="h-4 w-4" />
+                    Edit Profile
+                  </Link>
+                  <button
+                    onClick={() => { signOut(); setIsMenuOpen(false); }}
+                    className="flex items-center gap-2 px-4 py-4 w-full text-base font-medium text-destructive hover:bg-secondary/50 rounded-xl"
+                  >
+                    <LogOut className="h-4 w-4" />
+                    Sign Out
+                  </button>
+                </>
               ) : (
                 <Link
                   to="/auth"
