@@ -114,6 +114,11 @@ const GuestDashboard = () => {
               </div>
             )}
 
+            {/* Safety Disclaimer */}
+            <div className="rounded-lg bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 px-3 py-2 text-xs text-amber-800 dark:text-amber-200">
+              {t('chat.safetyDisclaimer')}
+            </div>
+
             {/* Messages */}
             <div ref={scrollRef} className="space-y-3 max-h-80 overflow-y-auto pr-1">
               {/* Welcome message */}

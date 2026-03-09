@@ -337,7 +337,8 @@
     "campusLife": "Đời sống campus",
     "housingGuide": "Hướng dẫn nhà ở",
     "foodGuide": "Hướng dẫn ẩm thực",
-    "transport": "Giao thông"
+    "transport": "Giao thông",
+    "safetyDisclaimer": "🔒 HuskyGuide AI sẽ không bao giờ yêu cầu SSN hoặc mật khẩu của bạn. Vui lòng không chia sẻ số ID nhạy cảm."
   },
   "auth": {
     "welcomeBack": "Chào mừng trở lại",

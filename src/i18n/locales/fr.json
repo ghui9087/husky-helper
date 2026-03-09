@@ -337,7 +337,8 @@
     "campusLife": "Vie universitaire",
     "housingGuide": "Guide logement",
     "foodGuide": "Guide gastronomique",
-    "transport": "Transport"
+    "transport": "Transport",
+    "safetyDisclaimer": "🔒 HuskyGuide AI ne vous demandera jamais votre SSN ou vos mots de passe. Veuillez ne pas partager de numéros d'identification sensibles."
   },
   "auth": {
     "welcomeBack": "Bon retour",

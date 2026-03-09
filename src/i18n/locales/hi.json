@@ -337,7 +337,8 @@
     "campusLife": "कैंपस जीवन",
     "housingGuide": "आवास गाइड",
     "foodGuide": "खाद्य गाइड",
-    "transport": "परिवहन"
+    "transport": "परिवहन",
+    "safetyDisclaimer": "🔒 HuskyGuide AI कभी भी आपका SSN या पासवर्ड नहीं मांगेगा। कृपया संवेदनशील पहचान संख्या साझा न करें।"
   },
   "auth": {
     "welcomeBack": "वापसी पर स्वागत है",
