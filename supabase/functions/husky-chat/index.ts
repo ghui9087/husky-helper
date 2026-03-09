@@ -44,7 +44,7 @@ serve(async (req) => {
     const userLang = language || "en";
     const { data: knowledgeRows } = await supabase
       .from("husky_knowledge")
-      .select("category, title, content, keywords, language")
+      .select("category, title, content, keywords, language, source_url")
       .eq("language", userLang);
 
     // If no rows found for user language, fallback to English
