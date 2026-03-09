@@ -24,7 +24,19 @@ serve(async (req) => {
     const userMessage = messages?.[messages.length - 1]?.content ?? "";
 
     // 1. Retrieve relevant knowledge from husky_knowledge
-    const searchTerms = userMessage.toLowerCase().split(/\s+/).filter((w: string) => w.length > 2);
+    // Split on whitespace AND extract CJK character bigrams for Chinese/Japanese/Korean
+    const lowerMsg = userMessage.toLowerCase();
+    const wordTerms = lowerMsg.split(/[\s，。！？、；：""''（）《》【】\-,.!?;:()\[\]{}]+/).filter((w: string) => w.length > 1);
+    // Extract CJK bigrams (sliding window of 2 chars) for better matching
+    const cjkChars = lowerMsg.replace(/[^\u4e00-\u9fff\u3040-\u309f\u30a0-\u30ff\uac00-\ud7af]/g, '');
+    const cjkBigrams: string[] = [];
+    for (let i = 0; i < cjkChars.length - 1; i++) {
+      cjkBigrams.push(cjkChars.slice(i, i + 2));
+    }
+    // Also add individual CJK chars for single-char keyword matching
+    const cjkSingleChars = cjkChars.split('').filter((c: string) => c.length > 0);
+    const searchTerms = [...new Set([...wordTerms, ...cjkBigrams, ...cjkSingleChars])];
+
     let knowledgeContext = "";
     let knowledgeFound = false;
 
@@ -45,6 +57,8 @@ serve(async (req) => {
       rows = enRows;
     }
 
+    console.log(`[husky-chat] Language: ${userLang}, Rows fetched: ${rows?.length ?? 0}, Search terms: ${searchTerms.slice(0, 15).join(', ')}`);
+
     if (rows && rows.length > 0 && searchTerms.length > 0) {
       const scored = rows.map((row: any) => {
         const text = `${row.category} ${row.title} ${row.content} ${row.keywords || ""}`.toLowerCase();
@@ -59,6 +73,8 @@ serve(async (req) => {
       }).filter((r: any) => r.score > 0)
         .sort((a: any, b: any) => b.score - a.score)
         .slice(0, 5);
+
+      console.log(`[husky-chat] Top scored articles: ${scored.map((r: any) => `${r.title}(${r.score})`).join(', ')}`);
 
       if (scored.length > 0) {
         knowledgeFound = true;
