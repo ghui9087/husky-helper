@@ -1,9 +1,16 @@
-import { MapPin, Menu, X, LogIn, LogOut, User } from "lucide-react";
+import { MapPin, Menu, X, LogIn, LogOut, User, Settings, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
 import LanguageSelector from "./LanguageSelector";
 import { useAuth } from "@/contexts/AuthContext";
 
