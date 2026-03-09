@@ -174,6 +174,55 @@
   .text-responsive-lg {
     @apply text-xl sm:text-2xl md:text-3xl;
   }
+
+  /* Chat assistant message – Claude-like formatting */
+  .chat-assistant-message {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .chat-prose p {
+    margin-bottom: 12px;
+  }
+
+  .chat-prose p:last-child {
+    margin-bottom: 0;
+  }
+
+  .chat-prose ul,
+  .chat-prose ol {
+    margin-top: 4px;
+    margin-bottom: 12px;
+    padding-left: 1.25em;
+  }
+
+  .chat-prose li {
+    margin-bottom: 8px;
+  }
+
+  .chat-prose li:last-child {
+    margin-bottom: 0;
+  }
+
+  .chat-prose hr {
+    border: none;
+    border-top: 1px solid hsl(var(--border));
+    margin: 16px 0;
+    opacity: 0.5;
+  }
+
+  .chat-prose h3,
+  .chat-prose h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 6px;
+  }
+
+  .chat-prose strong {
+    font-weight: 600;
+    color: hsl(var(--foreground));
+  }
 }
 
 @layer utilities {
