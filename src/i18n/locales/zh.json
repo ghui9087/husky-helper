@@ -309,7 +309,8 @@
     "campusLife": "校园生活",
     "housingGuide": "住房指南",
     "foodGuide": "美食指南",
-    "transport": "交通出行"
+    "transport": "交通出行",
+    "safetyDisclaimer": "🔒 HuskyGuide AI 绝不会要求您提供社会安全号码或密码。请勿分享敏感的身份证号码。"
   },
   "auth": {
     "welcomeBack": "欢迎回来",

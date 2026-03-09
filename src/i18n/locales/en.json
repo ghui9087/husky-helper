@@ -309,7 +309,8 @@
     "campusLife": "Campus Life",
     "housingGuide": "Housing Guide",
     "foodGuide": "Food Guide",
-    "transport": "Transport"
+    "transport": "Transport",
+    "safetyDisclaimer": "🔒 HuskyGuide AI will never ask for your SSN or passwords. Please do not share sensitive ID numbers."
   },
   "auth": {
     "welcomeBack": "Welcome Back",

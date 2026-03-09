@@ -309,7 +309,8 @@
     "campusLife": "Жизнь в кампусе",
     "housingGuide": "Гид по жилью",
     "foodGuide": "Гид по еде",
-    "transport": "Транспорт"
+    "transport": "Транспорт",
+    "safetyDisclaimer": "🔒 HuskyGuide AI никогда не запросит ваш SSN или пароли. Пожалуйста, не сообщайте конфиденциальные идентификационные номера."
   },
   "auth": {
     "welcomeBack": "С возвращением",

@@ -337,7 +337,8 @@
     "campusLife": "キャンパスライフ",
     "housingGuide": "住居ガイド",
     "foodGuide": "グルメガイド",
-    "transport": "交通"
+    "transport": "交通",
+    "safetyDisclaimer": "🔒 HuskyGuide AIがSSNやパスワードを聞くことはありません。機密性の高いID番号を共有しないでください。"
   },
   "auth": {
     "welcomeBack": "おかえりなさい",

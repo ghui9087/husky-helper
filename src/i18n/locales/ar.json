@@ -337,7 +337,8 @@
     "campusLife": "الحياة الجامعية",
     "housingGuide": "دليل السكن",
     "foodGuide": "دليل الطعام",
-    "transport": "المواصلات"
+    "transport": "المواصلات",
+    "safetyDisclaimer": "🔒 لن يطلب HuskyGuide AI أبدًا رقم الضمان الاجتماعي أو كلمات المرور الخاصة بك. يرجى عدم مشاركة أرقام الهوية الحساسة."
   },
   "auth": {
     "welcomeBack": "مرحبًا بعودتك",
