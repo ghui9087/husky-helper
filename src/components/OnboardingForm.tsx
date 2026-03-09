@@ -170,7 +170,22 @@ const OnboardingForm = ({ onComplete }: OnboardingFormProps) => {
                     <CalendarDays className="h-4 w-4 text-primary" /> Start Quarter
                   </Label>
                   <RadioGroup value={formData.start_quarter} onValueChange={(v) => handleChange("start_quarter", v)} className="grid grid-cols-2 gap-3">
-                    {["Autumn 2026", "Winter 2027", "Spring 2027", "Summer 2027"].map((q) => (
+                    {(() => {
+                      const quarters = ["Winter", "Spring", "Summer", "Autumn"];
+                      const now = new Date();
+                      const month = now.getMonth() + 1;
+                      const year = now.getFullYear();
+                      let startIdx = month <= 3 ? 0 : month <= 6 ? 1 : month <= 8 ? 2 : 3;
+                      let y = year;
+                      const opts: string[] = [];
+                      for (let i = 0; i < 8; i++) {
+                        opts.push(`${quarters[startIdx]} ${y}`);
+                        startIdx++;
+                        if (startIdx > 3) { startIdx = 0; y++; }
+                      }
+                      opts.push("Already enrolled");
+                      return opts;
+                    })().map((q) => (
                       <Label
                         key={q}
                         htmlFor={q}
