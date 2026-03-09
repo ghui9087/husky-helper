@@ -95,8 +95,8 @@ Use this information to personalize your advice. For example, if their budget is
       : "Respond in English unless the user writes in another language, in which case respond in that language.";
 
     const knowledgeSourceNote = knowledgeFound
-      ? "The following articles are from our verified UW knowledge base. Prioritize this information in your answer and cite it naturally (e.g. 'According to our UW guide...')."
-      : "No articles from our knowledge base matched this query. You may use your general knowledge about UW Seattle, but you MUST include a brief disclaimer such as: 'I don't have a specific guide on this topic yet, so this is based on general knowledge — please verify with official UW resources.'";
+      ? "The following articles are from our verified UW knowledge base. Prioritize this information in your answer and cite it naturally (e.g. 'According to our UW guide...'). IMPORTANT: At the end of your response, list every knowledge base article you used in this format on separate lines:\n\nSource: [category] > [title]\n\nList ALL sources used, one per line."
+      : "No articles from our knowledge base matched this query. You may use your general knowledge about UW Seattle, but you MUST end your response with exactly this line:\n\nBased on general knowledge. For the most accurate information, please verify at uw.edu or other online resources.";
 
     const systemPrompt = `You are HuskyGuide 🐾, an expert University of Washington (UW) International Student Advisor and AI assistant.
 
@@ -112,6 +112,14 @@ Use this information to personalize your advice. For example, if their budget is
 ${knowledgeSourceNote}
 ${knowledgeContext}
 ${profileContext}
+
+## Source Citation Rules (MANDATORY)
+- When you use information from the Knowledge Base Articles above, you MUST end your response with source citations in this exact format:
+  Source: [category] > [title]
+  (one line per source used)
+- When you do NOT use any knowledge base article (i.e. answering from general knowledge), you MUST end your response with:
+  Based on general knowledge. For the most accurate information, please verify at uw.edu or other online resources.
+- NEVER skip the source citation footer.
 
 ## Personalization Rules
 - If user profile data is available, ALWAYS tailor your answer to their specific situation
