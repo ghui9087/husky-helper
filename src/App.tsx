@@ -10,6 +10,7 @@ import FoodGuide from "./pages/FoodGuide";
 import CampusLife from "./pages/CampusLife";
 import TransportGuide from "./pages/TransportGuide";
 import Auth from "./pages/Auth";
+import ProfileSettings from "./pages/ProfileSettings";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/campus" element={<CampusLife />} />
             <Route path="/transport" element={<TransportGuide />} />
             <Route path="/auth" element={<Auth />} />
+            <Route path="/profile" element={<ProfileSettings />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

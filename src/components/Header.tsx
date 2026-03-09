@@ -1,9 +1,16 @@
-import { MapPin, Menu, X, LogIn, LogOut, User } from "lucide-react";
+import { MapPin, Menu, X, LogIn, LogOut, User, Settings, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
 import LanguageSelector from "./LanguageSelector";
 import { useAuth } from "@/contexts/AuthContext";
 
@@ -75,10 +82,26 @@ const Header = () => {
           <div className="ml-2 border-l border-border pl-3 flex items-center gap-2">
             <LanguageSelector />
             {user ? (
-              <Button variant="ghost" size="sm" onClick={() => signOut()} className="gap-1.5">
-                <LogOut className="h-4 w-4" />
-                Sign Out
-              </Button>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="sm" className="gap-1.5">
+                    <div className="flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary">
+                      <User className="h-3.5 w-3.5" />
+                    </div>
+                    <span className="max-w-[100px] truncate text-sm">{user.email?.split("@")[0] || "Account"}</span>
+                    <ChevronDown className="h-3 w-3 text-muted-foreground" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-48">
+                  <DropdownMenuItem onClick={() => navigate("/profile")} className="gap-2 cursor-pointer">
+                    <Settings className="h-4 w-4" /> Edit Profile
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem onClick={() => signOut()} className="gap-2 cursor-pointer text-destructive focus:text-destructive">
+                    <LogOut className="h-4 w-4" /> Sign Out
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             ) : (
               <Button variant="hero" size="sm" onClick={() => navigate('/auth')} className="gap-1.5">
                 <LogIn className="h-4 w-4" />
@@ -127,13 +150,23 @@ const Header = () => {
             {/* Mobile auth + contact */}
             <div className="mt-6 pt-6 border-t border-border space-y-2">
               {user ? (
-                <button
-                  onClick={() => { signOut(); setIsMenuOpen(false); }}
-                  className="flex items-center gap-2 px-4 py-4 w-full text-base font-medium text-muted-foreground hover:text-foreground rounded-xl hover:bg-secondary/50"
-                >
-                  <LogOut className="h-4 w-4" />
-                  Sign Out
-                </button>
+                <>
+                  <Link
+                    to="/profile"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="flex items-center gap-2 px-4 py-4 text-base font-medium text-muted-foreground hover:text-foreground rounded-xl hover:bg-secondary/50"
+                  >
+                    <Settings className="h-4 w-4" />
+                    Edit Profile
+                  </Link>
+                  <button
+                    onClick={() => { signOut(); setIsMenuOpen(false); }}
+                    className="flex items-center gap-2 px-4 py-4 w-full text-base font-medium text-destructive hover:bg-secondary/50 rounded-xl"
+                  >
+                    <LogOut className="h-4 w-4" />
+                    Sign Out
+                  </button>
+                </>
               ) : (
                 <Link
                   to="/auth"
