@@ -22,6 +22,7 @@ export type Database = {
           keywords: string | null
           language: string
           last_updated: string
+          source_url: string | null
           title: string
         }
         Insert: {
@@ -31,6 +32,7 @@ export type Database = {
           keywords?: string | null
           language?: string
           last_updated?: string
+          source_url?: string | null
           title: string
         }
         Update: {
@@ -40,6 +42,7 @@ export type Database = {
           keywords?: string | null
           language?: string
           last_updated?: string
+          source_url?: string | null
           title?: string
         }
         Relationships: []
