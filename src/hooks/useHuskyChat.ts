@@ -1,23 +1,120 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useAuth } from "@/contexts/AuthContext";
+import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
-type Msg = { role: "user" | "assistant"; content: string };
+export type Msg = { role: "user" | "assistant"; content: string };
 
 const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/husky-chat`;
 
-export function useHuskyChat() {
-  const { i18n } = useTranslation();
+interface UseHuskyChatOptions {
+  onConversationCreated?: (id: string, title: string) => void;
+}
+
+export function useHuskyChat(options?: UseHuskyChatOptions) {
+  const { i18n, t } = useTranslation();
   const { user } = useAuth();
   const [messages, setMessages] = useState<Msg[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [conversationId, setConversationId] = useState<string | null>(null);
+  const [guestMessageCount, setGuestMessageCount] = useState(0);
+  const [showSignInPrompt, setShowSignInPrompt] = useState(false);
+
+  // Load a specific conversation
+  const loadConversation = useCallback(async (id: string) => {
+    if (!user) return;
+
+    try {
+      const { data, error } = await supabase
+        .from("messages")
+        .select("role, content")
+        .eq("conversation_id", id)
+        .order("created_at", { ascending: true });
+
+      if (error) throw error;
+
+      setMessages((data as Msg[]) || []);
+      setConversationId(id);
+    } catch (err) {
+      console.error("Error loading conversation:", err);
+      toast.error("Failed to load conversation");
+    }
+  }, [user]);
+
+  // Save a message to the database
+  const saveMessage = useCallback(async (convId: string, msg: Msg) => {
+    if (!user) return;
+
+    try {
+      const { error } = await supabase
+        .from("messages")
+        .insert({
+          conversation_id: convId,
+          role: msg.role,
+          content: msg.content,
+        });
+
+      if (error) throw error;
+    } catch (err) {
+      console.error("Error saving message:", err);
+    }
+  }, [user]);
+
+  // Create a new conversation
+  const createConversation = useCallback(async (firstMessage: string): Promise<string | null> => {
+    if (!user) return null;
+
+    const title = firstMessage.slice(0, 40) + (firstMessage.length > 40 ? "..." : "");
+
+    try {
+      const { data, error } = await supabase
+        .from("conversations")
+        .insert({ user_id: user.id, title })
+        .select("id")
+        .single();
+
+      if (error) throw error;
+      
+      options?.onConversationCreated?.(data.id, title);
+      return data.id;
+    } catch (err) {
+      console.error("Error creating conversation:", err);
+      return null;
+    }
+  }, [user, options]);
 
   const send = useCallback(async (input: string) => {
     const userMsg: Msg = { role: "user", content: input };
     const allMessages = [...messages, userMsg];
     setMessages(allMessages);
     setIsLoading(true);
+
+    // Track guest message count
+    if (!user) {
+      const newCount = guestMessageCount + 1;
+      setGuestMessageCount(newCount);
+      if (newCount >= 2) {
+        setShowSignInPrompt(true);
+      }
+    }
+
+    // For logged-in users, handle conversation persistence
+    let currentConvId = conversationId;
+    if (user) {
+      // If no conversation exists, create one
+      if (!currentConvId) {
+        currentConvId = await createConversation(input);
+        if (currentConvId) {
+          setConversationId(currentConvId);
+        }
+      }
+      
+      // Save user message
+      if (currentConvId) {
+        await saveMessage(currentConvId, userMsg);
+      }
+    }
 
     let assistantSoFar = "";
 
@@ -109,15 +206,39 @@ export function useHuskyChat() {
           } catch { /* ignore */ }
         }
       }
+
+      // Save assistant response after streaming is complete
+      if (user && currentConvId && assistantSoFar) {
+        await saveMessage(currentConvId, { role: "assistant", content: assistantSoFar });
+      }
     } catch (e) {
       console.error("Chat error:", e);
       toast.error("Failed to get a response. Please try again.");
     } finally {
       setIsLoading(false);
     }
-  }, [messages, i18n.language, user?.id]);
+  }, [messages, i18n.language, user, conversationId, createConversation, saveMessage, guestMessageCount]);
 
-  const reset = useCallback(() => setMessages([]), []);
+  const reset = useCallback(() => {
+    setMessages([]);
+    setConversationId(null);
+  }, []);
 
-  return { messages, isLoading, send, reset };
+  const startNewChat = useCallback(() => {
+    setMessages([]);
+    setConversationId(null);
+  }, []);
+
+  return { 
+    messages, 
+    isLoading, 
+    send, 
+    reset, 
+    startNewChat,
+    conversationId,
+    loadConversation,
+    showSignInPrompt,
+    setShowSignInPrompt,
+    guestMessageCount,
+  };
 }
