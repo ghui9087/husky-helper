@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import ReactMarkdown from "react-markdown";
-import { BookOpen, ChevronDown } from "lucide-react";
+import { BookOpen, ChevronDown, ExternalLink } from "lucide-react";
 
 const viewSourcesLabels: Record<string, string> = {
   en: "📚 View Sources",
@@ -16,40 +16,52 @@ const viewSourcesLabels: Record<string, string> = {
   ru: "📚 Показать источники",
 };
 
+const visitSiteLabels: Record<string, string> = {
+  en: "Visit Official Site →",
+  zh: "访问官网 →",
+  ko: "공식 사이트 방문 →",
+  ja: "公式サイトへ →",
+  hi: "आधिकारिक साइट →",
+  vi: "Truy cập trang chính thức →",
+  es: "Visitar sitio oficial →",
+  ar: "→ زيارة الموقع الرسمي",
+  fr: "Visiter le site officiel →",
+  ru: "Посетить сайт →",
+};
+
 interface ChatMessageProps {
   role: "user" | "assistant";
   content: string;
 }
 
-/**
- * Parses source citations from the end of an assistant message.
- * Handles lines like:
- *   Source: Banking > Best Banks for Chinese Students
- *   Based on general knowledge. For the most accurate information, please verify at uw.edu or other online resources.
- */
 function parseSourcesFromContent(content: string): {
   mainContent: string;
-  sources: { category: string; title: string }[];
+  sources: { category: string; title: string; url?: string }[];
   isGeneralKnowledge: boolean;
 } {
   const lines = content.trimEnd().split("\n");
-  const sources: { category: string; title: string }[] = [];
+  const sources: { category: string; title: string; url?: string }[] = [];
   let isGeneralKnowledge = false;
   let lastContentLineIndex = lines.length - 1;
 
-  // Scan from the bottom up for source lines
   for (let i = lines.length - 1; i >= 0; i--) {
     const line = lines[i].trim();
-    if (!line) {
-      continue; // skip empty lines at the bottom
-    }
+    if (!line) continue;
 
-    const sourceMatch = line.match(/^(?:(?:来源|Source|Fuente|Источник|المصدر|स्रोत|出典|출처|Nguồn)\s*[:：])\s*(?:\[?(.+?)\]?\s*[>›»]\s*(.+)|(.+))$/i);
+    // Match: Source: Category > Title | https://url
+    // or: Source: Category > Title
+    const sourceMatch = line.match(
+      /^(?:(?:来源|Source|Fuente|Источник|المصدر|स्रोत|出典|출처|Nguồn)\s*[:：])\s*(?:\[?(.+?)\]?\s*[>›»]\s*(.+?)(?:\s*\|\s*(https?:\/\/\S+))?\s*$|(.+))$/i
+    );
     if (sourceMatch) {
       if (sourceMatch[1] && sourceMatch[2]) {
-        sources.unshift({ category: sourceMatch[1].trim(), title: sourceMatch[2].trim() });
-      } else if (sourceMatch[3]) {
-        sources.unshift({ category: "", title: sourceMatch[3].trim() });
+        sources.unshift({
+          category: sourceMatch[1].trim(),
+          title: sourceMatch[2].trim(),
+          url: sourceMatch[3]?.trim() || undefined,
+        });
+      } else if (sourceMatch[4]) {
+        sources.unshift({ category: "", title: sourceMatch[4].trim() });
       }
       lastContentLineIndex = i - 1;
       continue;
@@ -68,11 +80,9 @@ function parseSourcesFromContent(content: string): {
       continue;
     }
 
-    // Stop scanning when we hit a non-source, non-empty line
     break;
   }
 
-  // Trim trailing empty lines from main content
   while (lastContentLineIndex >= 0 && !lines[lastContentLineIndex].trim()) {
     lastContentLineIndex--;
   }
@@ -81,7 +91,6 @@ function parseSourcesFromContent(content: string): {
   return { mainContent, sources, isGeneralKnowledge };
 }
 
-// Map categories to emoji
 function getCategoryEmoji(category: string): string {
   const lower = category.toLowerCase();
   if (lower.includes("bank") || lower.includes("银行") || lower.includes("금융")) return "🏦";
@@ -90,9 +99,10 @@ function getCategoryEmoji(category: string): string {
   if (lower.includes("transport") || lower.includes("交通")) return "🚌";
   if (lower.includes("campus") || lower.includes("校园")) return "🏫";
   if (lower.includes("visa") || lower.includes("签证") || lower.includes("immigra")) return "🛂";
-  if (lower.includes("academic") || lower.includes("学术")) return "📚";
+  if (lower.includes("academic") || lower.includes("学术") || lower.includes("学业")) return "📚";
   if (lower.includes("daily") || lower.includes("日常")) return "🌟";
   if (lower.includes("onboard") || lower.includes("入学")) return "✅";
+  if (lower.includes("tuition") || lower.includes("学费") || lower.includes("financ") || lower.includes("财务") || lower.includes("등록금")) return "💰";
   return "📄";
 }
 
@@ -100,9 +110,13 @@ const ChatMessage = ({ role, content }: ChatMessageProps) => {
   const { i18n } = useTranslation();
   const [sourcesOpen, setSourcesOpen] = useState(false);
   const sourcesLabel = viewSourcesLabels[i18n.language] || viewSourcesLabels.en;
+  const visitLabel = visitSiteLabels[i18n.language] || visitSiteLabels.en;
 
   const { mainContent, sources, isGeneralKnowledge } = useMemo(
-    () => (role === "assistant" ? parseSourcesFromContent(content) : { mainContent: content, sources: [], isGeneralKnowledge: false }),
+    () =>
+      role === "assistant"
+        ? parseSourcesFromContent(content)
+        : { mainContent: content, sources: [], isGeneralKnowledge: false },
     [content, role]
   );
 
@@ -132,7 +146,11 @@ const ChatMessage = ({ role, content }: ChatMessageProps) => {
               className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
             >
               <BookOpen className="h-3 w-3" />
-              <span>{sources.length > 0 ? `${sourcesLabel} (${sources.length})` : sourcesLabel}</span>
+              <span>
+                {sources.length > 0
+                  ? `${sourcesLabel} (${sources.length})`
+                  : sourcesLabel}
+              </span>
               <ChevronDown
                 className={`h-3 w-3 transition-transform duration-200 ${sourcesOpen ? "rotate-180" : ""}`}
               />
@@ -140,7 +158,9 @@ const ChatMessage = ({ role, content }: ChatMessageProps) => {
 
             <div
               className={`grid transition-all duration-300 ease-out ${
-                sourcesOpen ? "grid-rows-[1fr] opacity-100 mt-2" : "grid-rows-[0fr] opacity-0"
+                sourcesOpen
+                  ? "grid-rows-[1fr] opacity-100 mt-2"
+                  : "grid-rows-[0fr] opacity-0"
               }`}
             >
               <div className="overflow-hidden">
@@ -149,14 +169,35 @@ const ChatMessage = ({ role, content }: ChatMessageProps) => {
                     {sources.map((s, i) => (
                       <div
                         key={i}
-                        className="flex items-start gap-1.5 rounded-lg bg-background/60 px-2.5 py-1.5 text-xs text-muted-foreground"
+                        className="flex items-start justify-between gap-2 rounded-lg bg-background/60 px-2.5 py-2 text-xs"
                       >
-                        <span className="shrink-0">{getCategoryEmoji(s.category)}</span>
-                        <span>
-                          {s.category && <span className="font-medium text-foreground/70">{s.category}</span>}
-                          {s.category && " › "}
-                          <span>{s.title}</span>
-                        </span>
+                        <div className="flex items-start gap-1.5 min-w-0">
+                          <span className="shrink-0 text-sm">
+                            {getCategoryEmoji(s.category)}
+                          </span>
+                          <div className="min-w-0">
+                            {s.category && (
+                              <span className="font-medium text-foreground/70">
+                                {s.category}
+                              </span>
+                            )}
+                            {s.category && " › "}
+                            <span className="text-muted-foreground">
+                              {s.title}
+                            </span>
+                          </div>
+                        </div>
+                        {s.url && (
+                          <a
+                            href={s.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="shrink-0 inline-flex items-center gap-1 text-blue-500 underline underline-offset-2 hover:text-blue-600 transition-colors whitespace-nowrap"
+                          >
+                            <span>{visitLabel}</span>
+                            <ExternalLink className="h-3 w-3" />
+                          </a>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -164,7 +205,11 @@ const ChatMessage = ({ role, content }: ChatMessageProps) => {
                 {isGeneralKnowledge && (
                   <div className="flex items-start gap-1.5 rounded-lg bg-background/60 px-2.5 py-1.5 text-xs text-muted-foreground">
                     <span className="shrink-0">💡</span>
-                    <span>Based on general knowledge. For the most accurate information, please verify at uw.edu or other online resources.</span>
+                    <span>
+                      Based on general knowledge. For the most accurate
+                      information, please verify at uw.edu or other online
+                      resources.
+                    </span>
                   </div>
                 )}
               </div>

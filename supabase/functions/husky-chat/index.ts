@@ -44,7 +44,7 @@ serve(async (req) => {
     const userLang = language || "en";
     const { data: knowledgeRows } = await supabase
       .from("husky_knowledge")
-      .select("category, title, content, keywords, language")
+      .select("category, title, content, keywords, language, source_url")
       .eq("language", userLang);
 
     // If no rows found for user language, fallback to English
@@ -52,7 +52,7 @@ serve(async (req) => {
     if (!rows || rows.length === 0) {
       const { data: enRows } = await supabase
         .from("husky_knowledge")
-        .select("category, title, content, keywords, language")
+        .select("category, title, content, keywords, language, source_url")
         .eq("language", "en");
       rows = enRows;
     }
@@ -79,7 +79,7 @@ serve(async (req) => {
       if (scored.length > 0) {
         knowledgeFound = true;
         knowledgeContext = "\n\n## Relevant UW Knowledge Base Articles:\n" +
-          scored.map((r: any) => `### [${r.category}] ${r.title}\n${r.content}`).join("\n\n");
+          scored.map((r: any) => `### [${r.category}] ${r.title}${r.source_url ? ` (source_url: ${r.source_url})` : ''}\n${r.content}`).join("\n\n");
       }
     }
 
@@ -111,7 +111,7 @@ Use this information to personalize your advice. For example, if their budget is
       : "Respond in English unless the user writes in another language, in which case respond in that language.";
 
     const knowledgeSourceNote = knowledgeFound
-      ? "The following articles are from our verified UW knowledge base. Prioritize this information in your answer and cite it naturally (e.g. 'According to our UW guide...'). IMPORTANT: At the end of your response, list every knowledge base article you used in this format on separate lines:\n\nSource: [category] > [title]\n\nList ALL sources used, one per line."
+      ? "The following articles are from our verified UW knowledge base. Prioritize this information in your answer and cite it naturally (e.g. 'According to our UW guide...'). IMPORTANT: At the end of your response, list every knowledge base article you used in this format on separate lines:\n\nSource: [category] > [title] | [source_url]\n\nList ALL sources used, one per line. Include the source_url from the article if available."
       : "No articles from our knowledge base matched this query. You may use your general knowledge about UW Seattle, but you MUST end your response with exactly this line:\n\nBased on general knowledge. For the most accurate information, please verify at uw.edu or other online resources.";
 
     const systemPrompt = `You are HuskyGuide 🐾, an expert University of Washington (UW) International Student Advisor and AI assistant.
@@ -131,8 +131,9 @@ ${profileContext}
 
 ## Source Citation Rules (MANDATORY)
 - When you use information from the Knowledge Base Articles above, you MUST end your response with source citations in this exact format:
-  Source: [category] > [title]
-  (one line per source used)
+  Source: [category] > [title] | [source_url]
+  (one line per source used, include the source_url from the article metadata)
+- Example: Source: Banking > Best Banks for Chinese Students | https://finance.uw.edu/example
 - When you do NOT use any knowledge base article (i.e. answering from general knowledge), you MUST end your response with:
   Based on general knowledge. For the most accurate information, please verify at uw.edu or other online resources.
 - NEVER skip the source citation footer.
