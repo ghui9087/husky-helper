@@ -2,3 +2,6 @@ project_id = "wtjlxrjcnfmkuqybmlfb"
 
 [functions.husky-chat]
 verify_jwt = false
+
+[functions.import-knowledge]
+verify_jwt = false
