@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import ChatMessage from "@/components/chat/ChatMessage";
+import ChatSidebar from "@/components/chat/ChatSidebar";
 import { useAuth } from "@/contexts/AuthContext";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -10,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Sparkles, BookOpen, Home, UtensilsCrossed, Bus, Loader2, Bot, Send } from "lucide-react";
 import OnboardingForm from "./OnboardingForm";
 import { useHuskyChat } from "@/hooks/useHuskyChat";
+import { useConversations } from "@/hooks/useConversations";
 
 interface Profile {
   full_name: string | null;
@@ -34,8 +36,29 @@ const PersonalizedDashboard = () => {
   const [loading, setLoading] = useState(true);
   const [needsOnboarding, setNeedsOnboarding] = useState(false);
   const [chatInput, setChatInput] = useState("");
-  const { messages, isLoading, send } = useHuskyChat();
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  const {
+    groupedConversations,
+    loading: conversationsLoading,
+    createConversation,
+    deleteConversation,
+    fetchConversations,
+  } = useConversations();
+
+  const { 
+    messages, 
+    isLoading, 
+    send, 
+    startNewChat, 
+    conversationId, 
+    loadConversation 
+  } = useHuskyChat({
+    onConversationCreated: (id, title) => {
+      // Refresh conversations when a new one is created
+      fetchConversations();
+    }
+  });
 
   useEffect(() => {
     if (!user) return;
@@ -74,6 +97,22 @@ const PersonalizedDashboard = () => {
     setChatInput("");
   };
 
+  const handleSelectConversation = (id: string) => {
+    loadConversation(id);
+  };
+
+  const handleNewChat = () => {
+    startNewChat();
+  };
+
+  const handleDeleteConversation = async (id: string) => {
+    await deleteConversation(id);
+    // If we're currently viewing the deleted conversation, start a new chat
+    if (conversationId === id) {
+      startNewChat();
+    }
+  };
+
   if (loading) {
     return (
       <section className="py-16">
@@ -95,94 +134,126 @@ const PersonalizedDashboard = () => {
 
   return (
     <section className="py-10 sm:py-14">
-      <div className="container max-w-4xl space-y-8">
-        {/* Welcome Card */}
-        <Card className="border-primary/20 shadow-lg overflow-hidden">
-          <div className="h-2 bg-gradient-to-r from-primary to-accent" />
-          <CardHeader className="text-center pb-2">
-            <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
-              <Sparkles className="h-7 w-7 text-primary" />
+      <div className="container max-w-7xl">
+        <div className="flex gap-6">
+          {/* Chat Sidebar */}
+          <div className="hidden lg:block">
+            <div className="sticky top-20 h-[calc(100vh-8rem)]">
+              <ChatSidebar
+                groupedConversations={groupedConversations}
+                activeConversationId={conversationId}
+                onSelectConversation={handleSelectConversation}
+                onNewChat={handleNewChat}
+                onDeleteConversation={handleDeleteConversation}
+                loading={conversationsLoading}
+              />
             </div>
-            <CardTitle className="text-2xl sm:text-3xl">My Husky Dashboard</CardTitle>
-          </CardHeader>
-          <CardContent className="text-center space-y-3 pb-6">
-            <p className="text-lg text-foreground">
-              Welcome <span className="font-bold text-primary">{profile.full_name}</span>! 🎉
-            </p>
-            <p className="text-muted-foreground text-sm">
-              {profile.program} · {profile.start_quarter}
-              {profile.country && <> · 🌍 {profile.country}</>}
-              {profile.budget_range && <> · 💰 {profile.budget_range}</>}
-            </p>
-          </CardContent>
-        </Card>
+          </div>
 
-        {/* Quick Links */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          {quickLinkKeys.map(({ icon: Icon, labelKey, href }) => (
-            <Card
-              key={href}
-              className="cursor-pointer border-border hover:border-primary/40 hover:shadow-md transition-all group"
-              onClick={() => navigate(href)}
-            >
-              <CardContent className="flex flex-col items-center gap-2 p-4 sm:p-5">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                  <Icon className="h-5 w-5 text-primary" />
+          {/* Main Content */}
+          <div className="flex-1 max-w-4xl space-y-8">
+            {/* Welcome Card */}
+            <Card className="border-primary/20 shadow-lg overflow-hidden">
+              <div className="h-2 bg-gradient-to-r from-primary to-accent" />
+              <CardHeader className="text-center pb-2">
+                <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
+                  <Sparkles className="h-7 w-7 text-primary" />
                 </div>
-                <span className="text-sm font-medium text-foreground text-center">{t(labelKey)}</span>
+                <CardTitle className="text-2xl sm:text-3xl">My Husky Dashboard</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center space-y-3 pb-6">
+                <p className="text-lg text-foreground">
+                  Welcome <span className="font-bold text-primary">{profile.full_name}</span>! 🎉
+                </p>
+                <p className="text-muted-foreground text-sm">
+                  {profile.program} · {profile.start_quarter}
+                  {profile.country && <> · 🌍 {profile.country}</>}
+                  {profile.budget_range && <> · 💰 {profile.budget_range}</>}
+                </p>
               </CardContent>
             </Card>
-          ))}
-        </div>
 
-        {/* AI Chat Card */}
-        <Card className="border-primary/20 shadow-lg overflow-hidden">
-          <div className="h-1.5 bg-gradient-to-r from-primary to-accent" />
-          <CardHeader className="pb-3">
-            <CardTitle className="flex items-center gap-2 text-lg">
-              <Bot className="h-5 w-5 text-primary" />
-              {t('chat.huskyGuideAI')}
-              <span className="ml-auto text-xs font-normal text-primary bg-primary/10 px-2 py-0.5 rounded-full">
-                ✨ Personalized
-              </span>
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div ref={scrollRef} className="space-y-3 max-h-80 overflow-y-auto pr-1">
-              {messages.length === 0 && (
-                <div className="flex justify-start">
-                  <div className="max-w-[85%] rounded-xl px-4 py-2.5 text-sm bg-secondary text-foreground">
-                    {t('chat.welcomeMessage')}
-                  </div>
-                </div>
-              )}
-              {messages.map((msg, i) => (
-                <ChatMessage key={i} role={msg.role} content={msg.content} />
+            {/* Quick Links */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {quickLinkKeys.map(({ icon: Icon, labelKey, href }) => (
+                <Card
+                  key={href}
+                  className="cursor-pointer border-border hover:border-primary/40 hover:shadow-md transition-all group"
+                  onClick={() => navigate(href)}
+                >
+                  <CardContent className="flex flex-col items-center gap-2 p-4 sm:p-5">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                      <Icon className="h-5 w-5 text-primary" />
+                    </div>
+                    <span className="text-sm font-medium text-foreground text-center">{t(labelKey)}</span>
+                  </CardContent>
+                </Card>
               ))}
-              {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
-                <div className="flex justify-start">
-                  <div className="max-w-[85%] rounded-xl px-4 py-2.5 text-sm bg-secondary text-foreground">
-                    <Loader2 className="h-4 w-4 animate-spin" />
-                  </div>
-                </div>
-              )}
             </div>
 
-            <div className="flex gap-2">
-              <Input
-                placeholder={t('chat.placeholder')}
-                value={chatInput}
-                onChange={(e) => setChatInput(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && handleSend()}
-                className="flex-1"
-                disabled={isLoading}
-              />
-              <Button size="icon" onClick={handleSend} disabled={isLoading}>
-                {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
+            {/* AI Chat Card */}
+            <Card className="border-primary/20 shadow-lg overflow-hidden">
+              <div className="h-1.5 bg-gradient-to-r from-primary to-accent" />
+              <CardHeader className="pb-3">
+                <CardTitle className="flex items-center gap-2 text-lg">
+                  <Bot className="h-5 w-5 text-primary" />
+                  {t('chat.huskyGuideAI')}
+                  <span className="ml-auto text-xs font-normal text-primary bg-primary/10 px-2 py-0.5 rounded-full">
+                    ✨ Personalized
+                  </span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                {/* Mobile: Show new chat button */}
+                <div className="lg:hidden">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    onClick={handleNewChat}
+                    className="w-full gap-2"
+                  >
+                    <Send className="h-4 w-4" />
+                    {t("chat.newChat", "New Chat")}
+                  </Button>
+                </div>
+
+                <div ref={scrollRef} className="space-y-3 max-h-80 overflow-y-auto pr-1">
+                  {messages.length === 0 && (
+                    <div className="flex justify-start">
+                      <div className="max-w-[85%] rounded-xl px-4 py-2.5 text-sm bg-secondary text-foreground">
+                        {t('chat.welcomeMessage')}
+                      </div>
+                    </div>
+                  )}
+                  {messages.map((msg, i) => (
+                    <ChatMessage key={i} role={msg.role} content={msg.content} />
+                  ))}
+                  {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
+                    <div className="flex justify-start">
+                      <div className="max-w-[85%] rounded-xl px-4 py-2.5 text-sm bg-secondary text-foreground">
+                        <Loader2 className="h-4 w-4 animate-spin" />
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                <div className="flex gap-2">
+                  <Input
+                    placeholder={t('chat.placeholder')}
+                    value={chatInput}
+                    onChange={(e) => setChatInput(e.target.value)}
+                    onKeyDown={(e) => e.key === "Enter" && handleSend()}
+                    className="flex-1"
+                    disabled={isLoading}
+                  />
+                  <Button size="icon" onClick={handleSend} disabled={isLoading}>
+                    {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
       </div>
     </section>
   );

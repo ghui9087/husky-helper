@@ -2,11 +2,13 @@ import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import ChatMessage from "@/components/chat/ChatMessage";
+import ChatSidebar from "@/components/chat/ChatSidebar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { LogIn, Send, Bot, BookOpen, Home, UtensilsCrossed, Bus, Sparkles, Loader2 } from "lucide-react";
 import { useHuskyChat } from "@/hooks/useHuskyChat";
+import { useConversations } from "@/hooks/useConversations";
 
 const quickLinkKeys = [
   { icon: BookOpen, labelKey: "chat.campusLife", href: "/campus" },
@@ -19,8 +21,16 @@ const GuestDashboard = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const [chatInput, setChatInput] = useState("");
-  const { messages, isLoading, send } = useHuskyChat();
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  const { 
+    messages, 
+    isLoading, 
+    send, 
+    showSignInPrompt, 
+    setShowSignInPrompt, 
+    guestMessageCount 
+  } = useHuskyChat();
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -78,6 +88,32 @@ const GuestDashboard = () => {
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
+            {/* Guest Sign In Prompt */}
+            {showSignInPrompt && (
+              <div className="p-4 border border-primary/30 bg-primary/5 rounded-lg">
+                <div className="flex items-center gap-3">
+                  <Sparkles className="h-5 w-5 text-primary shrink-0" />
+                  <div className="flex-1">
+                    <p className="font-medium text-sm">{t('chat.signInToSaveHistory', 'Sign in to save your chat history')}</p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      {t('chat.dontLoseConversation', "Don't lose your conversation and access it from any device")}
+                    </p>
+                  </div>
+                  <Button size="sm" variant="hero" onClick={() => navigate("/auth")}>
+                    {t('auth.signIn')}
+                  </Button>
+                  <Button 
+                    size="sm" 
+                    variant="ghost" 
+                    onClick={() => setShowSignInPrompt(false)}
+                    className="text-xs"
+                  >
+                    {t('common.dismiss', 'Dismiss')}
+                  </Button>
+                </div>
+              </div>
+            )}
+
             {/* Messages */}
             <div ref={scrollRef} className="space-y-3 max-h-80 overflow-y-auto pr-1">
               {/* Welcome message */}
