@@ -175,8 +175,8 @@ const OnboardingForm = ({ onComplete }: OnboardingFormProps) => {
                       const now = new Date();
                       const month = now.getMonth() + 1;
                       const year = now.getFullYear();
-                      let startIdx = month <= 3 ? 0 : month <= 6 ? 1 : month <= 8 ? 2 : 3;
-                      let y = year;
+                      let startIdx = month <= 3 ? 1 : month <= 6 ? 2 : month <= 8 ? 3 : 0;
+                      let y = month >= 9 ? year + 1 : year;
                       const opts: string[] = [];
                       for (let i = 0; i < 8; i++) {
                         opts.push(`${quarters[startIdx]} ${y}`);
