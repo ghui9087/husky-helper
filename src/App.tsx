@@ -10,6 +10,7 @@ import FoodGuide from "./pages/FoodGuide";
 import CampusLife from "./pages/CampusLife";
 import TransportGuide from "./pages/TransportGuide";
 import Auth from "./pages/Auth";
+import ProfileSettings from "./pages/ProfileSettings";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
