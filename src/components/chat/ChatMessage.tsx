@@ -132,7 +132,7 @@ const ChatMessage = ({ role, content }: ChatMessageProps) => {
               className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
             >
               <BookOpen className="h-3 w-3" />
-              <span>{sources.length > 0 ? `📚 View Sources (${sources.length})` : "📚 View Sources"}</span>
+              <span>{sources.length > 0 ? `${sourcesLabel} (${sources.length})` : sourcesLabel}</span>
               <ChevronDown
                 className={`h-3 w-3 transition-transform duration-200 ${sourcesOpen ? "rotate-180" : ""}`}
               />
