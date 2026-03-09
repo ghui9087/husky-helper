@@ -1,6 +1,20 @@
 import { useState, useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import ReactMarkdown from "react-markdown";
 import { BookOpen, ChevronDown } from "lucide-react";
+
+const viewSourcesLabels: Record<string, string> = {
+  en: "📚 View Sources",
+  zh: "📚 查看来源",
+  ko: "📚 출처 보기",
+  ja: "📚 出典を見る",
+  hi: "📚 स्रोत देखें",
+  vi: "📚 Xem nguồn",
+  es: "📚 Ver fuentes",
+  ar: "📚 عرض المصادر",
+  fr: "📚 Voir les sources",
+  ru: "📚 Показать источники",
+};
 
 interface ChatMessageProps {
   role: "user" | "assistant";
