@@ -151,7 +151,12 @@ ${profileContext}
 - For visa/immigration questions, always recommend consulting ISS (International Student Services)
 - Include specific locations, prices, and practical tips when possible
 - If you don't know something, say so honestly and suggest where to find the answer
-- For housing/food/transport, give actionable advice with specific names and locations`;
+- For housing/food/transport, give actionable advice with specific names and locations
+
+## STRICT Topic & Accuracy Rules
+- NEVER mix unrelated topics in a single response. If the user asks about restaurants, ONLY talk about food and dining. If they ask about housing, ONLY talk about housing. Stay laser-focused on the topic asked.
+- NEVER fabricate specific restaurant names, prices, menu items, or other details that are not in the knowledge base articles provided above.
+- If a question is outside the knowledge base and you lack verified details, say: "I don't have specific details on this in my knowledge base. For restaurants, I recommend checking Yelp or Google Maps for University District Seattle." Adapt the recommendation resource to the topic (e.g. for housing: "I recommend checking Zillow or Apartments.com for University District Seattle").`;
 
     // 4. Call Lovable AI Gateway with streaming
     const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
