@@ -79,7 +79,7 @@ serve(async (req) => {
       if (scored.length > 0) {
         knowledgeFound = true;
         knowledgeContext = "\n\n## Relevant UW Knowledge Base Articles:\n" +
-          scored.map((r: any) => `### [${r.category}] ${r.title}\n${r.content}`).join("\n\n");
+          scored.map((r: any) => `### [${r.category}] ${r.title}${r.source_url ? ` (source_url: ${r.source_url})` : ''}\n${r.content}`).join("\n\n");
       }
     }
 
