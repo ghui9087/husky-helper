@@ -55,11 +55,7 @@ const PrivacyPolicy = () => {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
-                    <span><strong>Usage Data:</strong> Anonymous analytics about how you interact with our features to improve our service</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span><strong>IP Address:</strong> For guest users, we track IP addresses to prevent abuse of our services</span>
+                    <span><strong>IP Address:</strong> Automatically recorded by our hosting infrastructure for security and abuse prevention purposes only. This data is not used for tracking or marketing.</span>
                   </li>
                 </ul>
               </div>
