@@ -340,6 +340,13 @@
     "transport": "परिवहन",
     "safetyDisclaimer": "🔒 HuskyGuide AI कभी भी आपका SSN या पासवर्ड नहीं मांगेगा। कृपया संवेदनशील पहचान संख्या साझा न करें।"
   },
+  "floatingChat": {
+    "askHousing": "आवास के बारे में पूछें 🏠",
+    "askFood": "खाने के बारे में पूछें 🍜",
+    "askCampus": "कैंपस के बारे में पूछें 📚",
+    "askTransport": "परिवहन के बारे में पूछें 🚌",
+    "askAnything": "HuskyGuide AI से पूछें 🐾"
+  },
   "auth": {
     "welcomeBack": "वापसी पर स्वागत है",
     "createAccount": "खाता बनाएं",

@@ -312,6 +312,13 @@
     "transport": "Transport",
     "safetyDisclaimer": "🔒 HuskyGuide AI will never ask for your SSN or passwords. Please do not share sensitive ID numbers."
   },
+  "floatingChat": {
+    "askHousing": "Ask about Housing 🏠",
+    "askFood": "Ask about Food 🍜",
+    "askCampus": "Ask about Campus 📚",
+    "askTransport": "Ask about Transport 🚌",
+    "askAnything": "Ask HuskyGuide AI 🐾"
+  },
   "auth": {
     "welcomeBack": "Welcome Back",
     "createAccount": "Create Account",

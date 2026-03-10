@@ -340,6 +340,13 @@
     "transport": "교통",
     "safetyDisclaimer": "🔒 HuskyGuide AI는 절대 SSN이나 비밀번호를 요청하지 않습니다. 민감한 신분증 번호를 공유하지 마세요."
   },
+  "floatingChat": {
+    "askHousing": "주거에 대해 물어보기 🏠",
+    "askFood": "맛집에 대해 물어보기 🍜",
+    "askCampus": "캠퍼스에 대해 물어보기 📚",
+    "askTransport": "교통에 대해 물어보기 🚌",
+    "askAnything": "HuskyGuide AI에게 물어보기 🐾"
+  },
   "auth": {
     "welcomeBack": "다시 오신 것을 환영합니다",
     "createAccount": "계정 만들기",

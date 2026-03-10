@@ -312,6 +312,13 @@
     "transport": "Транспорт",
     "safetyDisclaimer": "🔒 HuskyGuide AI никогда не запросит ваш SSN или пароли. Пожалуйста, не сообщайте конфиденциальные идентификационные номера."
   },
+  "floatingChat": {
+    "askHousing": "Спросить о жилье 🏠",
+    "askFood": "Спросить о еде 🍜",
+    "askCampus": "Спросить о кампусе 📚",
+    "askTransport": "Спросить о транспорте 🚌",
+    "askAnything": "Спросить HuskyGuide AI 🐾"
+  },
   "auth": {
     "welcomeBack": "С возвращением",
     "createAccount": "Создать аккаунт",

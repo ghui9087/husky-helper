@@ -312,6 +312,13 @@
     "transport": "交通出行",
     "safetyDisclaimer": "🔒 HuskyGuide AI 绝不会要求您提供社会安全号码或密码。请勿分享敏感的身份证号码。"
   },
+  "floatingChat": {
+    "askHousing": "咨询住房问题 🏠",
+    "askFood": "咨询美食推荐 🍜",
+    "askCampus": "咨询校园生活 📚",
+    "askTransport": "咨询交通出行 🚌",
+    "askAnything": "问问 HuskyGuide AI 🐾"
+  },
   "auth": {
     "welcomeBack": "欢迎回来",
     "createAccount": "创建账户",
