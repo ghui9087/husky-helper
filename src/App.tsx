@@ -12,6 +12,7 @@ import CampusLife from "./pages/CampusLife";
 import TransportGuide from "./pages/TransportGuide";
 import Auth from "./pages/Auth";
 import ProfileSettings from "./pages/ProfileSettings";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 import FloatingChat from "./components/FloatingChat";
 
