@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { ArrowRight } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import dubsMascot from "@/assets/dubs-mascot.jpg";
 
@@ -26,15 +26,15 @@ const HeroBanner = () => {
           {/* Mascot */}
           <div
             className="shrink-0 opacity-0 animate-fade-in"
-            style={{ animationDelay: "0.15s" }}
-          >
+            style={{ animationDelay: "0.15s" }}>
+            
             <div className="relative group">
               <div className="absolute -inset-3 rounded-full bg-accent/30 blur-xl transition-all duration-500 group-hover:bg-accent/50" />
               <img
                 src={dubsMascot}
                 alt="Dubs the Husky"
-                className="relative w-28 h-28 sm:w-36 sm:h-36 lg:w-44 lg:h-44 rounded-full object-cover border-4 border-accent/60 shadow-2xl transition-transform duration-500 group-hover:scale-105 group-hover:animate-wiggle"
-              />
+                className="relative w-28 h-28 sm:w-36 sm:h-36 lg:w-44 lg:h-44 rounded-full object-cover border-4 border-accent/60 shadow-2xl transition-transform duration-500 group-hover:scale-105 group-hover:animate-wiggle" />
+              
             </div>
           </div>
 
@@ -42,35 +42,35 @@ const HeroBanner = () => {
           <div className="text-center lg:text-left space-y-4 sm:space-y-5 flex-1">
             <h2
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-primary-foreground tracking-tight leading-tight opacity-0 animate-fade-in-up"
-              style={{ animationDelay: "0.2s" }}
-            >
+              style={{ animationDelay: "0.2s" }}>
+              
               {t("heroBanner.headline")}
             </h2>
             <p
               className="text-base sm:text-lg lg:text-xl text-primary-foreground/80 max-w-2xl mx-auto lg:mx-0 text-balance opacity-0 animate-fade-in-up"
-              style={{ animationDelay: "0.3s" }}
-            >
+              style={{ animationDelay: "0.3s" }}>
+              
               {t("heroBanner.subtitle")}
             </p>
             <div
               className="pt-2 opacity-0 animate-fade-in-up"
-              style={{ animationDelay: "0.4s" }}
-            >
+              style={{ animationDelay: "0.4s" }}>
+              
               <Button
                 variant="gold"
                 size="xl"
                 onClick={scrollToChat}
-                className="font-bold text-lg gap-2"
-              >
+                className="font-bold text-lg gap-2">
+                
                 {t("heroBanner.startChat")}
-                <ArrowRight className="h-5 w-5" />
+                
               </Button>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroBanner;
