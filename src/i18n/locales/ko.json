@@ -338,7 +338,13 @@
     "housingGuide": "주거 가이드",
     "foodGuide": "맛집 가이드",
     "transport": "교통",
-    "safetyDisclaimer": "🔒 HuskyGuide AI는 절대 SSN이나 비밀번호를 요청하지 않습니다. 민감한 신분증 번호를 공유하지 마세요."
+    "safetyDisclaimer": "🔒 HuskyGuide AI는 절대 SSN이나 비밀번호를 요청하지 않습니다. 민감한 신분증 번호를 공유하지 마세요.",
+    "suggestion": {
+      "bankAccount": "SSN 없이 은행 계좌를 여는 방법은?",
+      "whereToLive": "UW 근처 어디에 사는 게 좋을까요?",
+      "firstWeek": "첫 주에 무엇을 해야 하나요?",
+      "optTiming": "OPT는 언제 신청해야 하나요?"
+    }
   },
   "floatingChat": {
     "askHousing": "주거에 대해 물어보기 🏠",

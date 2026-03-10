@@ -146,11 +146,14 @@ const FloatingChat = () => {
         {/* Messages */}
         <div ref={scrollRef} className="flex-1 overflow-y-auto p-3 space-y-3">
           {messages.length === 0 && (
-            <div className="flex justify-start">
-              <div className="max-w-[85%] rounded-xl px-4 py-2.5 text-sm bg-secondary text-foreground">
-                {t("chat.welcomeMessage")}
+            <>
+              <div className="flex justify-start">
+                <div className="max-w-[85%] rounded-xl px-4 py-2.5 text-sm bg-secondary text-foreground">
+                  {t("chat.welcomeMessage")}
+                </div>
               </div>
-            </div>
+              <SuggestionChips onSelect={(q) => { send(q); setChatInput(""); }} disabled={isLoading} />
+            </>
           )}
           {messages.map((msg, i) => (
             <ChatMessage key={i} role={msg.role} content={msg.content} />

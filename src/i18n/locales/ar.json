@@ -338,7 +338,13 @@
     "housingGuide": "دليل السكن",
     "foodGuide": "دليل الطعام",
     "transport": "المواصلات",
-    "safetyDisclaimer": "🔒 لن يطلب HuskyGuide AI أبدًا رقم الضمان الاجتماعي أو كلمات المرور الخاصة بك. يرجى عدم مشاركة أرقام الهوية الحساسة."
+    "safetyDisclaimer": "🔒 لن يطلب HuskyGuide AI أبدًا رقم الضمان الاجتماعي أو كلمات المرور الخاصة بك. يرجى عدم مشاركة أرقام الهوية الحساسة.",
+    "suggestion": {
+      "bankAccount": "كيف أفتح حسابًا بنكيًا بدون SSN؟",
+      "whereToLive": "أين يجب أن أسكن بالقرب من UW؟",
+      "firstWeek": "ماذا أفعل في أسبوعي الأول؟",
+      "optTiming": "متى يجب أن أتقدم لـ OPT؟"
+    }
   },
   "floatingChat": {
     "askHousing": "اسأل عن السكن 🏠",
