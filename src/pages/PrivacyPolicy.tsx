@@ -133,11 +133,19 @@ const PrivacyPolicy = () => {
                 <ul className="space-y-3 text-muted-foreground mt-4">
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
-                    <span><strong>Lovable Cloud:</strong> For hosting and backend infrastructure</span>
+                    <span>Supabase (database and authentication)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
-                    <span><strong>AI Services:</strong> To process and respond to your chat messages</span>
+                    <span>Anthropic Claude API (AI responses)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Google OAuth (optional login)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Lovable Cloud (hosting)</span>
                   </li>
                 </ul>
               </div>
