@@ -345,10 +345,36 @@
     "transport": "交通",
     "safetyDisclaimer": "🔒 HuskyGuide AIがSSNやパスワードを聞くことはありません。機密性の高いID番号を共有しないでください。",
     "suggestion": {
-      "bankAccount": "SSNなしで銀行口座を開設するには？",
-      "whereToLive": "UW近くのおすすめ居住エリアは？",
-      "firstWeek": "最初の一週間にやるべきことは？",
-      "optTiming": "OPTはいつ申請すべき？"
+      "home": {
+        "bankAccount": "SSNなしで銀行口座を開設するには？",
+        "whereToLive": "UW近くのおすすめ居住エリアは？",
+        "firstWeek": "最初の一週間にやるべきことは？",
+        "optTiming": "OPTはいつ申請すべき？"
+      },
+      "campus": {
+        "emailProfessor": "UWの教授にメールするには？",
+        "studySpots": "おすすめの勉強場所は？",
+        "imaGym": "IMAジムの利用方法は？",
+        "emergency": "キャンパスで緊急事態が起きたら？"
+      },
+      "housing": {
+        "bestNeighborhood": "予算に合うおすすめの地域は？",
+        "rentalScam": "賃貸詐欺の見分け方は？",
+        "leaseCheck": "賃貸契約書で確認すべきポイントは？",
+        "findRoommates": "UWでルームメイトを見つけるには？"
+      },
+      "food": {
+        "cheapRestaurants": "The Aveのおすすめ安い飲食店は？",
+        "groceryStore": "UW近くで一番安いスーパーは？",
+        "mealPrep": "学生予算でのお弁当作りのコツは？",
+        "freeFood": "キャンパスで無料の食事はどこで？"
+      },
+      "transport": {
+        "upass": "U-PASSの有効化方法は？",
+        "lightRail": "Linkライトレールでキャンパスへの行き方は？",
+        "car": "UWで車を持つ価値はある？",
+        "lateNight": "深夜に安全に帰宅するには？"
+      }
     }
   },
   "floatingChat": {

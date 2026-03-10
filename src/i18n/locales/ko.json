@@ -345,10 +345,36 @@
     "transport": "교통",
     "safetyDisclaimer": "🔒 HuskyGuide AI는 절대 SSN이나 비밀번호를 요청하지 않습니다. 민감한 신분증 번호를 공유하지 마세요.",
     "suggestion": {
-      "bankAccount": "SSN 없이 은행 계좌를 여는 방법은?",
-      "whereToLive": "UW 근처 어디에 사는 게 좋을까요?",
-      "firstWeek": "첫 주에 무엇을 해야 하나요?",
-      "optTiming": "OPT는 언제 신청해야 하나요?"
+      "home": {
+        "bankAccount": "SSN 없이 은행 계좌를 여는 방법은?",
+        "whereToLive": "UW 근처 어디에 사는 게 좋을까요?",
+        "firstWeek": "첫 주에 무엇을 해야 하나요?",
+        "optTiming": "OPT는 언제 신청해야 하나요?"
+      },
+      "campus": {
+        "emailProfessor": "UW 교수에게 이메일은 어떻게 보내나요?",
+        "studySpots": "어디서 공부하는 게 좋을까요?",
+        "imaGym": "IMA 체육관은 어떻게 이용하나요?",
+        "emergency": "캠퍼스 비상 상황에서 어떻게 해야 하나요?"
+      },
+      "housing": {
+        "bestNeighborhood": "제 예산에 맞는 최적의 동네는 어디인가요?",
+        "rentalScam": "임대 사기를 어떻게 알아보나요?",
+        "leaseCheck": "임대 계약서에서 무엇을 확인해야 하나요?",
+        "findRoommates": "UW에서 룸메이트를 어떻게 구하나요?"
+      },
+      "food": {
+        "cheapRestaurants": "The Ave에서 저렴한 맛집은?",
+        "groceryStore": "UW 근처에서 가장 저렴한 마트는?",
+        "mealPrep": "학생 예산으로 식사 준비하는 방법은?",
+        "freeFood": "캠퍼스에서 무료 음식을 어디서 구할 수 있나요?"
+      },
+      "transport": {
+        "upass": "U-PASS를 어떻게 활성화하나요?",
+        "lightRail": "Link 경전철로 캠퍼스에 어떻게 가나요?",
+        "car": "UW에서 차가 있는 게 좋을까요?",
+        "lateNight": "밤늦게 안전하게 집에 가는 방법은?"
+      }
     }
   },
   "floatingChat": {

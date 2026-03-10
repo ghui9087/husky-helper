@@ -345,10 +345,36 @@
     "transport": "Transporte",
     "safetyDisclaimer": "🔒 HuskyGuide AI nunca te pedirá tu SSN ni contraseñas. Por favor, no compartas números de identificación sensibles.",
     "suggestion": {
-      "bankAccount": "¿Cómo abrir una cuenta bancaria sin SSN?",
-      "whereToLive": "¿Dónde debería vivir cerca de UW?",
-      "firstWeek": "¿Qué debo hacer en mi primera semana?",
-      "optTiming": "¿Cuándo debo solicitar el OPT?"
+      "home": {
+        "bankAccount": "¿Cómo abrir una cuenta bancaria sin SSN?",
+        "whereToLive": "¿Dónde debería vivir cerca de UW?",
+        "firstWeek": "¿Qué debo hacer en mi primera semana?",
+        "optTiming": "¿Cuándo debo solicitar el OPT?"
+      },
+      "campus": {
+        "emailProfessor": "¿Cómo enviar un correo a un profesor de UW?",
+        "studySpots": "¿Dónde debería estudiar?",
+        "imaGym": "¿Cómo accedo al gimnasio IMA?",
+        "emergency": "¿Qué hago en una emergencia en el campus?"
+      },
+      "housing": {
+        "bestNeighborhood": "¿Cuál barrio es mejor para mi presupuesto?",
+        "rentalScam": "¿Cómo identifico una estafa de alquiler?",
+        "leaseCheck": "¿Qué debo revisar en un contrato de arrendamiento?",
+        "findRoommates": "¿Cómo encuentro compañeros de cuarto en UW?"
+      },
+      "food": {
+        "cheapRestaurants": "¿Mejores restaurantes baratos en The Ave?",
+        "groceryStore": "¿Dónde está el supermercado más barato cerca de UW?",
+        "mealPrep": "¿Cómo preparar comidas con presupuesto estudiantil?",
+        "freeFood": "¿Dónde puedo encontrar comida gratis en el campus?"
+      },
+      "transport": {
+        "upass": "¿Cómo activo mi U-PASS?",
+        "lightRail": "¿Cómo tomo el Link light rail al campus?",
+        "car": "¿Vale la pena tener auto en UW?",
+        "lateNight": "¿Cómo llego a casa seguro tarde en la noche?"
+      }
     }
   },
   "floatingChat": {
