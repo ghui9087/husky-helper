@@ -134,7 +134,7 @@ const PersonalizedDashboard = () => {
   if (!profile) return null;
 
   return (
-    <section className="py-10 sm:py-14">
+    <section className="py-10 sm:py-14" data-chat-section>
       <div className="container max-w-7xl">
         <div className="flex gap-6">
           {/* Chat Sidebar */}
