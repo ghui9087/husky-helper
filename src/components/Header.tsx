@@ -9,8 +9,8 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
+  DropdownMenuTrigger } from
+"./ui/dropdown-menu";
 import LanguageSelector from "./LanguageSelector";
 import { useAuth } from "@/contexts/AuthContext";
 
@@ -39,12 +39,12 @@ const Header = () => {
   }, [isMenuOpen]);
 
   const navLinks = [
-    { name: t("nav.home"), href: "/" },
-    { name: t("nav.campusLife"), href: "/campus" },
-    { name: t("nav.housing"), href: "/housing" },
-    { name: t("nav.food"), href: "/food" },
-    { name: t("nav.transport"), href: "/transport" },
-  ];
+  { name: t("nav.home"), href: "/" },
+  { name: t("nav.campusLife"), href: "/campus" },
+  { name: t("nav.housing"), href: "/housing" },
+  { name: t("nav.food"), href: "/food" },
+  { name: t("nav.transport"), href: "/transport" }];
+
 
   const isActive = (href: string) => {
     if (href === "/") return location.pathname === "/";
@@ -59,30 +59,30 @@ const Header = () => {
           <div className="flex h-9 w-9 items-center justify-center rounded-lg hero-gradient shadow-sm">
             <MapPin className="h-5 w-5 text-primary-foreground" />
           </div>
-          <span className="text-foreground hidden xs:inline sm:inline">UW Survival Guide</span>
+          <span className="text-foreground hidden xs:inline sm:inline">
+</span>
           <span className="text-foreground xs:hidden sm:hidden">UW Guide</span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-1">
-          {navLinks.map((link) => (
-            <Link
+          {navLinks.map((link) => <Link
               key={link.href}
               to={link.href}
               className={cn(
                 "px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200",
-                isActive(link.href)
-                  ? "bg-secondary text-primary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-              )}
-            >
+                isActive(link.href) ?
+                "bg-secondary text-primary" :
+                "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
+              )}>
+            
               {link.name}
             </Link>
-          ))}
+          )}
           <div className="ml-2 border-l border-border pl-3 flex items-center gap-2">
             <LanguageSelector />
-            {user ? (
-              <DropdownMenu>
+            {user ?
+            <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" size="sm" className="gap-1.5">
                     <div className="flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary">
@@ -101,13 +101,13 @@ const Header = () => {
                     <LogOut className="h-4 w-4" /> Sign Out
                   </DropdownMenuItem>
                 </DropdownMenuContent>
-              </DropdownMenu>
-            ) : (
-              <Button variant="hero" size="sm" onClick={() => navigate('/auth')} className="gap-1.5">
+              </DropdownMenu> :
+
+            <Button variant="hero" size="sm" onClick={() => navigate('/auth')} className="gap-1.5">
                 <LogIn className="h-4 w-4" />
                 Sign In
               </Button>
-            )}
+            }
           </div>
         </nav>
 
@@ -120,75 +120,75 @@ const Header = () => {
             className="h-10 w-10"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={isMenuOpen}
-          >
+            aria-expanded={isMenuOpen}>
+            
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>
       </div>
 
       {/* Mobile Navigation Overlay */}
-      {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-16 z-50 bg-background animate-fade-in">
+      {isMenuOpen &&
+      <div className="lg:hidden fixed inset-0 top-16 z-50 bg-background animate-fade-in">
           <nav className="container py-6 flex flex-col gap-2 bg-background">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className={cn(
-                  "flex items-center px-4 py-4 text-base font-medium rounded-xl transition-all",
-                  isActive(link.href)
-                    ? "bg-secondary text-primary"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary/50 active:bg-secondary"
-                )}
-                onClick={() => setIsMenuOpen(false)}
-              >
+            {navLinks.map((link) =>
+          <Link
+            key={link.href}
+            to={link.href}
+            className={cn(
+              "flex items-center px-4 py-4 text-base font-medium rounded-xl transition-all",
+              isActive(link.href) ?
+              "bg-secondary text-primary" :
+              "text-muted-foreground hover:text-foreground hover:bg-secondary/50 active:bg-secondary"
+            )}
+            onClick={() => setIsMenuOpen(false)}>
+            
                 {link.name}
               </Link>
-            ))}
+          )}
             
             {/* Mobile auth + contact */}
             <div className="mt-6 pt-6 border-t border-border space-y-2">
-              {user ? (
-                <>
+              {user ?
+            <>
                   <Link
-                    to="/profile"
-                    onClick={() => setIsMenuOpen(false)}
-                    className="flex items-center gap-2 px-4 py-4 text-base font-medium text-muted-foreground hover:text-foreground rounded-xl hover:bg-secondary/50"
-                  >
+                to="/profile"
+                onClick={() => setIsMenuOpen(false)}
+                className="flex items-center gap-2 px-4 py-4 text-base font-medium text-muted-foreground hover:text-foreground rounded-xl hover:bg-secondary/50">
+                
                     <Settings className="h-4 w-4" />
                     Edit Profile
                   </Link>
                   <button
-                    onClick={() => { signOut(); setIsMenuOpen(false); }}
-                    className="flex items-center gap-2 px-4 py-4 w-full text-base font-medium text-destructive hover:bg-secondary/50 rounded-xl"
-                  >
+                onClick={() => {signOut();setIsMenuOpen(false);}}
+                className="flex items-center gap-2 px-4 py-4 w-full text-base font-medium text-destructive hover:bg-secondary/50 rounded-xl">
+                
                     <LogOut className="h-4 w-4" />
                     Sign Out
                   </button>
-                </>
-              ) : (
-                <Link
-                  to="/auth"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="flex items-center gap-2 px-4 py-4 text-base font-medium text-primary hover:bg-secondary/50 rounded-xl"
-                >
+                </> :
+
+            <Link
+              to="/auth"
+              onClick={() => setIsMenuOpen(false)}
+              className="flex items-center gap-2 px-4 py-4 text-base font-medium text-primary hover:bg-secondary/50 rounded-xl">
+              
                   <LogIn className="h-4 w-4" />
                   Sign In / Sign Up
                 </Link>
-              )}
+            }
               <a
-                href="mailto:wxy95929@uw.edu"
-                className="flex items-center px-4 py-4 text-base font-medium text-muted-foreground hover:text-foreground rounded-xl hover:bg-secondary/50"
-              >
+              href="mailto:wxy95929@uw.edu"
+              className="flex items-center px-4 py-4 text-base font-medium text-muted-foreground hover:text-foreground rounded-xl hover:bg-secondary/50">
+              
                 {t("nav.contact")}
               </a>
             </div>
           </nav>
         </div>
-      )}
-    </header>
-  );
+      }
+    </header>);
+
 };
 
 export default Header;
