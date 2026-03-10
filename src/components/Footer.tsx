@@ -101,13 +101,12 @@ const Footer = () => {
       <div className="border-t border-border bg-muted/50">
         <div className="container py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
-            <div className="space-y-1">
-              <p className="text-sm text-muted-foreground">
-                © {currentYear} {t("footer.copyright")}
-              </p>
-              <p className="text-xs text-muted-foreground/70">
-                {t("footer.notAffiliated")}
-              </p>
+            <div className="flex flex-wrap items-center justify-center gap-x-2 text-sm text-muted-foreground">
+              <span>© {currentYear} {t("footer.copyright")}</span>
+              <span>·</span>
+              <Link to="/privacy" className="hover:text-primary transition-colors">
+                {t("footer.privacyPolicy", "Privacy Policy")}
+              </Link>
             </div>
             <p className="text-xs text-muted-foreground/70">
               {t("footer.lastUpdated")}: {lastUpdated}

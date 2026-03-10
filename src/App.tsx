@@ -12,6 +12,7 @@ import CampusLife from "./pages/CampusLife";
 import TransportGuide from "./pages/TransportGuide";
 import Auth from "./pages/Auth";
 import ProfileSettings from "./pages/ProfileSettings";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 import FloatingChat from "./components/FloatingChat";
 
@@ -41,6 +42,7 @@ const App = () => (
             <Route path="/transport" element={<TransportGuide />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/profile" element={<ProfileSettings />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
