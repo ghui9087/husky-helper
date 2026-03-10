@@ -38,6 +38,30 @@ export type Database = {
         }
         Relationships: []
       }
+      guest_rate_limits: {
+        Row: {
+          created_at: string
+          id: string
+          ip_address: string
+          message_count: number
+          window_start: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          ip_address: string
+          message_count?: number
+          window_start?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          ip_address?: string
+          message_count?: number
+          window_start?: string
+        }
+        Relationships: []
+      }
       husky_knowledge: {
         Row: {
           category: string
