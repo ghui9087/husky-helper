@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
             {/* Introduction */}
             <section className="prose prose-sm max-w-none">
               <p className="text-muted-foreground leading-relaxed">
-                Welcome to UW Husky Helper. We are committed to protecting your privacy and ensuring 
+                Welcome to Husky Helper. We are committed to protecting your privacy and ensuring 
                 that your personal information is handled in a safe and responsible manner. This Privacy 
                 Policy explains how we collect, use, and safeguard your information when you use our website.
               </p>
@@ -133,11 +133,19 @@ const PrivacyPolicy = () => {
                 <ul className="space-y-3 text-muted-foreground mt-4">
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
-                    <span><strong>Lovable Cloud:</strong> For hosting and backend infrastructure</span>
+                    <span>Supabase (database and authentication)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
-                    <span><strong>AI Services:</strong> To process and respond to your chat messages</span>
+                    <span>Anthropic Claude API (AI responses)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Google OAuth (optional login)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Lovable Cloud (hosting)</span>
                   </li>
                 </ul>
               </div>
@@ -145,6 +153,9 @@ const PrivacyPolicy = () => {
 
             {/* Your Rights */}
             <section>
+              <p className="text-xs text-muted-foreground/60 text-center mb-6">
+                Husky Helper is a student project and is not an official University of Washington service.
+              </p>
               <div className="flex items-center gap-3 mb-4">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary">
                   <Eye className="h-5 w-5 text-primary" />
