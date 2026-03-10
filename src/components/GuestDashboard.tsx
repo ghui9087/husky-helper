@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import ChatMessage from "@/components/chat/ChatMessage";
+import SuggestionChips from "@/components/chat/SuggestionChips";
 import ChatSidebar from "@/components/chat/ChatSidebar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
