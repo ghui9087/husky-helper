@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import ChatMessage from "@/components/chat/ChatMessage";
+import SuggestionChips from "@/components/chat/SuggestionChips";
 import ChatSidebar from "@/components/chat/ChatSidebar";
 import { useAuth } from "@/contexts/AuthContext";
 import { supabase } from "@/integrations/supabase/client";
