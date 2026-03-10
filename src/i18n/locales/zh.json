@@ -317,10 +317,36 @@
     "transport": "交通出行",
     "safetyDisclaimer": "🔒 HuskyGuide AI 绝不会要求您提供社会安全号码或密码。请勿分享敏感的身份证号码。",
     "suggestion": {
-      "bankAccount": "没有SSN怎么开银行账户？",
-      "whereToLive": "UW附近住哪里比较好？",
-      "firstWeek": "第一周应该做什么？",
-      "optTiming": "什么时候申请OPT？"
+      "home": {
+        "bankAccount": "没有SSN怎么开银行账户？",
+        "whereToLive": "UW附近住哪里比较好？",
+        "firstWeek": "第一周应该做什么？",
+        "optTiming": "什么时候申请OPT？"
+      },
+      "campus": {
+        "emailProfessor": "怎么给UW教授发邮件？",
+        "studySpots": "在哪里自习比较好？",
+        "imaGym": "怎么使用IMA健身房？",
+        "emergency": "校园紧急情况怎么办？"
+      },
+      "housing": {
+        "bestNeighborhood": "哪个社区最适合我的预算？",
+        "rentalScam": "怎么识别租房骗局？",
+        "leaseCheck": "签租约时要注意什么？",
+        "findRoommates": "怎么在UW找室友？"
+      },
+      "food": {
+        "cheapRestaurants": "The Ave上有什么便宜的餐厅？",
+        "groceryStore": "UW附近最便宜的超市在哪？",
+        "mealPrep": "学生预算怎么做饭？",
+        "freeFood": "校园里哪里有免费食物？"
+      },
+      "transport": {
+        "upass": "怎么激活U-PASS？",
+        "lightRail": "怎么坐Link轻轨到校园？",
+        "car": "在UW有必要买车吗？",
+        "lateNight": "深夜怎么安全回家？"
+      }
     }
   },
   "floatingChat": {
