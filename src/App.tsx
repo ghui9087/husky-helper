@@ -41,6 +41,7 @@ const App = () => (
             <Route path="/transport" element={<TransportGuide />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/profile" element={<ProfileSettings />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
