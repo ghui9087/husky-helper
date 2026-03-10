@@ -134,7 +134,7 @@ const PersonalizedDashboard = () => {
   if (!profile) return null;
 
   return (
-    <section className="py-10 sm:py-14" data-chat-section>
+    <section className="py-10 sm:py-14 pb-24 md:pb-10" data-chat-section>
       <div className="container max-w-7xl">
         <div className="flex gap-6">
           {/* Chat Sidebar */}
@@ -163,7 +163,7 @@ const PersonalizedDashboard = () => {
                 <CardTitle className="text-2xl sm:text-3xl">My Husky Dashboard</CardTitle>
               </CardHeader>
               <CardContent className="text-center space-y-3 pb-6">
-                <p className="text-lg text-foreground">
+                <p className="text-base sm:text-lg text-foreground">
                   Welcome <span className="font-bold text-primary">{profile.full_name}</span>! 🎉
                 </p>
                 <p className="text-muted-foreground text-sm">
@@ -245,22 +245,42 @@ const PersonalizedDashboard = () => {
                     </div>
                   )}
                 </div>
-
-                <div className="flex gap-2">
-                  <Input
-                    placeholder={t('chat.placeholder')}
-                    value={chatInput}
-                    onChange={(e) => setChatInput(e.target.value)}
-                    onKeyDown={(e) => e.key === "Enter" && handleSend()}
-                    className="flex-1"
-                    disabled={isLoading}
-                  />
-                  <Button size="icon" onClick={handleSend} disabled={isLoading}>
-                    {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
-                  </Button>
-                </div>
               </CardContent>
             </Card>
+
+            {/* Sticky Mobile Chat Input */}
+            <div className="fixed bottom-0 left-0 right-0 z-40 bg-background border-t border-border p-3 md:hidden">
+              <div className="flex gap-2 max-w-4xl mx-auto">
+                <Input
+                  placeholder={t('chat.placeholder')}
+                  value={chatInput}
+                  onChange={(e) => setChatInput(e.target.value)}
+                  onKeyDown={(e) => e.key === "Enter" && handleSend()}
+                  className="flex-1 text-base"
+                  disabled={isLoading}
+                />
+                <Button size="icon" onClick={handleSend} disabled={isLoading}>
+                  {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
+                </Button>
+              </div>
+            </div>
+
+            {/* Desktop Chat Input */}
+            <div className="hidden md:block">
+              <div className="flex gap-2">
+                <Input
+                  placeholder={t('chat.placeholder')}
+                  value={chatInput}
+                  onChange={(e) => setChatInput(e.target.value)}
+                  onKeyDown={(e) => e.key === "Enter" && handleSend()}
+                  className="flex-1"
+                  disabled={isLoading}
+                />
+                <Button size="icon" onClick={handleSend} disabled={isLoading}>
+                  {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

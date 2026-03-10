@@ -46,14 +46,14 @@ const GuestDashboard = () => {
   };
 
   return (
-    <section className="py-10 sm:py-14" data-chat-section>
+    <section className="py-10 sm:py-14 pb-24 md:pb-10" data-chat-section>
       <div className="container max-w-4xl space-y-8">
         {/* Header */}
         <div className="text-center space-y-2">
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
             {t('chat.welcomeToHuskyGuide')}
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground text-base">
             {t('chat.browseOrSignIn')}
           </p>
         </div>
@@ -92,7 +92,7 @@ const GuestDashboard = () => {
             {/* Guest Sign In Prompt */}
             {showSignInPrompt && (
               <div className="p-4 border border-primary/30 bg-primary/5 rounded-lg">
-                <div className="flex items-center gap-3">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
                   <Sparkles className="h-5 w-5 text-primary shrink-0" />
                   <div className="flex-1">
                     <p className="font-medium text-sm">{t('chat.signInToSaveHistory', 'Sign in to save your chat history')}</p>
@@ -100,17 +100,19 @@ const GuestDashboard = () => {
                       {t('chat.dontLoseConversation', "Don't lose your conversation and access it from any device")}
                     </p>
                   </div>
-                  <Button size="sm" variant="hero" onClick={() => navigate("/auth")}>
-                    {t('auth.signIn')}
-                  </Button>
-                  <Button 
-                    size="sm" 
-                    variant="ghost" 
-                    onClick={() => setShowSignInPrompt(false)}
-                    className="text-xs"
-                  >
-                    {t('common.dismiss', 'Dismiss')}
-                  </Button>
+                  <div className="flex gap-2 w-full sm:w-auto">
+                    <Button size="sm" variant="hero" onClick={() => navigate("/auth")}>
+                      {t('auth.signIn')}
+                    </Button>
+                    <Button 
+                      size="sm" 
+                      variant="ghost" 
+                      onClick={() => setShowSignInPrompt(false)}
+                      className="text-xs"
+                    >
+                      {t('common.dismiss', 'Dismiss')}
+                    </Button>
+                  </div>
                 </div>
               </div>
             )}
@@ -143,8 +145,29 @@ const GuestDashboard = () => {
                 </div>
               )}
             </div>
+          </CardContent>
+        </Card>
 
-            {/* Input */}
+        {/* Sticky Mobile Chat Input */}
+        <div className="fixed bottom-0 left-0 right-0 z-40 bg-background border-t border-border p-3 md:hidden">
+          <div className="flex gap-2 max-w-4xl mx-auto">
+            <Input
+              placeholder={t('chat.placeholder')}
+              value={chatInput}
+              onChange={(e) => setChatInput(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleSend()}
+              className="flex-1 text-base"
+              disabled={isLoading}
+            />
+            <Button size="icon" onClick={handleSend} disabled={isLoading}>
+              {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
+            </Button>
+          </div>
+        </div>
+
+        {/* Desktop Chat Input */}
+        <div className="hidden md:block">
+          <Card className="border-primary/20 shadow-lg overflow-hidden p-4">
             <div className="flex gap-2">
               <Input
                 placeholder={t('chat.placeholder')}
@@ -158,8 +181,8 @@ const GuestDashboard = () => {
                 {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
               </Button>
             </div>
-          </CardContent>
-        </Card>
+          </Card>
+        </div>
 
         {/* CTA to Log In */}
         <Card className="border-accent/30 bg-gradient-to-r from-accent/5 to-primary/5">

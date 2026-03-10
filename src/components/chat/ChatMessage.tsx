@@ -134,7 +134,7 @@ const ChatMessage = ({ role, content }: ChatMessageProps) => {
 
   return (
     <div className="flex justify-start">
-      <div className="max-w-[85%] rounded-xl px-4 py-3 bg-secondary text-foreground chat-assistant-message">
+      <div className="max-w-[100%] md:max-w-[85%] rounded-xl px-4 py-3 bg-secondary text-foreground chat-assistant-message">
         <div className="prose dark:prose-invert max-w-none chat-prose">
           <ReactMarkdown>{mainContent}</ReactMarkdown>
         </div>
