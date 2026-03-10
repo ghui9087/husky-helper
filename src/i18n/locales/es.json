@@ -340,6 +340,13 @@
     "transport": "Transporte",
     "safetyDisclaimer": "🔒 HuskyGuide AI nunca te pedirá tu SSN ni contraseñas. Por favor, no compartas números de identificación sensibles."
   },
+  "floatingChat": {
+    "askHousing": "Pregunta sobre vivienda 🏠",
+    "askFood": "Pregunta sobre comida 🍜",
+    "askCampus": "Pregunta sobre el campus 📚",
+    "askTransport": "Pregunta sobre transporte 🚌",
+    "askAnything": "Pregúntale a HuskyGuide AI 🐾"
+  },
   "auth": {
     "welcomeBack": "Bienvenido de nuevo",
     "createAccount": "Crear cuenta",

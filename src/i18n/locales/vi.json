@@ -340,6 +340,13 @@
     "transport": "Giao thông",
     "safetyDisclaimer": "🔒 HuskyGuide AI sẽ không bao giờ yêu cầu SSN hoặc mật khẩu của bạn. Vui lòng không chia sẻ số ID nhạy cảm."
   },
+  "floatingChat": {
+    "askHousing": "Hỏi về nhà ở 🏠",
+    "askFood": "Hỏi về ẩm thực 🍜",
+    "askCampus": "Hỏi về khuôn viên 📚",
+    "askTransport": "Hỏi về giao thông 🚌",
+    "askAnything": "Hỏi HuskyGuide AI 🐾"
+  },
   "auth": {
     "welcomeBack": "Chào mừng trở lại",
     "createAccount": "Tạo tài khoản",
