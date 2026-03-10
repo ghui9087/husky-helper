@@ -310,7 +310,13 @@
     "housingGuide": "Housing Guide",
     "foodGuide": "Food Guide",
     "transport": "Transport",
-    "safetyDisclaimer": "🔒 HuskyGuide AI will never ask for your SSN or passwords. Please do not share sensitive ID numbers."
+    "safetyDisclaimer": "🔒 HuskyGuide AI will never ask for your SSN or passwords. Please do not share sensitive ID numbers.",
+    "suggestion": {
+      "bankAccount": "How to open a bank account without SSN?",
+      "whereToLive": "Where should I live near UW?",
+      "firstWeek": "What should I do in my first week?",
+      "optTiming": "When should I apply for OPT?"
+    }
   },
   "floatingChat": {
     "askHousing": "Ask about Housing 🏠",

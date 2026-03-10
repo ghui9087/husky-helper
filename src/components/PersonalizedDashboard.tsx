@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import ChatMessage from "@/components/chat/ChatMessage";
+import SuggestionChips from "@/components/chat/SuggestionChips";
 import ChatSidebar from "@/components/chat/ChatSidebar";
 import { useAuth } from "@/contexts/AuthContext";
 import { supabase } from "@/integrations/supabase/client";
@@ -224,11 +225,14 @@ const PersonalizedDashboard = () => {
 
                 <div ref={scrollRef} className="space-y-3 max-h-80 overflow-y-auto pr-1">
                   {messages.length === 0 && (
-                    <div className="flex justify-start">
-                      <div className="max-w-[85%] rounded-xl px-4 py-2.5 text-sm bg-secondary text-foreground">
-                        {t('chat.welcomeMessage')}
+                    <>
+                      <div className="flex justify-start">
+                        <div className="max-w-[85%] rounded-xl px-4 py-2.5 text-sm bg-secondary text-foreground">
+                          {t('chat.welcomeMessage')}
+                        </div>
                       </div>
-                    </div>
+                      <SuggestionChips onSelect={(q) => { send(q); }} disabled={isLoading} />
+                    </>
                   )}
                   {messages.map((msg, i) => (
                     <ChatMessage key={i} role={msg.role} content={msg.content} />

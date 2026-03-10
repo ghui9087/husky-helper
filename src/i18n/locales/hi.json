@@ -338,7 +338,13 @@
     "housingGuide": "आवास गाइड",
     "foodGuide": "खाद्य गाइड",
     "transport": "परिवहन",
-    "safetyDisclaimer": "🔒 HuskyGuide AI कभी भी आपका SSN या पासवर्ड नहीं मांगेगा। कृपया संवेदनशील पहचान संख्या साझा न करें।"
+    "safetyDisclaimer": "🔒 HuskyGuide AI कभी भी आपका SSN या पासवर्ड नहीं मांगेगा। कृपया संवेदनशील पहचान संख्या साझा न करें।",
+    "suggestion": {
+      "bankAccount": "SSN के बिना बैंक खाता कैसे खोलें?",
+      "whereToLive": "UW के पास कहाँ रहना चाहिए?",
+      "firstWeek": "पहले हफ्ते में क्या करना चाहिए?",
+      "optTiming": "OPT के लिए कब आवेदन करें?"
+    }
   },
   "floatingChat": {
     "askHousing": "आवास के बारे में पूछें 🏠",

@@ -338,7 +338,13 @@
     "housingGuide": "Hướng dẫn nhà ở",
     "foodGuide": "Hướng dẫn ẩm thực",
     "transport": "Giao thông",
-    "safetyDisclaimer": "🔒 HuskyGuide AI sẽ không bao giờ yêu cầu SSN hoặc mật khẩu của bạn. Vui lòng không chia sẻ số ID nhạy cảm."
+    "safetyDisclaimer": "🔒 HuskyGuide AI sẽ không bao giờ yêu cầu SSN hoặc mật khẩu của bạn. Vui lòng không chia sẻ số ID nhạy cảm.",
+    "suggestion": {
+      "bankAccount": "Mở tài khoản ngân hàng không có SSN như thế nào?",
+      "whereToLive": "Nên ở đâu gần UW?",
+      "firstWeek": "Tuần đầu tiên nên làm gì?",
+      "optTiming": "Khi nào nên nộp đơn OPT?"
+    }
   },
   "floatingChat": {
     "askHousing": "Hỏi về nhà ở 🏠",

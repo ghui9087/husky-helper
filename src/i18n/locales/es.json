@@ -338,7 +338,13 @@
     "housingGuide": "Guía de vivienda",
     "foodGuide": "Guía gastronómica",
     "transport": "Transporte",
-    "safetyDisclaimer": "🔒 HuskyGuide AI nunca te pedirá tu SSN ni contraseñas. Por favor, no compartas números de identificación sensibles."
+    "safetyDisclaimer": "🔒 HuskyGuide AI nunca te pedirá tu SSN ni contraseñas. Por favor, no compartas números de identificación sensibles.",
+    "suggestion": {
+      "bankAccount": "¿Cómo abrir una cuenta bancaria sin SSN?",
+      "whereToLive": "¿Dónde debería vivir cerca de UW?",
+      "firstWeek": "¿Qué debo hacer en mi primera semana?",
+      "optTiming": "¿Cuándo debo solicitar el OPT?"
+    }
   },
   "floatingChat": {
     "askHousing": "Pregunta sobre vivienda 🏠",

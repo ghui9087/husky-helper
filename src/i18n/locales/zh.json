@@ -310,7 +310,13 @@
     "housingGuide": "住房指南",
     "foodGuide": "美食指南",
     "transport": "交通出行",
-    "safetyDisclaimer": "🔒 HuskyGuide AI 绝不会要求您提供社会安全号码或密码。请勿分享敏感的身份证号码。"
+    "safetyDisclaimer": "🔒 HuskyGuide AI 绝不会要求您提供社会安全号码或密码。请勿分享敏感的身份证号码。",
+    "suggestion": {
+      "bankAccount": "没有SSN怎么开银行账户？",
+      "whereToLive": "UW附近住哪里比较好？",
+      "firstWeek": "第一周应该做什么？",
+      "optTiming": "什么时候申请OPT？"
+    }
   },
   "floatingChat": {
     "askHousing": "咨询住房问题 🏠",
