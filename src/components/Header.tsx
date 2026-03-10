@@ -59,7 +59,7 @@ const Header = () => {
           <div className="flex h-9 w-9 items-center justify-center rounded-lg hero-gradient shadow-sm">
             <MapPin className="h-5 w-5 text-primary-foreground" />
           </div>
-          <span className="text-foreground hidden xs:inline sm:inline">
+          <span className="text-foreground hidden xs:inline sm:inline">Husky Helper
 </span>
           <span className="text-foreground xs:hidden sm:hidden">UW Guide</span>
         </Link>
