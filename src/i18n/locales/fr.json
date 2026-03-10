@@ -345,10 +345,36 @@
     "transport": "Transport",
     "safetyDisclaimer": "🔒 HuskyGuide AI ne vous demandera jamais votre SSN ou vos mots de passe. Veuillez ne pas partager de numéros d'identification sensibles.",
     "suggestion": {
-      "bankAccount": "Comment ouvrir un compte bancaire sans SSN ?",
-      "whereToLive": "Où habiter près de UW ?",
-      "firstWeek": "Que faire pendant ma première semaine ?",
-      "optTiming": "Quand dois-je postuler pour l'OPT ?"
+      "home": {
+        "bankAccount": "Comment ouvrir un compte bancaire sans SSN ?",
+        "whereToLive": "Où habiter près de UW ?",
+        "firstWeek": "Que faire pendant ma première semaine ?",
+        "optTiming": "Quand dois-je postuler pour l'OPT ?"
+      },
+      "campus": {
+        "emailProfessor": "Comment envoyer un email à un professeur de UW ?",
+        "studySpots": "Où étudier sur le campus ?",
+        "imaGym": "Comment accéder à la salle de sport IMA ?",
+        "emergency": "Que faire en cas d'urgence sur le campus ?"
+      },
+      "housing": {
+        "bestNeighborhood": "Quel quartier est le mieux pour mon budget ?",
+        "rentalScam": "Comment repérer une arnaque de location ?",
+        "leaseCheck": "Que vérifier dans un contrat de bail ?",
+        "findRoommates": "Comment trouver des colocataires à UW ?"
+      },
+      "food": {
+        "cheapRestaurants": "Meilleurs restaurants pas chers sur The Ave ?",
+        "groceryStore": "Où est le supermarché le moins cher près de UW ?",
+        "mealPrep": "Comment préparer ses repas avec un budget étudiant ?",
+        "freeFood": "Où trouver de la nourriture gratuite sur le campus ?"
+      },
+      "transport": {
+        "upass": "Comment activer mon U-PASS ?",
+        "lightRail": "Comment prendre le Link light rail pour le campus ?",
+        "car": "Est-ce que ça vaut le coup d'avoir une voiture à UW ?",
+        "lateNight": "Comment rentrer chez soi en sécurité tard le soir ?"
+      }
     }
   },
   "floatingChat": {

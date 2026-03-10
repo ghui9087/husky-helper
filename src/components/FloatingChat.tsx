@@ -152,7 +152,7 @@ const FloatingChat = () => {
                   {t("chat.welcomeMessage")}
                 </div>
               </div>
-              <SuggestionChips onSelect={(q) => { send(q); setChatInput(""); }} disabled={isLoading} />
+              <SuggestionChips onSelect={(q) => { send(q); setChatInput(""); }} disabled={isLoading} page={location.pathname} />
             </>
           )}
           {messages.map((msg, i) => (
