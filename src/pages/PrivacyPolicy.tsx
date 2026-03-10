@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
             {/* Introduction */}
             <section className="prose prose-sm max-w-none">
               <p className="text-muted-foreground leading-relaxed">
-                Welcome to UW Husky Helper. We are committed to protecting your privacy and ensuring 
+                Welcome to Husky Helper. We are committed to protecting your privacy and ensuring 
                 that your personal information is handled in a safe and responsible manner. This Privacy 
                 Policy explains how we collect, use, and safeguard your information when you use our website.
               </p>
