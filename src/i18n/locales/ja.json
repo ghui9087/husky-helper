@@ -28,6 +28,11 @@
     "mascotDesc": "愛されるUWマスコット",
     "woofMessage": "ワン！ゴー ドーグス！"
   },
+  "heroBanner": {
+    "headline": "あなたのUW先輩、24時間対応",
+    "subtitle": "銀行口座開設からOPTまで、HuskyGuideがUWでの毎日をサポートします。",
+    "startChat": "チャットを始める →"
+  },
   "carousel": {
     "title": "美しいキャンパスを探索",
     "subtitle": "UWシアトルの魅力を発見",

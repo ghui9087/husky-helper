@@ -28,6 +28,11 @@
     "mascotDesc": "사랑하는 UW 마스코트",
     "woofMessage": "멍! 고 독스!"
   },
+  "heroBanner": {
+    "headline": "당신의 UW 선배, 24시간 대기 중",
+    "subtitle": "은행 개설부터 OPT까지, HuskyGuide가 UW 생활의 모든 단계를 안내합니다.",
+    "startChat": "채팅 시작 →"
+  },
   "carousel": {
     "title": "아름다운 캠퍼스 탐험",
     "subtitle": "UW 시애틀의 특별함을 발견하세요",
