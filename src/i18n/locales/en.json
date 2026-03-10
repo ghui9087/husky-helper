@@ -28,6 +28,11 @@
     "mascotDesc": "Our beloved UW mascot",
     "woofMessage": "Woof! Go Dawgs!"
   },
+  "heroBanner": {
+    "headline": "Your UW Senior, Available 24/7",
+    "subtitle": "From banking to OPT, HuskyGuide guides every step of your journey at UW.",
+    "startChat": "Start Chat →"
+  },
   "carousel": {
     "title": "Explore Our Beautiful Campus",
     "subtitle": "Discover what makes UW Seattle special",

@@ -46,7 +46,7 @@ const GuestDashboard = () => {
   };
 
   return (
-    <section className="py-10 sm:py-14">
+    <section className="py-10 sm:py-14" data-chat-section>
       <div className="container max-w-4xl space-y-8">
         {/* Header */}
         <div className="text-center space-y-2">
