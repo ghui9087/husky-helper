@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { useHuskyChat } from "@/hooks/useHuskyChat";
 import { useIsMobile } from "@/hooks/use-mobile";
 import ChatMessage from "@/components/chat/ChatMessage";
+import SuggestionChips from "@/components/chat/SuggestionChips";
 import { cn } from "@/lib/utils";
 
 const PAGE_HINTS: Record<string, { emoji: string; hintKey: string }> = {
