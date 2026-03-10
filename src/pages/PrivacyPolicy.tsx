@@ -153,6 +153,9 @@ const PrivacyPolicy = () => {
 
             {/* Your Rights */}
             <section>
+              <p className="text-xs text-muted-foreground/60 text-center mb-6">
+                Husky Helper is a student project and is not an official University of Washington service.
+              </p>
               <div className="flex items-center gap-3 mb-4">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary">
                   <Eye className="h-5 w-5 text-primary" />
