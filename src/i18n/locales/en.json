@@ -317,10 +317,36 @@
     "transport": "Transport",
     "safetyDisclaimer": "🔒 HuskyGuide AI will never ask for your SSN or passwords. Please do not share sensitive ID numbers.",
     "suggestion": {
-      "bankAccount": "How to open a bank account without SSN?",
-      "whereToLive": "Where should I live near UW?",
-      "firstWeek": "What should I do in my first week?",
-      "optTiming": "When should I apply for OPT?"
+      "home": {
+        "bankAccount": "How to open a bank account without SSN?",
+        "whereToLive": "Where should I live near UW?",
+        "firstWeek": "What should I do in my first week?",
+        "optTiming": "When should I apply for OPT?"
+      },
+      "campus": {
+        "emailProfessor": "How do I email a professor at UW?",
+        "studySpots": "Where should I study?",
+        "imaGym": "How do I access the IMA gym?",
+        "emergency": "What do I do in a campus emergency?"
+      },
+      "housing": {
+        "bestNeighborhood": "Which neighborhood is best for my budget?",
+        "rentalScam": "How do I spot a rental scam?",
+        "leaseCheck": "What should I check in a lease agreement?",
+        "findRoommates": "How do I find roommates at UW?"
+      },
+      "food": {
+        "cheapRestaurants": "Best cheap restaurants on The Ave?",
+        "groceryStore": "Where is the cheapest grocery store near UW?",
+        "mealPrep": "How do I meal prep on a student budget?",
+        "freeFood": "Where can I find free food on campus?"
+      },
+      "transport": {
+        "upass": "How do I activate my U-PASS?",
+        "lightRail": "How do I take the Link light rail to campus?",
+        "car": "Is it worth having a car at UW?",
+        "lateNight": "How do I get home safely late at night?"
+      }
     }
   },
   "floatingChat": {
