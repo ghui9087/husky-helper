@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBanner from "@/components/HeroBanner";
 import Hero from "@/components/Hero";
 import CampusCarousel from "@/components/CampusCarousel";
 import FeaturesSection from "@/components/FeaturesSection";
@@ -15,6 +16,7 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
+        <HeroBanner />
         <Hero />
         {!loading && (user ? <PersonalizedDashboard /> : <GuestDashboard />)}
         <CampusCarousel />
