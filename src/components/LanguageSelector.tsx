@@ -56,6 +56,7 @@ const LanguageSelector = () => {
               currentLanguage.code === language.code ? "bg-secondary" : ""
             }`}
           >
+            <span className="text-xs font-medium text-muted-foreground w-6">{language.code.toUpperCase()}</span>
             <span className="text-lg">{language.flag}</span>
             <span>{language.name}</span>
             {currentLanguage.code === language.code && (
