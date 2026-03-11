@@ -9,16 +9,16 @@ import {
 import { Button } from "@/components/ui/button";
 
 const languages = [
-  { code: "en", name: "English", flag: "🇺🇸", countryCode: "US" },
-  { code: "zh", name: "中文", flag: "🇨🇳", countryCode: "CN" },
-  { code: "ko", name: "한국어", flag: "🇰🇷", countryCode: "KR" },
-  { code: "ja", name: "日本語", flag: "🇯🇵", countryCode: "JP" },
-  { code: "hi", name: "हिन्दी", flag: "🇮🇳", countryCode: "IN" },
-  { code: "vi", name: "Tiếng Việt", flag: "🇻🇳", countryCode: "VN" },
-  { code: "es", name: "Español", flag: "🇪🇸", countryCode: "ES" },
-  { code: "ar", name: "العربية", flag: "🇸🇦", countryCode: "SA" },
-  { code: "fr", name: "Français", flag: "🇫🇷", countryCode: "FR" },
-  { code: "ru", name: "Русский", flag: "🇷🇺", countryCode: "RU" },
+  { code: "en", name: "English", flag: "🇺🇸" },
+  { code: "zh", name: "中文", flag: "🇨🇳" },
+  { code: "ko", name: "한국어", flag: "🇰🇷" },
+  { code: "ja", name: "日本語", flag: "🇯🇵" },
+  { code: "hi", name: "हिन्दी", flag: "🇮🇳" },
+  { code: "vi", name: "Tiếng Việt", flag: "🇻🇳" },
+  { code: "es", name: "Español", flag: "🇪🇸" },
+  { code: "ar", name: "العربية", flag: "🇸🇦" },
+  { code: "fr", name: "Français", flag: "🇫🇷" },
+  { code: "ru", name: "Русский", flag: "🇷🇺" },
 ];
 
 const LanguageSelector = () => {
@@ -56,7 +56,6 @@ const LanguageSelector = () => {
               currentLanguage.code === language.code ? "bg-secondary" : ""
             }`}
           >
-            <span className="text-xs font-medium text-muted-foreground w-6">{language.countryCode}</span>
             <span className="text-lg">{language.flag}</span>
             <span>{language.name}</span>
             {currentLanguage.code === language.code && (
