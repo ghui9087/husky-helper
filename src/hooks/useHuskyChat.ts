@@ -226,8 +226,5 @@ export function useHuskyChat(options?: UseHuskyChatOptions) {
     startNewChat,
     conversationId,
     loadConversation,
-    showSignInPrompt,
-    setShowSignInPrompt,
-    guestMessageCount,
   };
 }

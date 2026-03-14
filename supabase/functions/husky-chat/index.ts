@@ -23,51 +23,6 @@ serve(async (req) => {
     const { messages, language, userId } = await req.json();
     const userMessage = messages?.[messages.length - 1]?.content ?? "";
 
-    // Server-side rate limiting for unauthenticated (guest) users
-    if (!userId) {
-      const clientIp = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() 
-        || req.headers.get("cf-connecting-ip") 
-        || "unknown";
-
-      const GUEST_LIMIT = 3;
-      const WINDOW_MINUTES = 60;
-
-      // Check/update rate limit
-      const { data: rateRow } = await supabase
-        .from("guest_rate_limits")
-        .select("message_count, window_start")
-        .eq("ip_address", clientIp)
-        .maybeSingle();
-
-      const now = new Date();
-      if (rateRow) {
-        const windowStart = new Date(rateRow.window_start);
-        const windowExpired = (now.getTime() - windowStart.getTime()) > WINDOW_MINUTES * 60 * 1000;
-
-        if (windowExpired) {
-          // Reset window
-          await supabase
-            .from("guest_rate_limits")
-            .update({ message_count: 1, window_start: now.toISOString() })
-            .eq("ip_address", clientIp);
-        } else if (rateRow.message_count >= GUEST_LIMIT) {
-          return new Response(
-            JSON.stringify({ error: "Guest message limit reached. Please sign in to continue chatting." }),
-            { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-          );
-        } else {
-          await supabase
-            .from("guest_rate_limits")
-            .update({ message_count: rateRow.message_count + 1 })
-            .eq("ip_address", clientIp);
-        }
-      } else {
-        await supabase
-          .from("guest_rate_limits")
-          .insert({ ip_address: clientIp, message_count: 1, window_start: now.toISOString() });
-      }
-    }
-
     // 1. Retrieve relevant knowledge from husky_knowledge
     // Split on whitespace AND extract CJK character bigrams for Chinese/Japanese/Korean
     const lowerMsg = userMessage.toLowerCase();
