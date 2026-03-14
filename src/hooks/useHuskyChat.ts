@@ -88,15 +88,6 @@ export function useHuskyChat(options?: UseHuskyChatOptions) {
     setMessages(allMessages);
     setIsLoading(true);
 
-    // Track guest message count
-    if (!user) {
-      const newCount = guestMessageCount + 1;
-      setGuestMessageCount(newCount);
-      if (newCount >= 2) {
-        setShowSignInPrompt(true);
-      }
-    }
-
     // For logged-in users, handle conversation persistence
     let currentConvId = conversationId;
     if (user) {
