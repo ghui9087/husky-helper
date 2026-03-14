@@ -331,10 +331,10 @@
   "chat": {
     "welcomeToHuskyGuide": "🐺 مرحباً بك في Husky Helper",
     "browseOrSignIn": "تصفح الموارد العامة أو سجل الدخول لتجربة مخصصة",
-    "huskyGuideAI": "HuskyGuide AI",
+    "huskyGuideAI": "Husky Helper AI",
     "guestMode": "وضع الضيف",
-    "welcomeMessage": "مرحباً! أنا HuskyGuide 🐾. يمكنني مساعدتك في استكشاف موارد UW. سجل الدخول للحصول على نصائح مخصصة!",
-    "guestReply": "مرحباً! أنا HuskyGuide. سجل الدخول للحصول على نصائح مخصصة! في هذه الأثناء، تصفح الأدلة أعلاه. 🐺",
+    "welcomeMessage": "مرحباً! أنا Husky Helper 🐾. يمكنني مساعدتك في استكشاف موارد UW. سجل الدخول للحصول على نصائح مخصصة!",
+    "guestReply": "مرحباً! أنا Husky Helper. سجل الدخول للحصول على نصائح مخصصة! في هذه الأثناء، تصفح الأدلة أعلاه. 🐺",
     "placeholder": "اسأل عن الحياة في UW...",
     "getPersonalized": "احصل على دليلك المخصص",
     "signInCta": "سجل الدخول لحفظ تقدمك والحصول على نصائح لبرنامجك وميزانيتك وفصلك الدراسي.",
@@ -343,7 +343,7 @@
     "housingGuide": "دليل السكن",
     "foodGuide": "دليل الطعام",
     "transport": "المواصلات",
-    "safetyDisclaimer": "🔒 لن يطلب HuskyGuide AI أبدًا رقم الضمان الاجتماعي أو كلمات المرور الخاصة بك. يرجى عدم مشاركة أرقام الهوية الحساسة.",
+    "safetyDisclaimer": "🔒 لن يطلب Husky Helper AI أبدًا رقم الضمان الاجتماعي أو كلمات المرور الخاصة بك. يرجى عدم مشاركة أرقام الهوية الحساسة.",
     "suggestion": {
       "home": {
         "bankAccount": "كيف أفتح حسابًا بنكيًا بدون SSN؟",

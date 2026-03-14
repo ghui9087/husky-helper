@@ -331,10 +331,10 @@
   "chat": {
     "welcomeToHuskyGuide": "🐺 Bienvenue sur Husky Helper",
     "browseOrSignIn": "Parcourez les ressources ou connectez-vous pour une expérience personnalisée",
-    "huskyGuideAI": "HuskyGuide AI",
+    "huskyGuideAI": "Husky Helper AI",
     "guestMode": "Mode invité",
-    "welcomeMessage": "Bonjour ! Je suis HuskyGuide 🐾. Je peux vous aider à explorer les ressources UW. Connectez-vous pour des conseils personnalisés !",
-    "guestReply": "Bonjour ! Je suis HuskyGuide. Connectez-vous pour des conseils personnalisés ! En attendant, parcourez les guides ci-dessus. 🐺",
+    "welcomeMessage": "Bonjour ! Je suis Husky Helper 🐾. Je peux vous aider à explorer les ressources UW. Connectez-vous pour des conseils personnalisés !",
+    "guestReply": "Bonjour ! Je suis Husky Helper. Connectez-vous pour des conseils personnalisés ! En attendant, parcourez les guides ci-dessus. 🐺",
     "placeholder": "Posez une question sur la vie à UW...",
     "getPersonalized": "Obtenez votre guide personnalisé",
     "signInCta": "Connectez-vous pour sauvegarder votre progression et recevoir des conseils adaptés à votre programme, budget et trimestre.",
@@ -343,7 +343,7 @@
     "housingGuide": "Guide logement",
     "foodGuide": "Guide gastronomique",
     "transport": "Transport",
-    "safetyDisclaimer": "🔒 HuskyGuide AI ne vous demandera jamais votre SSN ou vos mots de passe. Veuillez ne pas partager de numéros d'identification sensibles.",
+    "safetyDisclaimer": "🔒 Husky Helper AI ne vous demandera jamais votre SSN ou vos mots de passe. Veuillez ne pas partager de numéros d'identification sensibles.",
     "suggestion": {
       "home": {
         "bankAccount": "Comment ouvrir un compte bancaire sans SSN ?",

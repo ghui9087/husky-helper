@@ -331,10 +331,10 @@
   "chat": {
     "welcomeToHuskyGuide": "🐺 Bienvenido a Husky Helper",
     "browseOrSignIn": "Explora recursos generales o inicia sesión para una experiencia personalizada",
-    "huskyGuideAI": "HuskyGuide AI",
+    "huskyGuideAI": "Husky Helper AI",
     "guestMode": "Modo invitado",
-    "welcomeMessage": "¡Hola! Soy HuskyGuide 🐾. Puedo ayudarte a explorar los recursos de UW. ¡Inicia sesión para obtener consejos personalizados!",
-    "guestReply": "¡Hola! Soy HuskyGuide. ¡Inicia sesión para obtener consejos personalizados! Mientras tanto, explora las guías de arriba. 🐺",
+    "welcomeMessage": "¡Hola! Soy Husky Helper 🐾. Puedo ayudarte a explorar los recursos de UW. ¡Inicia sesión para obtener consejos personalizados!",
+    "guestReply": "¡Hola! Soy Husky Helper. ¡Inicia sesión para obtener consejos personalizados! Mientras tanto, explora las guías de arriba. 🐺",
     "placeholder": "Pregunta sobre la vida en UW...",
     "getPersonalized": "Obtén tu guía personalizada",
     "signInCta": "Inicia sesión para guardar tu progreso y recibir consejos para tu programa, presupuesto y trimestre.",
@@ -343,7 +343,7 @@
     "housingGuide": "Guía de vivienda",
     "foodGuide": "Guía gastronómica",
     "transport": "Transporte",
-    "safetyDisclaimer": "🔒 HuskyGuide AI nunca te pedirá tu SSN ni contraseñas. Por favor, no compartas números de identificación sensibles.",
+    "safetyDisclaimer": "🔒 Husky Helper AI nunca te pedirá tu SSN ni contraseñas. Por favor, no compartas números de identificación sensibles.",
     "suggestion": {
       "home": {
         "bankAccount": "¿Cómo abrir una cuenta bancaria sin SSN?",
