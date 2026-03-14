@@ -18,8 +18,6 @@ export function useHuskyChat(options?: UseHuskyChatOptions) {
   const [messages, setMessages] = useState<Msg[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [conversationId, setConversationId] = useState<string | null>(null);
-  const [guestMessageCount, setGuestMessageCount] = useState(0);
-  const [showSignInPrompt, setShowSignInPrompt] = useState(false);
 
   // Load a specific conversation
   const loadConversation = useCallback(async (id: string) => {
