@@ -301,12 +301,12 @@
     }
   },
   "chat": {
-    "welcomeToHuskyGuide": "🐺 Welcome to HuskyGuide",
+    "welcomeToHuskyGuide": "🐺 Welcome to Husky Helper",
     "browseOrSignIn": "Browse general resources or sign in for a personalized experience",
-    "huskyGuideAI": "HuskyGuide AI",
+    "huskyGuideAI": "Husky Helper AI",
     "guestMode": "Guest Mode",
-    "welcomeMessage": "Hi! I'm HuskyGuide 🐾. I can help you explore UW resources. Log in to get advice tailored to your specific program and budget!",
-    "guestReply": "Hi! I'm HuskyGuide. Log in to get advice tailored to your specific program and budget! In the meantime, feel free to browse our guides above. 🐺",
+    "welcomeMessage": "Hi! I'm Husky Helper 🐾. I can help you explore UW resources. Log in to get advice tailored to your specific program and budget!",
+    "guestReply": "Hi! I'm Husky Helper. Log in to get advice tailored to your specific program and budget! In the meantime, feel free to browse our guides above. 🐺",
     "placeholder": "Ask about UW life...",
     "getPersonalized": "Get Your Personalized Guide",
     "signInCta": "Sign in to save your progress and get tailored advice for your program, budget, and quarter.",
@@ -315,7 +315,7 @@
     "housingGuide": "Housing Guide",
     "foodGuide": "Food Guide",
     "transport": "Transport",
-    "safetyDisclaimer": "🔒 HuskyGuide AI will never ask for your SSN or passwords. Please do not share sensitive ID numbers.",
+    "safetyDisclaimer": "🔒 Husky Helper AI will never ask for your SSN or passwords. Please do not share sensitive ID numbers.",
     "suggestion": {
       "home": {
         "bankAccount": "How to open a bank account without SSN?",
@@ -354,7 +354,7 @@
     "askFood": "Ask about Food 🍜",
     "askCampus": "Ask about Campus 📚",
     "askTransport": "Ask about Transport 🚌",
-    "askAnything": "Ask HuskyGuide AI 🐾"
+    "askAnything": "Ask Husky Helper AI 🐾"
   },
   "auth": {
     "welcomeBack": "Welcome Back",

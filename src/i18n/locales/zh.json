@@ -301,12 +301,12 @@
     }
   },
   "chat": {
-    "welcomeToHuskyGuide": "🐺 欢迎来到 HuskyGuide",
+    "welcomeToHuskyGuide": "🐺 欢迎来到 Husky Helper",
     "browseOrSignIn": "浏览通用资源或登录获取个性化体验",
-    "huskyGuideAI": "HuskyGuide AI",
+    "huskyGuideAI": "Husky Helper AI",
     "guestMode": "访客模式",
-    "welcomeMessage": "你好！我是 HuskyGuide 🐾。我可以帮助你探索 UW 资源。登录后可获得针对你的专业和预算的个性化建议！",
-    "guestReply": "你好！我是 HuskyGuide。登录后可获得个性化建议！同时，欢迎浏览上方的指南。🐺",
+    "welcomeMessage": "你好！我是 Husky Helper 🐾。我可以帮助你探索 UW 资源。登录后可获得针对你的专业和预算的个性化建议！",
+    "guestReply": "你好！我是 Husky Helper。登录后可获得个性化建议！同时，欢迎浏览上方的指南。🐺",
     "placeholder": "询问关于 UW 的生活...",
     "getPersonalized": "获取个性化指南",
     "signInCta": "登录以保存进度，获取针对你的专业、预算和学期的建议。",
@@ -315,7 +315,7 @@
     "housingGuide": "住房指南",
     "foodGuide": "美食指南",
     "transport": "交通出行",
-    "safetyDisclaimer": "🔒 HuskyGuide AI 绝不会要求您提供社会安全号码或密码。请勿分享敏感的身份证号码。",
+    "safetyDisclaimer": "🔒 Husky Helper AI 绝不会要求您提供社会安全号码或密码。请勿分享敏感的身份证号码。",
     "suggestion": {
       "home": {
         "bankAccount": "没有SSN怎么开银行账户？",
@@ -354,7 +354,7 @@
     "askFood": "咨询美食推荐 🍜",
     "askCampus": "咨询校园生活 📚",
     "askTransport": "咨询交通出行 🚌",
-    "askAnything": "问问 HuskyGuide AI 🐾"
+    "askAnything": "问问 Husky Helper AI 🐾"
   },
   "auth": {
     "welcomeBack": "欢迎回来",

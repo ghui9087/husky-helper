@@ -105,7 +105,7 @@ const FloatingChat = () => {
   const buttonSize = isMobile ? 50 : 60;
   const hintText = pageHint
     ? t(pageHint.hintKey, `Ask about this ${pageHint.emoji}`)
-    : t("floatingChat.askAnything", "Ask HuskyGuide AI 🐾");
+    : t("floatingChat.askAnything", "Ask Husky Helper AI 🐾");
 
   return (
     <>

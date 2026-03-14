@@ -329,12 +329,12 @@
     }
   },
   "chat": {
-    "welcomeToHuskyGuide": "🐺 Chào mừng đến HuskyGuide",
+    "welcomeToHuskyGuide": "🐺 Chào mừng đến Husky Helper",
     "browseOrSignIn": "Duyệt tài nguyên chung hoặc đăng nhập để có trải nghiệm cá nhân hóa",
-    "huskyGuideAI": "HuskyGuide AI",
+    "huskyGuideAI": "Husky Helper AI",
     "guestMode": "Chế độ khách",
-    "welcomeMessage": "Xin chào! Tôi là HuskyGuide 🐾. Tôi có thể giúp bạn khám phá tài nguyên UW. Đăng nhập để nhận lời khuyên phù hợp với chương trình và ngân sách của bạn!",
-    "guestReply": "Xin chào! Tôi là HuskyGuide. Đăng nhập để nhận lời khuyên cá nhân! Trong khi đó, hãy duyệt các hướng dẫn ở trên. 🐺",
+    "welcomeMessage": "Xin chào! Tôi là Husky Helper 🐾. Tôi có thể giúp bạn khám phá tài nguyên UW. Đăng nhập để nhận lời khuyên phù hợp với chương trình và ngân sách của bạn!",
+    "guestReply": "Xin chào! Tôi là Husky Helper. Đăng nhập để nhận lời khuyên cá nhân! Trong khi đó, hãy duyệt các hướng dẫn ở trên. 🐺",
     "placeholder": "Hỏi về cuộc sống tại UW...",
     "getPersonalized": "Nhận hướng dẫn cá nhân hóa",
     "signInCta": "Đăng nhập để lưu tiến trình và nhận lời khuyên phù hợp với chương trình, ngân sách và học kỳ.",
@@ -343,7 +343,7 @@
     "housingGuide": "Hướng dẫn nhà ở",
     "foodGuide": "Hướng dẫn ẩm thực",
     "transport": "Giao thông",
-    "safetyDisclaimer": "🔒 HuskyGuide AI sẽ không bao giờ yêu cầu SSN hoặc mật khẩu của bạn. Vui lòng không chia sẻ số ID nhạy cảm.",
+    "safetyDisclaimer": "🔒 Husky Helper AI sẽ không bao giờ yêu cầu SSN hoặc mật khẩu của bạn. Vui lòng không chia sẻ số ID nhạy cảm.",
     "suggestion": {
       "home": {
         "bankAccount": "Mở tài khoản ngân hàng không có SSN như thế nào?",
@@ -382,7 +382,7 @@
     "askFood": "Hỏi về ẩm thực 🍜",
     "askCampus": "Hỏi về khuôn viên 📚",
     "askTransport": "Hỏi về giao thông 🚌",
-    "askAnything": "Hỏi HuskyGuide AI 🐾"
+    "askAnything": "Hỏi Husky Helper AI 🐾"
   },
   "auth": {
     "welcomeBack": "Chào mừng trở lại",
