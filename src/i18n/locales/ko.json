@@ -329,7 +329,7 @@
     }
   },
   "chat": {
-    "welcomeToHuskyGuide": "🐺 HuskyGuide에 오신 것을 환영합니다",
+    "welcomeToHuskyGuide": "🐺 Husky Helper에 오신 것을 환영합니다",
     "browseOrSignIn": "일반 리소스를 찾아보거나 로그인하여 맞춤형 경험을 받으세요",
     "huskyGuideAI": "Husky Helper AI",
     "guestMode": "게스트 모드",
