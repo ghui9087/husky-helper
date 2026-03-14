@@ -331,10 +331,10 @@
   "chat": {
     "welcomeToHuskyGuide": "🐺 HuskyGuideへようこそ",
     "browseOrSignIn": "一般リソースを閲覧するか、サインインしてパーソナライズされた体験を",
-    "huskyGuideAI": "HuskyGuide AI",
+    "huskyGuideAI": "Husky Helper AI",
     "guestMode": "ゲストモード",
-    "welcomeMessage": "こんにちは！HuskyGuide 🐾です。UWのリソース探しをお手伝いします。ログインすると、あなたの専攻と予算に合わせたアドバイスが受けられます！",
-    "guestReply": "こんにちは！HuskyGuideです。ログインすると個別のアドバイスが受けられます！それまで、上のガイドをご覧ください。🐺",
+    "welcomeMessage": "こんにちは！Husky Helper 🐾です。UWのリソース探しをお手伝いします。ログインすると、あなたの専攻と予算に合わせたアドバイスが受けられます！",
+    "guestReply": "こんにちは！Husky Helperです。ログインすると個別のアドバイスが受けられます！それまで、上のガイドをご覧ください。🐺",
     "placeholder": "UWの生活について質問...",
     "getPersonalized": "パーソナライズガイドを取得",
     "signInCta": "サインインして進捗を保存し、専攻・予算・学期に合わせたアドバイスを受けましょう。",
@@ -343,7 +343,7 @@
     "housingGuide": "住居ガイド",
     "foodGuide": "グルメガイド",
     "transport": "交通",
-    "safetyDisclaimer": "🔒 HuskyGuide AIがSSNやパスワードを聞くことはありません。機密性の高いID番号を共有しないでください。",
+    "safetyDisclaimer": "🔒 Husky Helper AIがSSNやパスワードを聞くことはありません。機密性の高いID番号を共有しないでください。",
     "suggestion": {
       "home": {
         "bankAccount": "SSNなしで銀行口座を開設するには？",
