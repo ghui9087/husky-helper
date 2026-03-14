@@ -28,9 +28,6 @@ const GuestDashboard = () => {
     messages, 
     isLoading, 
     send, 
-    showSignInPrompt, 
-    setShowSignInPrompt, 
-    guestMessageCount 
   } = useHuskyChat();
 
   useEffect(() => {
