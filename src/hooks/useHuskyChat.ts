@@ -206,7 +206,7 @@ export function useHuskyChat(options?: UseHuskyChatOptions) {
     } finally {
       setIsLoading(false);
     }
-  }, [messages, i18n.language, user, conversationId, createConversation, saveMessage, guestMessageCount]);
+  }, [messages, i18n.language, user, conversationId, createConversation, saveMessage]);
 
   const reset = useCallback(() => {
     setMessages([]);
