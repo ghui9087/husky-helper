@@ -28,9 +28,6 @@ const GuestDashboard = () => {
     messages, 
     isLoading, 
     send, 
-    showSignInPrompt, 
-    setShowSignInPrompt, 
-    guestMessageCount 
   } = useHuskyChat();
 
   useEffect(() => {
@@ -89,33 +86,6 @@ const GuestDashboard = () => {
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            {/* Guest Sign In Prompt */}
-            {showSignInPrompt && (
-              <div className="p-4 border border-primary/30 bg-primary/5 rounded-lg">
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-                  <Sparkles className="h-5 w-5 text-primary shrink-0" />
-                  <div className="flex-1">
-                    <p className="font-medium text-sm">{t('chat.signInToSaveHistory', 'Sign in to save your chat history')}</p>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      {t('chat.dontLoseConversation', "Don't lose your conversation and access it from any device")}
-                    </p>
-                  </div>
-                  <div className="flex gap-2 w-full sm:w-auto">
-                    <Button size="sm" variant="hero" onClick={() => navigate("/auth")}>
-                      {t('auth.signIn')}
-                    </Button>
-                    <Button 
-                      size="sm" 
-                      variant="ghost" 
-                      onClick={() => setShowSignInPrompt(false)}
-                      className="text-xs"
-                    >
-                      {t('common.dismiss', 'Dismiss')}
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            )}
 
             {/* Safety Disclaimer */}
             <div className="rounded-lg bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 px-3 py-2 text-xs text-amber-800 dark:text-amber-200">

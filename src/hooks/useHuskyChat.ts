@@ -18,8 +18,6 @@ export function useHuskyChat(options?: UseHuskyChatOptions) {
   const [messages, setMessages] = useState<Msg[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [conversationId, setConversationId] = useState<string | null>(null);
-  const [guestMessageCount, setGuestMessageCount] = useState(0);
-  const [showSignInPrompt, setShowSignInPrompt] = useState(false);
 
   // Load a specific conversation
   const loadConversation = useCallback(async (id: string) => {
@@ -89,15 +87,6 @@ export function useHuskyChat(options?: UseHuskyChatOptions) {
     const allMessages = [...messages, userMsg];
     setMessages(allMessages);
     setIsLoading(true);
-
-    // Track guest message count
-    if (!user) {
-      const newCount = guestMessageCount + 1;
-      setGuestMessageCount(newCount);
-      if (newCount >= 2) {
-        setShowSignInPrompt(true);
-      }
-    }
 
     // For logged-in users, handle conversation persistence
     let currentConvId = conversationId;
@@ -217,7 +206,7 @@ export function useHuskyChat(options?: UseHuskyChatOptions) {
     } finally {
       setIsLoading(false);
     }
-  }, [messages, i18n.language, user, conversationId, createConversation, saveMessage, guestMessageCount]);
+  }, [messages, i18n.language, user, conversationId, createConversation, saveMessage]);
 
   const reset = useCallback(() => {
     setMessages([]);
@@ -237,8 +226,5 @@ export function useHuskyChat(options?: UseHuskyChatOptions) {
     startNewChat,
     conversationId,
     loadConversation,
-    showSignInPrompt,
-    setShowSignInPrompt,
-    guestMessageCount,
   };
 }
